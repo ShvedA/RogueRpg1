@@ -1,0 +1,386 @@
+fileFormatVersion: 2
+guid: 658115d0432e2f84297d2d0d82c93cdc
+timeCreated: 1445880605
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Didit_0
+    21300002: Didit_1
+    21300004: Didit_2
+    21300006: Didit_3
+    21300008: Didit_4
+    21300010: Didit_5
+    21300012: Didit_6
+    21300014: Didit_7
+    21300016: Didit_8
+    21300018: Didit_9
+    21300020: Didit_10
+    21300022: Didit_11
+    21300024: Didit_12
+    21300026: Didit_13
+    21300028: Didit_14
+    21300030: Didit_15
+    21300032: Didit_16
+    21300034: Didit_17
+    21300036: Didit_18
+    21300038: Didit_19
+    21300040: Didit_20
+    21300042: Didit_21
+    21300044: Didit_22
+    21300046: Didit_23
+    21300048: Didit_24
+    21300050: Didit_25
+    21300052: Didit_26
+    21300054: Didit_27
+    21300056: Didit_28
+    21300058: Didit_29
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Didit_0
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 264
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Didit_1
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 263
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Didit_2
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 264
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Didit_3
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 265
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Didit_4
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 263
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Didit_5
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 196
+        width: 49
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Didit_6
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 238
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Didit_7
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 234
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Didit_8
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 235
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Didit_9
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 235
+        width: 27
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Didit_10
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 221
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Didit_11
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 204
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Didit_12
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 203
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Didit_13
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 203
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Didit_14
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 203
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Didit_15
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 43
+        width: 123
+        height: 135
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Didit_16
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 163
+        width: 20
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Didit_17
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 161
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Didit_18
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 123
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Didit_19
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 133
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Didit_20
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 128
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Didit_21
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 123
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Didit_22
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 84
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Didit_23
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 84
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Didit_24
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 47
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Didit_25
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 21
+        width: 39
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Didit_26
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 22
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Didit_27
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 22
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Didit_28
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 22
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Didit_29
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 22
+        width: 16
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
