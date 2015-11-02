@@ -1,0 +1,144 @@
+fileFormatVersion: 2
+guid: 1f194771fdd31cc4ea6ad9b8e94877d8
+timeCreated: 1446497795
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: tree_stable_0
+    21300002: tree_stable_1
+    21300004: tree_stable_2
+    21300006: tree_stable_3
+    21300008: tree_stable_4
+    21300010: tree_stable_5
+    21300012: tree_stable_6
+    21300014: tree_stable_7
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: tree_stable_0
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 569
+        width: 292
+        height: 349
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tree_stable_1
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 544
+        width: 239
+        height: 370
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tree_stable_2
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 534
+        width: 179
+        height: 366
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tree_stable_3
+      rect:
+        serializedVersion: 2
+        x: 1991
+        y: 540
+        width: 218
+        height: 348
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tree_stable_4
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 66
+        width: 292
+        height: 315
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tree_stable_5
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 40
+        width: 215
+        height: 348
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tree_stable_6
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 34
+        width: 179
+        height: 367
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tree_stable_7
+      rect:
+        serializedVersion: 2
+        x: 1971
+        y: 45
+        width: 240
+        height: 370
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
