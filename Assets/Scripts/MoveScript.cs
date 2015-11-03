@@ -16,15 +16,20 @@ public class MoveScript : MonoBehaviour {
 
     private Rigidbody2D rb;
 
+    public Vector2 zeroVector;
 
     public Sprite[] sprites;
+
+    public int numOfSpriteTurns;
+
+    public double round = 360;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        Console.Write("test");
         sprites = AssetDatabase.LoadAllAssetRepresentationsAtPath("Assets/Sprites/tree_stable.png").OfType<Sprite>().ToArray();
-        Console.WriteLine(sprites.Count());
+        zeroVector = new Vector2(0, -1);
+        numOfSpriteTurns = 8;
     }
 
     void Update()
@@ -33,17 +38,26 @@ public class MoveScript : MonoBehaviour {
         float moveVertical = Input.GetAxis("Vertical");
         Vector2 movement = new Vector2(moveHorizontal * speed, moveVertical * speed);
         rb.velocity = movement * speed;
-
-        if (movement.x > 0 || movement.y > 0)
+        double angle = Vector2.Angle(movement, zeroVector);
+        if (movement.x < 0)
         {
-            replaceMatchingSprite(MoveSprite.LEFT);
+            angle = 360 - angle;
         }
+        turnCharacter(angle);
     }
 
-    void replaceMatchingSprite (MoveSprite newSprite)
+    private void turnCharacter(double angle)
     {
-        rb.GetComponent<SpriteRenderer>().sprite = sprites[(int)newSprite];
+        double angleFromSectorBeginning = angle + round / numOfSpriteTurns / 2;
+        int spriteNum = (int)(angle / (round / numOfSpriteTurns));
+        replaceMatchingSprite(spriteNum);
     }
+
+    void replaceMatchingSprite (int newSprite)
+    {
+        rb.GetComponent<SpriteRenderer>().sprite = sprites[newSprite];
+    }
+
 
     public enum MoveSprite
     {
