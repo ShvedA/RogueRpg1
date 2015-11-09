@@ -38,8 +38,16 @@ public class MoveScript : MonoBehaviour {
         float moveVertical = Input.GetAxis("Vertical");
         Vector2 movement = new Vector2(moveHorizontal * speed, moveVertical * speed);
         rb.velocity = movement * speed;
-        double angle = Vector2.Angle(movement, zeroVector);
-        if (movement.x < 0)
+
+        Vector3 pz = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        pz.z = 0;
+        Vector2 mouse = new Vector2(pz.x, pz.y);
+
+        Vector2 vectorToCenter = new Vector2(mouse.x - rb.position.x, mouse.y - rb.position.y);
+
+        double angle = Vector2.Angle(vectorToCenter, zeroVector);
+
+        if (vectorToCenter.x < 0)
         {
             angle = 360 - angle;
         }
@@ -48,8 +56,12 @@ public class MoveScript : MonoBehaviour {
 
     private void turnCharacter(double angle)
     {
-        double angleFromSectorBeginning = angle + round / numOfSpriteTurns / 2;
-        int spriteNum = (int)(angle / (round / numOfSpriteTurns));
+        double angleFromSectorBeginning = angle + (round / numOfSpriteTurns) / 2;
+        int spriteNum = (int)(angleFromSectorBeginning / (round / numOfSpriteTurns));
+        if (spriteNum < 0 || spriteNum == numOfSpriteTurns)
+        {
+            spriteNum = 0;
+        } 
         replaceMatchingSprite(spriteNum);
     }
 
