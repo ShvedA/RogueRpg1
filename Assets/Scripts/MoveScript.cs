@@ -73,13 +73,13 @@ public class MoveScript : MonoBehaviour {
 
     public enum MoveSprite
     {
+        DOWN = 0,
+        RIGHTDOWN = 1,
+        RIGHT = 2,
+        RIGHTUP = 3,
+        UP = 4,
+        LEFTUP = 5,
         LEFT=6,
-        LEFTUP=5,
-        UP=4,
-        RIGHTUP=3,
-        RIGHT=2,
-        RIGHTDOWN=1,
-        DOWN=0,
         LEFTDOWN=7
     }
 }
