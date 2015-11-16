@@ -1,25 +1,27 @@
 ﻿using UnityEngine;
-using System.Collections;
 
-public class WallPlacer : MonoBehaviour {
+namespace Assets.Scripts
+{
+    public class WallPlacer : MonoBehaviour {
 
-    public GameObject brick;
+        public GameObject Brick;
 
-    void Start()
-    {
-        
-        for (int x = -22; x <= 22; x++)
+        void Start()
         {
-            for (int y = -10; y <= 10; y++)
+        
+            for (int x = -22; x <= 22; x++)
             {
-                if (x == -22 || x == 22 || y == -10 || y == 10)
+                for (int y = -10; y <= 10; y++)
                 {
-                    GameObject each = Instantiate(brick, new Vector3(x, y, 0), Quaternion.identity) as GameObject;
-                    each.transform.parent = transform;
+                    if (x == -22 || x == 22 || y == -10 || y == 10)
+                    {
+                        GameObject each = Instantiate(Brick, new Vector3(x, y, 0), Quaternion.identity) as GameObject;
+                        each.transform.parent = transform;
+                    }
+                
                 }
                 
             }
-                
         }
     }
 }
