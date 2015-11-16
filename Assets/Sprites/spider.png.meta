@@ -1,0 +1,144 @@
+fileFormatVersion: 2
+guid: 7e6ea61d1a189ac4a9fee8e96ba83932
+timeCreated: 1447706789
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: spider_0
+    21300002: spider_1
+    21300004: spider_2
+    21300006: spider_3
+    21300008: spider_4
+    21300010: spider_5
+    21300012: spider_6
+    21300014: spider_7
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: spider_0
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 288
+        width: 188
+        height: 213
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spider_1
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 272
+        width: 233
+        height: 237
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spider_2
+      rect:
+        serializedVersion: 2
+        x: 579
+        y: 284
+        width: 176
+        height: 238
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spider_3
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 280
+        width: 233
+        height: 254
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spider_4
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 21
+        width: 188
+        height: 230
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spider_5
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 13
+        width: 234
+        height: 254
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spider_6
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 17
+        width: 175
+        height: 238
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spider_7
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 5
+        width: 234
+        height: 237
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
