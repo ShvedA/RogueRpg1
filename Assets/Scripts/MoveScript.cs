@@ -2,106 +2,105 @@
 using UnityEditor;
 using UnityEngine;
 
-namespace Assets.Scripts
+public class MoveScript : MonoBehaviour
 {
-    public class MoveScript : MonoBehaviour {
 
-        public float Speed;
+    public float Speed;
 
-        public Texture2D[] Skins;
+    public Texture2D[] Skins;
 
-        public int ActiveSkin;
+    public int ActiveSkin;
 
-        private Rigidbody2D _rb;
+    private Rigidbody2D _rb;
 
-        public Vector2 ZeroVector;
+    public Vector2 ZeroVector;
 
-        public Sprite[] Sprites;
+    public Sprite[] Sprites;
 
-        public int NumOfSpriteTurns;
+    public int NumOfSpriteTurns;
 
-        public double Round = 360;
+    public double Round = 360;
 
-        void Start()
+    private void Start()
+    {
+        _rb = GetComponent<Rigidbody2D>();
+        Sprites =
+            AssetDatabase.LoadAllAssetRepresentationsAtPath("Assets/Sprites/tree_stable.png").OfType<Sprite>().ToArray();
+        ZeroVector = new Vector2(0, -1);
+        NumOfSpriteTurns = 8;
+    }
+
+    private void Update()
+    {
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveVertical = Input.GetAxis("Vertical");
+        Vector2 movement = new Vector2(moveHorizontal*Speed, moveVertical*Speed);
+        _rb.velocity = movement*Speed;
+
+        Vector3 pz = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        pz.z = 0;
+        Vector2 mouse = new Vector2(pz.x, pz.y);
+
+        Vector2 vectorToCenter = new Vector2(mouse.x - _rb.position.x, mouse.y - _rb.position.y);
+
+        double angle = GetAngle(vectorToCenter);
+
+        if (Input.GetMouseButtonDown(0))
         {
-            _rb = GetComponent<Rigidbody2D>();
-            Sprites = AssetDatabase.LoadAllAssetRepresentationsAtPath("Assets/Sprites/tree_stable.png").OfType<Sprite>().ToArray();
-            ZeroVector = new Vector2(0, -1);
-            NumOfSpriteTurns = 8;
+            Fire(angle);
         }
 
-        void Update()
+        TurnCharacter(angle);
+    }
+
+    private void Fire(double angle)
+    {
+        var projectile = GameObject.Find("Fire_Projectile");
+        var position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10);
+        position = Camera.main.ScreenToWorldPoint(position);
+        var go = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
+        go.transform.LookAt(position);
+        Debug.Log(position);
+        go.GetComponent<Rigidbody2D>().AddForce(go.transform.forward*1000);
+    }
+
+    private double GetAngle(Vector2 vectorToCenter)
+    {
+        double angle = Vector2.Angle(vectorToCenter, ZeroVector);
+
+        if (vectorToCenter.x < 0)
         {
-            float moveHorizontal = Input.GetAxis("Horizontal");
-            float moveVertical = Input.GetAxis("Vertical");
-            Vector2 movement = new Vector2(moveHorizontal * Speed, moveVertical * Speed);
-            _rb.velocity = movement * Speed;
-
-            Vector3 pz = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            pz.z = 0;
-            Vector2 mouse = new Vector2(pz.x, pz.y);
-
-            Vector2 vectorToCenter = new Vector2(mouse.x - _rb.position.x, mouse.y - _rb.position.y);
-
-            double angle = GetAngle(vectorToCenter);
-
-            if (Input.GetMouseButtonDown(0))
-            {
-                Fire(angle);
-            }
-
-            TurnCharacter(angle);
+            angle = 360 - angle;
         }
+        return angle;
+    }
 
-        private void Fire(double angle)
+    private void TurnCharacter(double angle)
+    {
+        double angleFromSectorBeginning = angle + (Round/NumOfSpriteTurns)/2;
+        int spriteNum = (int) (angleFromSectorBeginning/(Round/NumOfSpriteTurns));
+        if (spriteNum < 0 || spriteNum == NumOfSpriteTurns)
         {
-            var projectile = GameObject.Find("Fire_Projectile");
-            var position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10);
-            position = Camera.main.ScreenToWorldPoint(position);
-            var go = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
-            go.transform.LookAt(position);
-            Debug.Log(position);
-            go.GetComponent<Rigidbody2D>().AddForce(go.transform.forward * 1000);
+            spriteNum = 0;
         }
+        ReplaceMatchingSprite(spriteNum);
+    }
 
-        private double GetAngle(Vector2 vectorToCenter)
-        {
-            double angle = Vector2.Angle(vectorToCenter, ZeroVector);
-
-            if (vectorToCenter.x < 0)
-            {
-                angle = 360 - angle;
-            }
-            return angle;
-        }
-
-        private void TurnCharacter(double angle)
-        {
-            double angleFromSectorBeginning = angle + (Round / NumOfSpriteTurns) / 2;
-            int spriteNum = (int)(angleFromSectorBeginning / (Round / NumOfSpriteTurns));
-            if (spriteNum < 0 || spriteNum == NumOfSpriteTurns)
-            {
-                spriteNum = 0;
-            } 
-            ReplaceMatchingSprite(spriteNum);
-        }
-
-        void ReplaceMatchingSprite (int newSprite)
-        {
-            _rb.GetComponent<SpriteRenderer>().sprite = Sprites[newSprite];
-        }
+    private void ReplaceMatchingSprite(int newSprite)
+    {
+        _rb.GetComponent<SpriteRenderer>().sprite = Sprites[newSprite];
+    }
 
 
-        public enum MoveSprite
-        {
-            Down = 0,
-            RightDown = 1,
-            Right = 2,
-            RightUp = 3,
-            Up = 4,
-            LeftUp = 5,
-            Left=6,
-            LeftDown=7
-        }
+    public enum MoveSprite
+    {
+        Down = 0,
+        RightDown = 1,
+        Right = 2,
+        RightUp = 3,
+        Up = 4,
+        LeftUp = 5,
+        Left = 6,
+        LeftDown = 7
     }
 }
