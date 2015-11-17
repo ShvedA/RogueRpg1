@@ -61,7 +61,7 @@ namespace Assets.Scripts
             var position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1);
             position = Camera.main.ScreenToWorldPoint(position);
             var go = Instantiate(Projectile, transform.position, Quaternion.identity) as GameObject;
-            go.transform.parent = transform;
+            //go.transform.parent = transform;
             //go.transform.LookAt(position);
             go.GetComponent<Rigidbody2D>().AddForce(go.transform.forward*1000);
         }
