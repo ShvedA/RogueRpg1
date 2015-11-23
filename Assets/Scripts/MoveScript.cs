@@ -30,7 +30,7 @@ namespace Assets.Scripts
         private void Start()
         {
             _rb = GetComponent<Rigidbody2D>();
-            Sprites = AssetDatabase.LoadAllAssetRepresentationsAtPath("Assets/Sprites/tree-8side.png").OfType<Sprite>().ToArray();
+            Sprites = AssetDatabase.LoadAllAssetRepresentationsAtPath("Assets/Sprites/tree_stable.png").OfType<Sprite>().ToArray();
             ZeroVector = new Vector2(0, -1);
             NumOfSpriteTurns = 8;
         }
