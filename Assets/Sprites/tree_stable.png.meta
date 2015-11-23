@@ -1,17 +1,25 @@
 fileFormatVersion: 2
-guid: 1f194771fdd31cc4ea6ad9b8e94877d8
-timeCreated: 1446497795
+guid: 4080448e1323d1d4c926a2793c2c73ba
+timeCreated: 1448303413
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: tree_stable_0
-    21300002: tree_stable_1
-    21300004: tree_stable_2
-    21300006: tree_stable_3
-    21300008: tree_stable_4
-    21300010: tree_stable_5
-    21300012: tree_stable_6
-    21300014: tree_stable_7
+    21300000: tree-8side_0
+    21300002: tree-8side_1
+    21300004: tree-8side_2
+    21300006: tree-8side_3
+    21300008: tree-8side_4
+    21300010: tree-8side_5
+    21300012: tree-8side_6
+    21300014: tree-8side_7
+    21300016: tree_stable_0
+    21300018: tree_stable_1
+    21300020: tree_stable_2
+    21300022: tree_stable_3
+    21300024: tree_stable_4
+    21300026: tree_stable_5
+    21300028: tree_stable_6
+    21300030: tree_stable_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -45,14 +53,13 @@ TextureImporter:
   lightmap: 0
   rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 30
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
@@ -61,82 +68,82 @@ TextureImporter:
     - name: tree_stable_0
       rect:
         serializedVersion: 2
-        x: 159
-        y: 569
-        width: 292
-        height: 349
+        x: 12
+        y: 137
+        width: 104
+        height: 101
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: tree_stable_1
       rect:
         serializedVersion: 2
-        x: 774
-        y: 544
-        width: 239
-        height: 370
+        x: 153
+        y: 128
+        width: 86
+        height: 110
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: tree_stable_2
       rect:
         serializedVersion: 2
-        x: 1417
-        y: 534
-        width: 179
-        height: 366
+        x: 294
+        y: 128
+        width: 68
+        height: 117
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: tree_stable_3
       rect:
         serializedVersion: 2
-        x: 1991
-        y: 540
-        width: 218
-        height: 348
+        x: 409
+        y: 130
+        width: 84
+        height: 124
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: tree_stable_4
       rect:
         serializedVersion: 2
-        x: 159
-        y: 66
-        width: 292
-        height: 315
+        x: 14
+        y: 12
+        width: 102
+        height: 116
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: tree_stable_5
       rect:
         serializedVersion: 2
-        x: 776
-        y: 40
-        width: 215
-        height: 348
+        x: 146
+        y: 0
+        width: 86
+        height: 126
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: tree_stable_6
       rect:
         serializedVersion: 2
-        x: 1389
-        y: 34
-        width: 179
-        height: 367
+        x: 279
+        y: 1
+        width: 69
+        height: 116
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: tree_stable_7
       rect:
         serializedVersion: 2
-        x: 1971
-        y: 45
-        width: 240
-        height: 370
+        x: 404
+        y: 0
+        width: 84
+        height: 110
       alignment: 0
-      pivot: {x: .5, y: .5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
