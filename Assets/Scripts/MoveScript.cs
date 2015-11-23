@@ -54,9 +54,7 @@ namespace Assets.Scripts
             {
                 Fire();
             }
-
             
-
             TurnCharacter(angle);
         }
 
