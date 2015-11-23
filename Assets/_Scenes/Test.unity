@@ -85,6 +85,10 @@ NavMeshSettings:
     cellSize: .166666672
     manualCellSize: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &125332884 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 473360, guid: feff8fa6097a818459750f42032ea0c1, type: 2}
+  m_PrefabInternal: {fileID: 1504013713}
 --- !u!1 &603421948
 GameObject:
   m_ObjectHideFlags: 0
@@ -431,3 +435,53 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!1001 &2112092792
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 429072, guid: 4d118f82e12575845a852e9b79e3446d, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -16.9099998
+      objectReference: {fileID: 0}
+    - target: {fileID: 429072, guid: 4d118f82e12575845a852e9b79e3446d, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 7.36000013
+      objectReference: {fileID: 0}
+    - target: {fileID: 429072, guid: 4d118f82e12575845a852e9b79e3446d, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 429072, guid: 4d118f82e12575845a852e9b79e3446d, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 429072, guid: 4d118f82e12575845a852e9b79e3446d, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 429072, guid: 4d118f82e12575845a852e9b79e3446d, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 429072, guid: 4d118f82e12575845a852e9b79e3446d, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 429072, guid: 4d118f82e12575845a852e9b79e3446d, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 19864674, guid: 4d118f82e12575845a852e9b79e3446d, type: 2}
+      propertyPath: CollisionModule.plane0
+      value: 
+      objectReference: {fileID: 125332884}
+    - target: {fileID: 19864674, guid: 4d118f82e12575845a852e9b79e3446d, type: 2}
+      propertyPath: CollisionModule.plane1
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4d118f82e12575845a852e9b79e3446d, type: 2}
+  m_IsPrefabParent: 0
