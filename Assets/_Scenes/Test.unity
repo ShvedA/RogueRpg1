@@ -220,7 +220,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1596371624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1.03999996, y: .529999971, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -238,6 +238,7 @@ GameObject:
   - 50: {fileID: 1755471176}
   - 95: {fileID: 1755471177}
   - 61: {fileID: 1755471178}
+  - 114: {fileID: 1755471175}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -303,6 +304,17 @@ MonoBehaviour:
   NumOfSpriteTurns: 0
   Round: 360
   Projectile: {fileID: 130972, guid: 2b5d88df57267ec47bec2cc073c82f44, type: 2}
+--- !u!114 &1755471175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1755471171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7a11007447e99545b08bc1f87f28f38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &1755471176
 Rigidbody2D:
   serializedVersion: 2
