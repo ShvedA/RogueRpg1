@@ -30,7 +30,7 @@ namespace Assets.Scripts
         private void Start()
         {
             _rb = GetComponent<Rigidbody2D>();
-            Sprites = AssetDatabase.LoadAllAssetRepresentationsAtPath("Assets/Sprites/tree_stable.png").OfType<Sprite>().ToArray();
+            Sprites = AssetDatabase.LoadAllAssetRepresentationsAtPath("Assets/Sprites/tree-8side.png").OfType<Sprite>().ToArray();
             ZeroVector = new Vector2(0, -1);
             NumOfSpriteTurns = 8;
         }
@@ -52,13 +52,15 @@ namespace Assets.Scripts
 
             if (Input.GetMouseButton(0))
             {
-                Fire(angle);
+                Fire();
             }
+
+            
 
             TurnCharacter(angle);
         }
 
-        private void Fire(double angle)
+        private void Fire()
         {
             var position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1);
             position = Camera.main.ScreenToWorldPoint(position);
@@ -72,9 +74,9 @@ namespace Assets.Scripts
             {
                 go.transform.Rotate(new Vector3(0, 0, 180 + Mathf.Atan(projectileVector.y / projectileVector.x) / Mathf.PI * 180));
             }
-            //go.transform.parent = transform;
+            go.transform.parent = transform;
             //go.transform.LookAt(position);
-            go.GetComponent<Rigidbody2D>().AddForce(Vector2.ClampMagnitude(projectileVector, 0.1f) * 10 * projectileSpeed);
+            go.GetComponent<Rigidbody2D>().AddForce(Vector2.ClampMagnitude(projectileVector, 0.01f) * 100 * projectileSpeed);
         }
 
         private double GetAngle(Vector2 vectorToCenter)
