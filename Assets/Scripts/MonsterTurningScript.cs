@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TurningAroundScript : MonoBehaviour {
+public class MonsterTurningScript : MonoBehaviour {
 
     private Texture2D[] Skins;
 
@@ -17,22 +17,23 @@ public class TurningAroundScript : MonoBehaviour {
 
     private double Round = 360;
 
-    void Start () {
+    public GameObject character;
+
+    void Start()
+    {
 
         _rb = GetComponent<Rigidbody2D>();
 
     }
-	
 
-	void Update () {
 
-        Vector3 pz = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        pz.z = 0;
-        Vector2 mouse = new Vector2(pz.x, pz.y);
+    void Update()
+    {
 
-        Vector2 vectorToCenter = new Vector2(mouse.x - _rb.position.x, mouse.y - _rb.position.y);
+        var position = character.transform.position;
+        Vector2 lol = new Vector2(position.x - transform.position.x, position.y - transform.position.y);
 
-        double angle = GetAngle(vectorToCenter);
+        double angle = GetAngle(lol);
 
         TurnCharacter(angle);
 
@@ -76,5 +77,4 @@ public class TurningAroundScript : MonoBehaviour {
         Left = 6,
         LeftDown = 7
     }
-
 }
