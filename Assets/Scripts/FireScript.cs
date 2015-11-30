@@ -7,6 +7,10 @@ public class FireScript : MonoBehaviour {
 
     public GameObject Projectile;
 
+    public GameObject Particles;
+
+    public float particleSpeed;
+
     void Start () {
 	
 	}
@@ -15,9 +19,17 @@ public class FireScript : MonoBehaviour {
 
         if (Input.GetMouseButton(0))
         {
-            Fire();
+            //Fire();
         }
 
+    }
+
+    void LateUpdate()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            Fire2();
+        }
     }
 
     private void Fire()
@@ -38,6 +50,24 @@ public class FireScript : MonoBehaviour {
         go.transform.parent = transform;
         //go.transform.LookAt(position);
         go.GetComponent<Rigidbody2D>().AddForce(Vector2.ClampMagnitude(projectileVector, 0.001f) * 1000 * projectileSpeed);
+
+    }
+
+    private void Fire2()
+    {
+
+        ParticleSystem.Particle[] particles = new ParticleSystem.Particle[Particles.GetComponent<ParticleSystem>().particleCount];
+        int count = Particles.GetComponent<ParticleSystem>().GetParticles(particles);
+        var position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1);
+        position = Camera.main.ScreenToWorldPoint(position);
+        for (int i = 0; i < count; i++)
+        {
+
+            particles[i].velocity = new Vector3(position.x - transform.position.x, 0, position.y - transform.position.y) * particleSpeed;
+
+        }
+
+        Particles.GetComponent<ParticleSystem>().SetParticles(particles, count);
 
     }
 
