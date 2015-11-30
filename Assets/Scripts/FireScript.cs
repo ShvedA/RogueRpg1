@@ -30,6 +30,10 @@ public class FireScript : MonoBehaviour {
         {
             Fire2();
         }
+        if (Input.GetButton("Fire1"))
+            Particles.SetActive(true);
+        else if (Input.GetButtonUp("Fire1"))
+            Particles.SetActive(false);
     }
 
     private void Fire()
