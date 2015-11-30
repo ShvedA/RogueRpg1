@@ -239,6 +239,8 @@ GameObject:
   - 95: {fileID: 1755471177}
   - 61: {fileID: 1755471178}
   - 114: {fileID: 1755471175}
+  - 114: {fileID: 1755471179}
+  - 114: {fileID: 1755471180}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -296,14 +298,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 25
-  projectileSpeed: 1000
-  Skins: []
-  ActiveSkin: 0
-  ZeroVector: {x: 0, y: 0}
-  Sprites: []
-  NumOfSpriteTurns: 0
-  Round: 360
-  Projectile: {fileID: 130972, guid: 2b5d88df57267ec47bec2cc073c82f44, type: 2}
 --- !u!114 &1755471175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -361,6 +355,36 @@ BoxCollider2D:
   m_Offset: {x: 0, y: -.800000012}
   serializedVersion: 2
   m_Size: {x: 2, y: 2}
+--- !u!114 &1755471179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1755471171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0ea9feac2c8ee849b8a7d4fd6381de3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectileSpeed: 1000
+  Projectile: {fileID: 130972, guid: 2b5d88df57267ec47bec2cc073c82f44, type: 2}
+--- !u!114 &1755471180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1755471171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b95bbbe617930df4f9b3f67925c5a347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Skins: []
+  ActiveSkin: 0
+  ZeroVector: {x: 0, y: 0}
+  Sprites: []
+  NumOfSpriteTurns: 0
+  Round: 360
 --- !u!1 &1813067375
 GameObject:
   m_ObjectHideFlags: 0
