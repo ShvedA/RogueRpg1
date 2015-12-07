@@ -89,6 +89,60 @@ NavMeshSettings:
 Transform:
   m_PrefabParentObject: {fileID: 473360, guid: feff8fa6097a818459750f42032ea0c1, type: 2}
   m_PrefabInternal: {fileID: 1504013713}
+--- !u!1001 &197984278
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 418206, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 418206, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 418206, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 418206, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 418206, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 418206, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 418206, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 418206, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11499698, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 1755471171}
+    - target: {fileID: 11427126, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 1755471171}
+    - target: {fileID: 118274, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
+      propertyPath: m_Name
+      value: Spider
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &603421948
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,60 +187,6 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 159536, guid: feff8fa6097a818459750f42032ea0c1, type: 2}
   m_PrefabInternal: {fileID: 1504013713}
---- !u!1001 &1453797180
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 418206, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 418206, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 418206, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 418206, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 418206, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 418206, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 418206, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 418206, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 11427126, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
-      propertyPath: character
-      value: 
-      objectReference: {fileID: 1755471171}
-    - target: {fileID: 11499698, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
-      propertyPath: character
-      value: 
-      objectReference: {fileID: 1755471171}
-    - target: {fileID: 11499698, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
-      propertyPath: filePath
-      value: Assets/Sprites/spider.png
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1001 &1504013713
 Prefab:
   m_ObjectHideFlags: 0

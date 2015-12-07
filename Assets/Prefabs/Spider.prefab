@@ -16,7 +16,7 @@ GameObject:
   - 114: {fileID: 11462854}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,10 +84,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 118274}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 543f3d6a775e987459f4fa823b2efec9, type: 3}
+  m_Script: {fileID: 11500000, guid: 5bee59bd2a58910438b963d76ce3d68c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 100
 --- !u!114 &11499698
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -99,15 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9f311c2dda5150419adfe8ca7f1a4b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sprites:
-  - {fileID: 21300016, guid: 95a24991311cfa04ca15008531f06ce1, type: 3}
-  - {fileID: 21300018, guid: 95a24991311cfa04ca15008531f06ce1, type: 3}
-  - {fileID: 21300020, guid: 95a24991311cfa04ca15008531f06ce1, type: 3}
-  - {fileID: 21300022, guid: 95a24991311cfa04ca15008531f06ce1, type: 3}
-  - {fileID: 21300024, guid: 95a24991311cfa04ca15008531f06ce1, type: 3}
-  - {fileID: 21300026, guid: 95a24991311cfa04ca15008531f06ce1, type: 3}
-  - {fileID: 21300028, guid: 95a24991311cfa04ca15008531f06ce1, type: 3}
-  - {fileID: 21300030, guid: 95a24991311cfa04ca15008531f06ce1, type: 3}
+  filePath: Assets/Sprites/spider.png
   character: {fileID: 0}
 --- !u!212 &21226478
 SpriteRenderer:
@@ -146,6 +137,10 @@ Prefab:
       propertyPath: newOne
       value: 
       objectReference: {fileID: 118274}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: Monster
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 118274}
