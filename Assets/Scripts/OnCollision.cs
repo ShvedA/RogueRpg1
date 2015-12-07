@@ -5,7 +5,7 @@ namespace Assets.Scripts
 {
     public class OnCollision : MonoBehaviour {
 
-        public float damage;
+        public float Damage;
 
         void OnCollisionEnter2D(Collision2D col)
         {
