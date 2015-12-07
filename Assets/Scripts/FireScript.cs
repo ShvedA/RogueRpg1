@@ -26,7 +26,7 @@ public class FireScript : MonoBehaviour {
 
     void LateUpdate()
     {
-        /*
+        /* TODO: Sanja, sdelai normaljno.
         if (Input.GetMouseButton(0))
         {
             Fire2();
