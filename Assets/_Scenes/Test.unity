@@ -180,6 +180,10 @@ Prefab:
       propertyPath: character
       value: 
       objectReference: {fileID: 1755471171}
+    - target: {fileID: 11499698, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
+      propertyPath: filePath
+      value: Assets/Sprites/spider.png
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
   m_IsPrefabParent: 0

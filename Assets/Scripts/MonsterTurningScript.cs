@@ -1,5 +1,8 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
+using System.Linq;
+using UnityEditor;
 
 public class MonsterTurningScript : MonoBehaviour {
 
@@ -11,7 +14,9 @@ public class MonsterTurningScript : MonoBehaviour {
 
     private Vector2 ZeroVector = new Vector2(0, -1);
 
-    public Sprite[] Sprites;
+    private Sprite[] Sprites;
+
+    public String filePath = "Assets/Sprites/spider.png";
 
     private int NumOfSpriteTurns = 8;
 
@@ -23,6 +28,7 @@ public class MonsterTurningScript : MonoBehaviour {
     {
 
         _rb = GetComponent<Rigidbody2D>();
+        Sprites = AssetDatabase.LoadAllAssetRepresentationsAtPath(filePath).OfType<Sprite>().ToArray();
 
     }
 
@@ -66,15 +72,4 @@ public class MonsterTurningScript : MonoBehaviour {
         _rb.GetComponent<SpriteRenderer>().sprite = Sprites[newSprite];
     }
 
-    public enum MoveSprite
-    {
-        Down = 0,
-        RightDown = 1,
-        Right = 2,
-        RightUp = 3,
-        Up = 4,
-        LeftUp = 5,
-        Left = 6,
-        LeftDown = 7
-    }
 }
