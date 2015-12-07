@@ -1,5 +1,7 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System;
+using UnityEngine;
+using System.Linq;
+using UnityEditor;
 
 public class TurningAroundScript : MonoBehaviour {
 
@@ -11,16 +13,18 @@ public class TurningAroundScript : MonoBehaviour {
 
     private Vector2 ZeroVector = new Vector2(0, -1);
 
-    public Sprite[] Sprites;
+    private Sprite[] Sprites;
 
-    private int NumOfSpriteTurns = 8;
+    public String filePath = "Assets/Sprites/tree-16side.png";
+
+    private int NumOfSpriteTurns = 16;
 
     private double Round = 360;
 
     void Start () {
 
         _rb = GetComponent<Rigidbody2D>();
-
+        Sprites = AssetDatabase.LoadAllAssetRepresentationsAtPath(filePath).OfType<Sprite>().ToArray();
     }
 	
 
@@ -63,18 +67,6 @@ public class TurningAroundScript : MonoBehaviour {
     private void ReplaceMatchingSprite(int newSprite)
     {
         _rb.GetComponent<SpriteRenderer>().sprite = Sprites[newSprite];
-    }
-
-    public enum MoveSprite
-    {
-        Down = 0,
-        RightDown = 1,
-        Right = 2,
-        RightUp = 3,
-        Up = 4,
-        LeftUp = 5,
-        Left = 6,
-        LeftDown = 7
     }
 
 }
