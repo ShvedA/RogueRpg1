@@ -5,7 +5,7 @@ namespace Assets.Scripts
 {
     public class OnCollision : MonoBehaviour {
 
-        public float damage;
+        public float Damage;
 
         void OnCollisionEnter2D(Collision2D col)
         {
@@ -14,11 +14,18 @@ namespace Assets.Scripts
                 {
                     Destroy(fire.otherCollider.gameObject);
                 }
+                /*foreach (var monster in col.contacts.Where(x => x.otherCollider.gameObject.tag == "monster"))
+                {
+                    monster.
+                }*/
             }
-            if (col.gameObject.GetComponent<LifeScript>() != null)
+            if (col.gameObject.tag == "Monster")
             {
-                col.gameObject.GetComponent<LifeScript>().life -= damage;
-            }
+                col.gameObject.GetComponent<Monster>().Damage(5);
+            } 
+
+
+                //col.gameObject.GetComponent<LifeScript>().life -= damage;
 
         }
 
