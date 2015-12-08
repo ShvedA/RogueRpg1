@@ -21,7 +21,7 @@ namespace Assets.Scripts
             }
             if (col.gameObject.tag == "Monster")
             {
-                col.gameObject.GetComponent<Monster>().Damage(5);
+                col.gameObject.GetComponent<Monster>().Damage((int)Damage);
             } 
 
 

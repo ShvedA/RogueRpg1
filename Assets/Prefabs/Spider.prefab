@@ -15,7 +15,7 @@ GameObject:
   - 114: {fileID: 11427126}
   - 114: {fileID: 11462854}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: Spider
   m_TagString: Monster
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,8 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9f311c2dda5150419adfe8ca7f1a4b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  filePath: Assets/Sprites/spider.png
-  character: {fileID: 0}
+  FilePath: Assets/Sprites/spider.png
+  Character: {fileID: 0}
 --- !u!212 &21226478
 SpriteRenderer:
   m_ObjectHideFlags: 1
