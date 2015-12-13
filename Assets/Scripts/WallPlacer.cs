@@ -1,19 +1,26 @@
-﻿using UnityEngine;
+﻿using System.Linq.Expressions;
+using UnityEngine;
 
 namespace Assets.Scripts
 {
     public class WallPlacer : MonoBehaviour {
+        private const int Width = 22;
+        private const int Height = 10;
 
         public GameObject Brick;
-        /*
         void Start()
         {
-        
-            for (int x = -22; x <= 22; x++)
+            //CreateRectangleField();
+            RandomSquaresAroundTheMap();
+        }
+
+        private void CreateRectangleField()
+        {
+            for (int x = -Width; x <= Width; x++)
             {
-                for (int y = -10; y <= 10; y++)
+                for (int y = -Height; y <= Height; y++)
                 {
-                    if (x == -22 || x == 22 || y == -10 || y == 10)
+                    if (x == -Width || x == Width || y == -Height || y == Height)
                     {
                         GameObject each = Instantiate(Brick, new Vector3(x, y, 0), Quaternion.identity) as GameObject;
                         each.transform.parent = transform;
@@ -21,8 +28,8 @@ namespace Assets.Scripts
                 }
             }
         }
-        */
-        void Start()
+
+        private void RandomSquaresAroundTheMap()
         {
             for (int i = 0; i < 100; i++)
             {
@@ -30,6 +37,5 @@ namespace Assets.Scripts
                 each.transform.parent = transform;
             }
         }
-
     }
 }

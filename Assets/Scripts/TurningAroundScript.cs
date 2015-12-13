@@ -33,7 +33,7 @@ namespace Assets.Scripts
         void Update () {
 
             Vector3 pz = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            pz.z = 0;
+
             Vector2 mouse = new Vector2(pz.x, pz.y);
 
             Vector2 vectorToCenter = new Vector2(mouse.x - _rb.position.x, mouse.y - _rb.position.y);

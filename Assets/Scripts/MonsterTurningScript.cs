@@ -27,23 +27,19 @@ namespace Assets.Scripts
 
         void Start()
         {
-
             _rb = GetComponent<Rigidbody2D>();
             _sprites = AssetDatabase.LoadAllAssetRepresentationsAtPath(FilePath).OfType<Sprite>().ToArray();
-
         }
 
 
         void Update()
         {
-
             var position = Character.transform.position;
             Vector2 lol = new Vector2(position.x - transform.position.x, position.y - transform.position.y);
 
             double angle = GetAngle(lol);
 
             TurnCharacter(angle);
-
         }
 
         private double GetAngle(Vector2 vectorToCenter)
@@ -72,6 +68,5 @@ namespace Assets.Scripts
         {
             _rb.GetComponent<SpriteRenderer>().sprite = _sprites[newSprite];
         }
-
     }
 }

@@ -15,10 +15,7 @@ namespace Assets.Scripts
                 Instantiate(gameObject, gameObject.transform.position, gameObject.transform.rotation);
                 Instantiate(gameObject, gameObject.transform.position, gameObject.transform.rotation);
 
-                //Instantiate(gameObject, transform.position, Quaternion.identity);
-
                 Destroy(gameObject);
-                //Spider spider = new Spider();
             }
         }
     }

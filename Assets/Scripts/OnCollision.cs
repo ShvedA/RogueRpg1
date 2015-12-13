@@ -14,20 +14,11 @@ namespace Assets.Scripts
                 {
                     Destroy(fire.otherCollider.gameObject);
                 }
-                /*foreach (var monster in col.contacts.Where(x => x.otherCollider.gameObject.tag == "monster"))
-                {
-                    monster.
-                }*/
             }
             if (col.gameObject.tag == "Monster")
             {
                 col.gameObject.GetComponent<Monster>().Damage((int)Damage);
             } 
-
-
-                //col.gameObject.GetComponent<LifeScript>().life -= damage;
-
         }
-
     }
 }

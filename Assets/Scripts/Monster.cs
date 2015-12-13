@@ -5,10 +5,8 @@ namespace Assets.Scripts
 {
     public abstract class Monster : MonoBehaviour
     {
-
         private int _health = 100;
         private double _speed;
-        //private double rotationSpeed;
         private int _attack;
 
         public Boolean IsDead()
@@ -20,6 +18,5 @@ namespace Assets.Scripts
         {
             _health -= damage;
         }
-
     }
 }
