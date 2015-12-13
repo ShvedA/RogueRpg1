@@ -352,7 +352,6 @@ GameObject:
   - 50: {fileID: 1755471176}
   - 95: {fileID: 1755471177}
   - 61: {fileID: 1755471178}
-  - 114: {fileID: 1755471175}
   - 114: {fileID: 1755471179}
   - 114: {fileID: 1755471180}
   m_Layer: 0
@@ -414,18 +413,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 25
---- !u!114 &1755471175
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1755471171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7a11007447e99545b08bc1f87f28f38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Damage: 1000
 --- !u!50 &1755471176
 Rigidbody2D:
   serializedVersion: 2
