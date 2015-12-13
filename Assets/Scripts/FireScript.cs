@@ -27,17 +27,18 @@ namespace Assets.Scripts
 
         void LateUpdate()
         {
-            /*
-        if (Input.GetMouseButton(0))
-        {
-            Fire2();
-        }
-        if (Input.GetButton("Fire1"))
-            Particles.GetComponent<ParticleSystem>().Play();
-        else if (Input.GetButtonUp("Fire1"))
-            Particles.GetComponent<ParticleSystem>().Pause();
-        */
-        }
+            /* TODO: Sanja, sdelai normaljno.
+
+            if (Input.GetMouseButton(0))
+            {
+                Fire2();
+            }
+            if (Input.GetButton("Fire1"))
+                Particles.GetComponent<ParticleSystem>().Play();
+            else if (Input.GetButtonUp("Fire1"))
+                Particles.GetComponent<ParticleSystem>().Pause();
+            */
+            }
 
         private void Fire()
         {

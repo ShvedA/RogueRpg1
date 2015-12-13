@@ -5,7 +5,7 @@ namespace Assets.Scripts
     public class WallPlacer : MonoBehaviour {
 
         public GameObject Brick;
-
+        /*
         void Start()
         {
         
@@ -21,5 +21,15 @@ namespace Assets.Scripts
                 }
             }
         }
+        */
+        void Start()
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                GameObject each = Instantiate(Brick, new Vector3((int)Random.Range(-30f, 30f), (int)Random.Range(-30f, 30f), 0), Quaternion.identity) as GameObject;
+                each.transform.parent = transform;
+            }
+        }
+
     }
 }

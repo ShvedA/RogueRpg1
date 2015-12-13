@@ -12,9 +12,13 @@ namespace Assets.Scripts
         void Update () {
             if (IsDead())
             {
+                Instantiate(gameObject, gameObject.transform.position, gameObject.transform.rotation);
+                Instantiate(gameObject, gameObject.transform.position, gameObject.transform.rotation);
+
+                //Instantiate(gameObject, transform.position, Quaternion.identity);
+
                 Destroy(gameObject);
-                Spider spider = new Spider();
-                Spider spider2 = new Spider();
+                //Spider spider = new Spider();
             }
         }
     }
