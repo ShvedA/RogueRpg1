@@ -228,7 +228,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 473360, guid: feff8fa6097a818459750f42032ea0c1, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 19848120, guid: feff8fa6097a818459750f42032ea0c1, type: 2}
       propertyPath: looping
@@ -397,8 +397,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
-  - {fileID: 125332884}
   - {fileID: 1813067380}
+  - {fileID: 125332884}
   m_Father: {fileID: 0}
   m_RootOrder: 1
 --- !u!114 &1755471174
@@ -571,7 +571,7 @@ Transform:
   m_LocalScale: {x: .333333343, y: .333333343, z: 1}
   m_Children: []
   m_Father: {fileID: 1755471173}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!1001 &2112092792
 Prefab:
   m_ObjectHideFlags: 0
