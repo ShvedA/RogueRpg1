@@ -4,11 +4,6 @@ namespace Assets.Scripts
 {
     public class Spider : Monster {
 
-        void Start()
-        {
-            transform.position = new Vector3(15f, 7f);
-        }
-
         protected override void OnDeath()
         {
             base.OnDeath();

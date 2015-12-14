@@ -8,7 +8,7 @@ namespace Assets.Scripts
         private int _health = 100;
         private double _speed;
         private int _attack;
-        private static int numOfMonsters = 1;
+        private static int _numOfMonsters = 1;
         public const int MaxNumOfMonsters = 100;
 
         protected virtual void Update()
@@ -27,7 +27,7 @@ namespace Assets.Scripts
 
         protected virtual void OnDeath()
         {
-            numOfMonsters--;
+            _numOfMonsters--;
         }
 
         public bool IsDead()
@@ -47,7 +47,7 @@ namespace Assets.Scripts
 
         public bool CanAddMonster()
         {
-            if (MaxNumOfMonsters > numOfMonsters)
+            if (MaxNumOfMonsters > _numOfMonsters)
             {
                 return true;
             }
@@ -56,8 +56,8 @@ namespace Assets.Scripts
 
         public void CreateNewMonster()
         {
-            Instantiate(gameObject, gameObject.transform.position, gameObject.transform.rotation);
-            numOfMonsters++;
+            Instantiate(gameObject, gameObject.transform.localPosition, gameObject.transform.localRotation);
+            _numOfMonsters++;
         }
 
     }
