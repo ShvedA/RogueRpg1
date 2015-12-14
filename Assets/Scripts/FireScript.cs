@@ -15,12 +15,17 @@ namespace Assets.Scripts
         void Start () {
 	
         }
-	
+
         void Update () {
             if (Input.GetMouseButton(0))
             {
                 Fire3();
             }
+            if (Input.GetButton("Fire1"))
+                Particles.GetComponent<ParticleSystem>().Play();
+            else if (Input.GetButtonUp("Fire1"))
+                Particles.GetComponent<ParticleSystem>().Stop();
+            
         }
 
         private void Fire()
@@ -40,21 +45,6 @@ namespace Assets.Scripts
             }
             go.transform.parent = transform;
             go.GetComponent<Rigidbody2D>().AddForce(Vector2.ClampMagnitude(projectileVector, 0.001f) * 1000 * ProjectileSpeed);
-        }
-
-        private void Fire2()
-        {
-
-            ParticleSystem.Particle[] particles = new ParticleSystem.Particle[Particles.GetComponent<ParticleSystem>().particleCount];
-            int count = Particles.GetComponent<ParticleSystem>().GetParticles(particles);
-            var position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1);
-            position = Camera.main.ScreenToWorldPoint(position);
-            for (int i = 0; i < count; i++)
-            {
-                particles[i].velocity = new Vector3(position.x - transform.position.x, 0, position.y - transform.position.y) * ParticleSpeed;
-            }
-
-            Particles.GetComponent<ParticleSystem>().SetParticles(particles, count);
         }
 
         private void Fire3()
