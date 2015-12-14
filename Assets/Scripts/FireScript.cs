@@ -12,7 +12,7 @@ namespace Assets.Scripts
 
         public float ParticleSpeed;
 
-        private float arc;
+        private float _arc;
 
         private static readonly Vector2 ZeroVector = new Vector2(1, 0);
 
@@ -20,11 +20,7 @@ namespace Assets.Scripts
         {
 
             UnityEditor.SerializedObject so = new UnityEditor.SerializedObject(Particles.GetComponent<ParticleSystem>());
-            /*
-            UnityEditor.SerializedProperty it = so.GetIterator();
-            while (it.Next(true))
-                Debug.Log(it.propertyPath);*/
-            arc = so.FindProperty("ShapeModule.arc").floatValue;
+            _arc = so.FindProperty("ShapeModule.arc").floatValue;
         }
 
         void Update () {
@@ -72,7 +68,7 @@ namespace Assets.Scripts
             var position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1);
             position = Camera.main.ScreenToWorldPoint(position);
             var projectileVector = new Vector2(position.x - transform.position.x, position.y - transform.position.y);
-            Particles.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, GetAngle(projectileVector) - arc / 2);
+            Particles.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, GetAngle(projectileVector) - _arc / 2);
 
         }
 

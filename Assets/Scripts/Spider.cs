@@ -9,14 +9,20 @@ namespace Assets.Scripts
             transform.position = new Vector3(15f, 7f);
         }
 
-        void Update () {
-            if (IsDead())
+        protected override void OnDeath()
+        {
+            base.OnDeath();
+            if (CanAddMonster())
             {
-                Instantiate(gameObject, gameObject.transform.position, gameObject.transform.rotation);
-                Instantiate(gameObject, gameObject.transform.position, gameObject.transform.rotation);
-
-                Destroy(gameObject);
+                CreateNewMonster();
+                CreateNewMonster();
+            }
+            else
+            {
+                Debug.LogWarning("Too much monsters, can't create another one");
             }
         }
+
+
     }
 }
