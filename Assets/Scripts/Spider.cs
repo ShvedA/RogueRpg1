@@ -9,20 +9,25 @@ namespace Assets.Scripts
             transform.position = new Vector3(15f, 7f);
         }
 
-        void Update () {
-            if (IsDead())
+        private void Update()
+        {
+            CheckForDeath();
+        }
+
+        protected override void OnDeath()
+        {
+            base.OnDeath();
+            if (CanAddMonster())
             {
-
-                if (CanAddMonster())
-                {
-                    CreateNewSpider();
-                    CreateNewSpider();
-                }
-
-                Die();
+                CreateNewMonster();
+                CreateNewMonster();
+            }
+            else
+            {
+                Debug.LogWarning("Too much monsters, can't create another one");
             }
         }
 
-        
+
     }
 }

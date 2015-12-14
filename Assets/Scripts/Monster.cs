@@ -11,7 +11,21 @@ namespace Assets.Scripts
         private static int numOfMonsters = 1;
         public const int MaxNumOfMonsters = 100;
 
-        public Boolean IsDead()
+        public void CheckForDeath()
+        {
+            if (_health <= 0)
+            {
+                OnDeath();
+                Die();
+            }
+        }
+
+        protected virtual void OnDeath()
+        {
+            numOfMonsters--;
+        }
+
+        public bool IsDead()
         {
             return _health <= 0;
         }
@@ -23,7 +37,6 @@ namespace Assets.Scripts
 
         public void Die()
         {
-            numOfMonsters--;
             Destroy(gameObject);
         }
 
@@ -36,7 +49,7 @@ namespace Assets.Scripts
             return false;
         }
 
-        public void CreateNewSpider()
+        public void CreateNewMonster()
         {
             Instantiate(gameObject, gameObject.transform.position, gameObject.transform.rotation);
             numOfMonsters++;
