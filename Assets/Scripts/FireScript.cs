@@ -67,7 +67,5 @@ namespace Assets.Scripts
                 Particles.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 180 + Mathf.Atan(projectileVector.y / projectileVector.x) / Mathf.PI * 180 - _arc / 2);
             }
         }
-
-
     }
 }
