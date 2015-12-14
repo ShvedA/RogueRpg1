@@ -12,11 +12,17 @@ namespace Assets.Scripts
         void Update () {
             if (IsDead())
             {
-                Instantiate(gameObject, gameObject.transform.position, gameObject.transform.rotation);
-                Instantiate(gameObject, gameObject.transform.position, gameObject.transform.rotation);
 
-                Destroy(gameObject);
+                if (CanAddMonster())
+                {
+                    CreateNewSpider();
+                    CreateNewSpider();
+                }
+
+                Die();
             }
         }
+
+        
     }
 }
