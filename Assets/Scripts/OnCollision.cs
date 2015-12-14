@@ -3,9 +3,17 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-    public class OnCollision : MonoBehaviour {
+    public class OnCollision : MonoBehaviour
+    {
+
+        public GameObject Character;
 
         public float Damage;
+
+        void Awale()
+        {
+            //Physics2D.IgnoreCollision(Character.GetComponent<Collider2D>(), GetComponent<ParticleSystem>());
+        }
 
         void OnCollisionEnter2D(Collision2D col)
         {
@@ -19,6 +27,14 @@ namespace Assets.Scripts
             {
                 col.gameObject.GetComponent<Monster>().Damage((int)Damage);
             } 
+        }
+
+        void OnParticleCollision(GameObject col)
+        {
+            if (col.gameObject.tag == "Monster")
+            {
+                col.gameObject.GetComponent<Monster>().Damage((int)Damage);
+            }
         }
     }
 }

@@ -4,14 +4,14 @@ using UnityEngine;
 namespace Assets.Scripts
 {
     public class WallPlacer : MonoBehaviour {
-        private const int Width = 22;
-        private const int Height = 10;
+        private const int Width = 50;
+        private const int Height = 50;
 
         public GameObject Brick;
         void Start()
         {
-            //CreateRectangleField();
-            RandomSquaresAroundTheMap();
+            CreateRectangleField();
+            //RandomSquaresAroundTheMap();
         }
 
         private void CreateRectangleField()
