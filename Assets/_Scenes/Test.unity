@@ -191,6 +191,18 @@ Transform:
 GameObject:
   m_PrefabParentObject: {fileID: 159536, guid: feff8fa6097a818459750f42032ea0c1, type: 2}
   m_PrefabInternal: {fileID: 1504013713}
+--- !u!114 &1397165131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1397165128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7a11007447e99545b08bc1f87f28f38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Damage: 1
 --- !u!1001 &1504013713
 Prefab:
   m_ObjectHideFlags: 0
@@ -208,11 +220,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 473360, guid: feff8fa6097a818459750f42032ea0c1, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -1.39999998
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 473360, guid: feff8fa6097a818459750f42032ea0c1, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -.707106829
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 473360, guid: feff8fa6097a818459750f42032ea0c1, type: 2}
       propertyPath: m_LocalRotation.y
@@ -224,63 +236,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 473360, guid: feff8fa6097a818459750f42032ea0c1, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .707106829
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 473360, guid: feff8fa6097a818459750f42032ea0c1, type: 2}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 19848120, guid: feff8fa6097a818459750f42032ea0c1, type: 2}
-      propertyPath: looping
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 19848120, guid: feff8fa6097a818459750f42032ea0c1, type: 2}
-      propertyPath: prewarm
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 159536, guid: feff8fa6097a818459750f42032ea0c1, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 19848120, guid: feff8fa6097a818459750f42032ea0c1, type: 2}
-      propertyPath: VelocityModule.enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 19848120, guid: feff8fa6097a818459750f42032ea0c1, type: 2}
-      propertyPath: ForceModule.enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 19848120, guid: feff8fa6097a818459750f42032ea0c1, type: 2}
-      propertyPath: ClampVelocityModule.enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 19848120, guid: feff8fa6097a818459750f42032ea0c1, type: 2}
-      propertyPath: VelocityModule.x.scalar
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 19848120, guid: feff8fa6097a818459750f42032ea0c1, type: 2}
-      propertyPath: VelocityModule.y.scalar
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 19848120, guid: feff8fa6097a818459750f42032ea0c1, type: 2}
-      propertyPath: VelocityModule.z.scalar
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 19848120, guid: feff8fa6097a818459750f42032ea0c1, type: 2}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 19848120, guid: feff8fa6097a818459750f42032ea0c1, type: 2}
-      propertyPath: UVModule.enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 19848120, guid: feff8fa6097a818459750f42032ea0c1, type: 2}
-      propertyPath: RotationBySpeedModule.curve.scalar
-      value: .785398126
-      objectReference: {fileID: 0}
-    - target: {fileID: 19848120, guid: feff8fa6097a818459750f42032ea0c1, type: 2}
-      propertyPath: RotationModule.curve.scalar
-      value: .785398126
+      propertyPath: m_Name
+      value: Flamethrower
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: feff8fa6097a818459750f42032ea0c1, type: 2}
@@ -621,7 +585,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 149800, guid: 4d118f82e12575845a852e9b79e3446d, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4d118f82e12575845a852e9b79e3446d, type: 2}
