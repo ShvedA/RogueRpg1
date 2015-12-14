@@ -11,6 +11,11 @@ namespace Assets.Scripts
         private static int numOfMonsters = 1;
         public const int MaxNumOfMonsters = 100;
 
+        protected virtual void Update()
+        {
+            CheckForDeath();
+        }
+
         public void CheckForDeath()
         {
             if (_health <= 0)

@@ -9,11 +9,6 @@ namespace Assets.Scripts
             transform.position = new Vector3(15f, 7f);
         }
 
-        private void Update()
-        {
-            CheckForDeath();
-        }
-
         protected override void OnDeath()
         {
             base.OnDeath();
