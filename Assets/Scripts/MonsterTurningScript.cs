@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using Assets.Scripts.Helper;
 using UnityEditor;
 using UnityEngine;
 
@@ -13,15 +14,11 @@ namespace Assets.Scripts
 
         private Rigidbody2D _rb;
 
-        private static readonly Vector2 ZeroVector = new Vector2(0, -1);
-
         private Sprite[] _sprites;
 
         public String FilePath = "Assets/Sprites/spider.png";
 
         private const int NumOfSpriteTurns = 8;
-
-        private const double Round = 360;
 
         public GameObject Character;
 
@@ -35,28 +32,17 @@ namespace Assets.Scripts
         void Update()
         {
             var position = Character.transform.position;
-            Vector2 lol = new Vector2(position.x - transform.position.x, position.y - transform.position.y);
+            Vector2 vectorFromCenter = new Vector2(position.x - transform.position.x, position.y - transform.position.y);
 
-            double angle = GetAngle(lol);
+            double angle = AngleHelper.GetAngleForTurningAround(vectorFromCenter);
 
             TurnCharacter(angle);
         }
 
-        private double GetAngle(Vector2 vectorToCenter)
-        {
-            double angle = Vector2.Angle(vectorToCenter, ZeroVector);
-
-            if (vectorToCenter.x < 0)
-            {
-                angle = 360 - angle;
-            }
-            return angle;
-        }
-
         private void TurnCharacter(double angle)
         {
-            double angleFromSectorBeginning = angle + (Round / NumOfSpriteTurns) / 2;
-            int spriteNum = (int)(angleFromSectorBeginning / (Round / NumOfSpriteTurns));
+            double angleFromSectorBeginning = angle + (Constants.Round / NumOfSpriteTurns) / 2;
+            int spriteNum = (int)(angleFromSectorBeginning / (Constants.Round / NumOfSpriteTurns));
             if (spriteNum < 0 || spriteNum == NumOfSpriteTurns)
             {
                 spriteNum = 0;

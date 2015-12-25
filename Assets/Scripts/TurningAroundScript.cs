@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using Assets.Scripts.Helper;
 using UnityEditor;
 using UnityEngine;
 
@@ -13,15 +14,11 @@ namespace Assets.Scripts
 
         private Rigidbody2D _rb;
 
-        private static readonly Vector2 ZeroVector = new Vector2(0, -1);
-
         private Sprite[] _sprites;
 
         public String FilePath = "Assets/Sprites/tree-16side.png";
 
         private const int NumOfSpriteTurns = 16;
-
-        private const double Round = 360;
 
         void Start () {
 
@@ -36,29 +33,18 @@ namespace Assets.Scripts
 
             Vector2 mouse = new Vector2(pz.x, pz.y);
 
-            Vector2 vectorToCenter = new Vector2(mouse.x - _rb.position.x, mouse.y - _rb.position.y);
+            Vector2 vectorFromCenter = new Vector2(mouse.x - _rb.position.x, mouse.y - _rb.position.y);
 
-            double angle = GetAngle(vectorToCenter);
+            double angle = AngleHelper.GetAngleForTurningAround(vectorFromCenter);
 
             TurnCharacter(angle);
 
         }
 
-        private double GetAngle(Vector2 vectorToCenter)
-        {
-            double angle = Vector2.Angle(vectorToCenter, ZeroVector);
-
-            if (vectorToCenter.x < 0)
-            {
-                angle = 360 - angle;
-            }
-            return angle;
-        }
-
         private void TurnCharacter(double angle)
         {
-            double angleFromSectorBeginning = angle + (Round / NumOfSpriteTurns) / 2;
-            int spriteNum = (int)(angleFromSectorBeginning / (Round / NumOfSpriteTurns));
+            double angleFromSectorBeginning = angle + (Constants.Round / NumOfSpriteTurns) / 2;
+            int spriteNum = (int)(angleFromSectorBeginning / (Constants.Round / NumOfSpriteTurns));
             if (spriteNum < 0 || spriteNum == NumOfSpriteTurns)
             {
                 spriteNum = 0;
