@@ -128,38 +128,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11499698, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
-      propertyPath: character
-      value: 
-      objectReference: {fileID: 1755471171}
-    - target: {fileID: 11427126, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
-      propertyPath: character
-      value: 
-      objectReference: {fileID: 1755471171}
-    - target: {fileID: 118274, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
-      propertyPath: m_Name
-      value: Spider
-      objectReference: {fileID: 0}
-    - target: {fileID: 11499698, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
-      propertyPath: Character
-      value: 
-      objectReference: {fileID: 1755471171}
-    - target: {fileID: 11427126, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
-      propertyPath: Speed
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 118274, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 11427126, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
       propertyPath: Character
       value: 
       objectReference: {fileID: 1755471171}
-    - target: {fileID: 11427126, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
-      propertyPath: Life
-      value: 2
-      objectReference: {fileID: 0}
+    - target: {fileID: 11499698, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
+      propertyPath: Character
+      value: 
+      objectReference: {fileID: 1755471171}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
   m_IsPrefabParent: 0
@@ -190,6 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329c29415bc60384bba7b05f7ab0c48d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mapOffset: 5
   Brick: {fileID: 120498, guid: f1e4851cf4974d2469f352b5a5750e23, type: 2}
 --- !u!4 &603421950
 Transform:
@@ -529,10 +506,9 @@ GameObject:
   - 114: {fileID: 1755471174}
   - 50: {fileID: 1755471176}
   - 95: {fileID: 1755471177}
-  - 61: {fileID: 1755471178}
   - 114: {fileID: 1755471179}
   - 114: {fileID: 1755471180}
-  - 114: {fileID: 1755471175}
+  - 58: {fileID: 1755471175}
   m_Layer: 8
   m_Name: Character
   m_TagString: Untagged
@@ -578,7 +554,7 @@ Transform:
   m_GameObject: {fileID: 1755471171}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1813067380}
   - {fileID: 125332884}
@@ -595,37 +571,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fca1d3d30449794b9ca2a464ca6f496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 25
---- !u!114 &1755471175
-MonoBehaviour:
+  Speed: 15
+--- !u!58 &1755471175
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1755471171}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1862395651, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Delegates:
-  - eventID: 7
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1813067379}
-          m_MethodName: set_depth
-          m_Mode: 4
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 500
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 1
-      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
-        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  delegates: []
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: -0.3}
+  serializedVersion: 2
+  m_Radius: 0.4
 --- !u!50 &1755471176
 Rigidbody2D:
   serializedVersion: 2
@@ -660,20 +620,6 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!61 &1755471178
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1755471171}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0.02, y: -0.3}
-  serializedVersion: 2
-  m_Size: {x: 0.8, y: 0.5}
 --- !u!114 &1755471179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -757,7 +703,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 12.676485
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
