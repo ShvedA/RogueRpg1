@@ -19,48 +19,62 @@ namespace Assets.Scripts.Helper
         {
             MapWidth = 40;
             MapHeight = 21;
-            PercentAreWalls = 40;
+            PercentAreWalls = 80;
 
             RandomFillMap();
         }
 
         public void MakeCaverns()
         {
-            // By initilizing column in the outter loop, its only created ONCE
+            int[,] TempMap = BlankMap();
             for (int column = 0, row = 0; row <= MapHeight - 1; row++)
             {
                 for (column = 0; column <= MapWidth - 1; column++)
                 {
-                    Map[column, row] = PlaceWallLogic(column, row);
+                    
+                    TempMap[column, row] = PlaceWallLogic(column, row);
                 }
             }
+            Map = TempMap;
+        }
+
+        public void FillHugeSpaces()
+        {
+            int[,] TempMap = BlankMap();
+            for (int column = 0, row = 0; row <= MapHeight - 1; row++)
+            {
+                for (column = 0; column <= MapWidth - 1; column++)
+                {
+                    TempMap[column, row] = FillSpaceLogic(column, row);
+                }
+            }
+            Map = TempMap;
+        }
+
+        public int FillSpaceLogic(int x, int y)
+        {
+            if (Map[x, y] == 1)
+            {
+                return 1;
+            }
+            int numWalls = GetAdjacentWalls(x, y, 2, 2);
+
+            if (numWalls <= 2)
+            {
+                return 1;
+            }
+                return 0;
         }
 
         public int PlaceWallLogic(int x, int y)
         {
             int numWalls = GetAdjacentWalls(x, y, 1, 1);
 
-
-            if (Map[x, y] == 1)
+            if (numWalls >= 5)
             {
-                if (numWalls >= 4)
-                {
-                    return 1;
-                }
-                if (numWalls < 2)
-                {
-                    return 0;
-                }
-
+                return 1;
             }
-            else
-            {
-                if (numWalls >= 5)
-                {
-                    return 1;
-                }
-            }
-            return 0;
+                return 0;
         }
 
         public int GetAdjacentWalls(int x, int y, int scopeX, int scopeY)
@@ -79,12 +93,9 @@ namespace Assets.Scripts.Helper
             {
                 for (iX = startX; iX <= endX; iX++)
                 {
-                    if (!(iX == x && iY == y))
+                    if (IsWall(iX, iY))
                     {
-                        if (IsWall(iX, iY))
-                        {
-                            wallCounter += 1;
-                        }
+                        wallCounter += 1;
                     }
                 }
             }
@@ -123,92 +134,60 @@ namespace Assets.Scripts.Helper
             }
             return false;
         }
-        /*
-        public void PrintMap()
+
+        bool IsEdge(int column, int row)
         {
-            Console.Clear();
-            Console.Write(MapToString());
+            if (column == 0)
+            {
+                return true;
+            }
+            else if (row == 0)
+            {
+                return true;
+            }
+            else if (column == MapWidth - 1)
+            {
+                return true;
+            }
+            else if (row == MapHeight - 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
-        string MapToString()
+        public int[,] BlankMap()
         {
-            string returnString = string.Join(" ", // Seperator between each element
-                                              "Width:",
-                                              MapWidth.ToString(),
-                                              "\tHeight:",
-                                              MapHeight.ToString(),
-                                              "\t% Walls:",
-                                              PercentAreWalls.ToString(),
-                                              Environment.NewLine
-                                             );
-
-            List<string> mapSymbols = new List<string>();
-            mapSymbols.Add(".");
-            mapSymbols.Add("#");
-            mapSymbols.Add("+");
-
+            int [,] TempMap = new int[this.MapWidth, this.MapHeight];
             for (int column = 0, row = 0; row < MapHeight; row++)
             {
                 for (column = 0; column < MapWidth; column++)
                 {
-                    returnString += mapSymbols[Map[column, row]];
-                }
-                returnString += Environment.NewLine;
-            }
-            return returnString;
-        }
-        */
-        public void BlankMap()
-        {
-            for (int column = 0, row = 0; row < MapHeight; row++)
-            {
-                for (column = 0; column < MapWidth; column++)
-                {
-                    Map[column, row] = 0;
+                    TempMap[column, row] = 0;
                 }
             }
+            return TempMap;
         }
 
         public void RandomFillMap()
         {
-            // New, empty map
-            Map = new int[MapWidth, MapHeight];
 
-            int mapMiddle = 0; // Temp variable
             for (int column = 0, row = 0; row < MapHeight; row++)
             {
                 for (column = 0; column < MapWidth; column++)
                 {
                     // If coordinants lie on the the edge of the map (creates a border)
-                    if (column == 0)
-                    {
-                        Map[column, row] = 1;
-                    }
-                    else if (row == 0)
-                    {
-                        Map[column, row] = 1;
-                    }
-                    else if (column == MapWidth - 1)
-                    {
-                        Map[column, row] = 1;
-                    }
-                    else if (row == MapHeight - 1)
+                    if (IsEdge(column, row))
                     {
                         Map[column, row] = 1;
                     }
                     // Else, fill with a wall a random percent of the time
                     else
                     {
-                        mapMiddle = (MapHeight / 2);
-                        
-                        if (row == mapMiddle)
-                        {
-                            Map[column, row] = 0;
-                        }
-                        else
-                        {
-                            Map[column, row] = RandomPercent(PercentAreWalls);
-                        }
+                        Map[column, row] = RandomPercent(PercentAreWalls);
                     }
                 }
             }
@@ -220,10 +199,10 @@ namespace Assets.Scripts.Helper
             {
                 return 1;
             }
-            return 0;
+                return 0;
         }
 
-        public MapHandler(int mapWidth, int mapHeight, int seed, int percentWalls = 40)
+        public MapHandler(int mapWidth, int mapHeight, int seed, int percentWalls = 45)
         {
             Random.seed = seed;
             this.MapWidth = mapWidth;

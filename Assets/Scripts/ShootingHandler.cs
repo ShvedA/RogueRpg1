@@ -15,10 +15,13 @@ namespace Assets.Scripts
         }
 	
         void Update () {
+            if (Input.GetButtonDown("Fire1"))
+            {
+                _shootingScript.Play();
+            }
             if (Input.GetButton("Fire1"))
             {
                 _shootingScript.ShootPartice();
-                _shootingScript.Play();
             }
             if (Input.GetButtonUp("Fire1"))
             {
