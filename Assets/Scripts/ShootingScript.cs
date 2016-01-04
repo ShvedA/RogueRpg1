@@ -7,25 +7,31 @@ namespace Assets.Scripts
 
         private float _particleSpeed;
 
+        private ParticleSystem _particleSystem;
+
         private float _arc;
 
-        private void Awake()
+        public void Init()
         {
             UnityEditor.SerializedObject so = new UnityEditor.SerializedObject(gameObject.GetComponent<ParticleSystem>());
             _arc = so.FindProperty("ShapeModule.arc").floatValue;
+            _particleSystem = gameObject.GetComponent<ParticleSystem>();
+            Debug.Log(GetInstanceID());
         }
 
         public void Play()
         {
-            gameObject.GetComponent<ParticleSystem>().Play();
-            Debug.Log(gameObject.GetComponent<ParticleSystem>().IsAlive());
-            Debug.Log(gameObject.GetComponent<ParticleSystem>().isPlaying);
-            Debug.Log(gameObject.GetComponent<ParticleSystem>().isStopped);
+            Debug.Log(_particleSystem);
+            Debug.Log(GetInstanceID());
+            _particleSystem.Play();
         }
+
 
         public void Stop()
         {
-            gameObject.GetComponent<ParticleSystem>().Stop();
+            Debug.Log(_particleSystem);
+            Debug.Log(GetInstanceID());
+            _particleSystem.Stop();
         }
 
         public void ShootPartice()

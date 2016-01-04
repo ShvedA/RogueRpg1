@@ -21,6 +21,10 @@ namespace Assets.Scripts.Helper
         private static float GetAngle(Vector2 vectorFromCenter, Vector2 zeroVector)
         {
             float angle = Vector2.Angle(vectorFromCenter, zeroVector);
+            if (zeroVector.x == 0)
+            {
+                return vectorFromCenter.x < 0 ? 360 - angle : angle;
+            }
             return vectorFromCenter.y < 0 ? 360 - angle : angle;
         }
     }

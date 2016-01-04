@@ -136,6 +136,14 @@ Prefab:
       propertyPath: Character
       value: 
       objectReference: {fileID: 1755471171}
+    - target: {fileID: 11427126, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
+      propertyPath: Speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5065706, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
+      propertyPath: m_Mass
+      value: 0.0001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
   m_IsPrefabParent: 0
@@ -506,9 +514,9 @@ GameObject:
   - 114: {fileID: 1755471174}
   - 50: {fileID: 1755471176}
   - 95: {fileID: 1755471177}
-  - 114: {fileID: 1755471179}
   - 114: {fileID: 1755471180}
   - 58: {fileID: 1755471175}
+  - 114: {fileID: 1755471178}
   m_Layer: 8
   m_Name: Character
   m_TagString: Untagged
@@ -620,7 +628,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &1755471179
+--- !u!114 &1755471178
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -628,9 +636,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1755471171}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0ea9feac2c8ee849b8a7d4fd6381de3, type: 3}
+  m_Script: {fileID: 11500000, guid: c665193caeddd1849bad3b1b89e959cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Particle: {fileID: 159536, guid: feff8fa6097a818459750f42032ea0c1, type: 2}
 --- !u!114 &1755471180
 MonoBehaviour:
   m_ObjectHideFlags: 0
