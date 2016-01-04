@@ -20,7 +20,7 @@ namespace Assets.Scripts
 
             float moveHorizontal = Input.GetAxis("Horizontal");
             float moveVertical = Input.GetAxis("Vertical");
-            Vector2 movement = Vector2.ClampMagnitude(new Vector2(moveHorizontal, moveVertical), 0.001f) * 1000;
+            Vector2 movement = Vector2.ClampMagnitude(new Vector2(moveHorizontal, moveVertical), 1);
             _rb.velocity = movement * Speed;
         }
     }
