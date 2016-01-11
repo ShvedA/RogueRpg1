@@ -33,7 +33,6 @@ namespace Assets.Scripts
         {
             var position = Character.transform.position;
             Vector2 vectorFromCenter = new Vector2(position.x - transform.position.x, position.y - transform.position.y);
-
             double angle = AngleHelper.GetAngleForTurningAround(vectorFromCenter);
 
             TurnCharacter(angle);

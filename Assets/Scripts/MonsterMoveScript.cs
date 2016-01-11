@@ -14,7 +14,7 @@ namespace Assets.Scripts
 
         int count=0;
 
-        Vector2 randomMove;
+        public Vector2 randomMove = new Vector2(0,0);
 
         private void Start()
         {
@@ -24,14 +24,41 @@ namespace Assets.Scripts
         private void Update()
         {
             count++;
-            if (count == 40)
+            var position = Character.transform.position;
+            if (((int)transform.position.x).Equals((int)position.x)||((int)transform.position.y).Equals((int)position.y)||(count<=0))
             {
-                randomMove = Vector2.ClampMagnitude(new Vector2(Random.Range(-10, 11), Random.Range(-10, 11)), 1);
-            } 
-            else if(count==90)
+                if (count > 0)
+                {
+                    count = -100;
+                }
+                else if ((transform.position.y > position.y)&&((int)transform.position.x).Equals((int)position.x))
+                {
+                    randomMove = new Vector2(0,-3);
+                }
+                else if ((transform.position.y < position.y) && ((int) transform.position.x).Equals((int) position.x))
+                {
+                    randomMove = new Vector2(0,3);
+                }
+                else if ((transform.position.x > position.x) && ((int) transform.position.y).Equals((int) position.y))
+                {
+                    randomMove = new Vector2(-3,0);
+                }
+                else if ((transform.position.x < position.x) && ((int) transform.position.y).Equals((int) position.y))
+                {
+                    randomMove = new Vector2(3,0);
+                }
+            }
+            else if(count>0)
             {
-                randomMove = Vector2.ClampMagnitude(new Vector2(0, 0), 0);
-                count = 0;
+                if (count == 40)
+                {
+                    randomMove = Vector2.ClampMagnitude(new Vector2(Random.Range(-10, 11), Random.Range(-10, 11)), 1);
+                }
+                else if (count == 90)
+                {
+                    randomMove = new Vector2(0,0);
+                    count = 0;
+                }
             }
             _rb.velocity = randomMove * Speed;
 
