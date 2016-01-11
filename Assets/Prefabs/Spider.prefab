@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Life: 2
-  Speed: 20
+  Speed: 4
   Character: {fileID: 0}
 --- !u!114 &11462854
 MonoBehaviour:
