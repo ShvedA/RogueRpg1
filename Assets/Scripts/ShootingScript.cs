@@ -5,11 +5,9 @@ namespace Assets.Scripts
 {
     public class ShootingScript : MonoBehaviour {
 
-        private float _particleSpeed;
-
         private ParticleSystem _particleSystem;
 
-        private float _arc;
+        private float _arc = 0;
 
         public void Init()
         {
