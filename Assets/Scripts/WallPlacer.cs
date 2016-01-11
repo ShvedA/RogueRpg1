@@ -45,7 +45,9 @@ namespace Assets.Scripts
 
         private void CreateCaveLikeMap()
         {
-            MapHandler handler = new MapHandler(100, 100, 123);
+            MapHandler handler = new MapHandler(100, 100, 657);
+            handler.MakeCaverns();
+            handler.MakeCaverns();
             handler.MakeCaverns();
             for (int column = 0, row = 0; row <= handler.MapHeight - 1; row++)
             {

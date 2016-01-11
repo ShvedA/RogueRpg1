@@ -23,14 +23,16 @@ namespace Assets.Scripts
         
         private void Update()
         {
-            
             count++;
-            if (count == 1)
+            if (count == 40)
             {
-                var charPosition = Character.transform.position;
                 randomMove = Vector2.ClampMagnitude(new Vector2(Random.Range(-10, 11), Random.Range(-10, 11)), 1);
-                count = 0;
             } 
+            else if(count==90)
+            {
+                randomMove = Vector2.ClampMagnitude(new Vector2(0, 0), 0);
+                count = 0;
+            }
             _rb.velocity = randomMove * Speed;
 
             /*
