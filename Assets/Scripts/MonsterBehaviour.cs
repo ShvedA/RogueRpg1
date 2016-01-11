@@ -2,7 +2,7 @@
 
 namespace Assets.Scripts
 {
-    public class MonsterMoveScript : MonoBehaviour {
+    public class MonsterBehaviour : MonoBehaviour {
 
         public float Life;
 
