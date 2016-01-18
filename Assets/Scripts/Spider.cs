@@ -2,8 +2,8 @@
 
 namespace Assets.Scripts
 {
-    public class Spider : Monster {
-
+    public class Spider : Monster
+    {
         protected override void OnDeath()
         {
             base.OnDeath();
@@ -17,7 +17,5 @@ namespace Assets.Scripts
                 Debug.LogWarning("Too much monsters, can't create another one");
             }
         }
-
-
     }
 }

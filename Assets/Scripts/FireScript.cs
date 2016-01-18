@@ -1,7 +1,6 @@
 ﻿
 namespace Assets.Scripts
 {
-    public class FireScript : ShootingScript {
-
-    }
+    public class FireScript : ShootingScript
+    {}
 }

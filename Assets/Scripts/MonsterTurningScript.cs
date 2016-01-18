@@ -6,20 +6,14 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-    public class MonsterTurningScript : MonoBehaviour {
-
+    public class MonsterTurningScript : MonoBehaviour
+    {
         private Texture2D[] _skins;
-
         private int _activeSkin;
-
         private Rigidbody2D _rb;
-
         private Sprite[] _sprites;
-
         public String FilePath = "Assets/Sprites/spider.png";
-
         private const int NumOfSpriteTurns = 8;
-
         public GameObject Character;
 
         void Start()
@@ -32,15 +26,14 @@ namespace Assets.Scripts
         void Update()
         {
             var position = Character.transform.position;
-            Vector2 vectorFromCenter = new Vector2(position.x - transform.position.x, position.y - transform.position.y);
+            var vectorFromCenter = new Vector2(position.x - transform.position.x, position.y - transform.position.y);
             double angle = AngleHelper.GetAngleForTurningAround(vectorFromCenter);
-
             TurnCharacter(angle);
         }
 
         private void TurnCharacter(double angle)
         {
-            double angleFromSectorBeginning = angle + (Constants.Round / NumOfSpriteTurns) / 2;
+            var angleFromSectorBeginning = angle + (Constants.Round / NumOfSpriteTurns) / 2;
             int spriteNum = (int)(angleFromSectorBeginning / (Constants.Round / NumOfSpriteTurns));
             if (spriteNum < 0 || spriteNum == NumOfSpriteTurns)
             {

@@ -46,11 +46,7 @@ namespace Assets.Scripts
 
         public bool CanAddMonster()
         {
-            if (MaxNumOfMonsters > _numOfMonsters)
-            {
-                return true;
-            }
-            return false;
+            return MaxNumOfMonsters > _numOfMonsters;
         }
 
         public void CreateNewMonster()
