@@ -32,7 +32,7 @@ namespace Assets.Scripts
             _particleSystem.Stop();
         }
 
-        public void ShootPartice()
+        public void ShootParticle()
         {
             var position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1);
             position = Camera.main.ScreenToWorldPoint(position);

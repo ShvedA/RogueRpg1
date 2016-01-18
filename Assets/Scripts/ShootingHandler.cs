@@ -23,7 +23,7 @@ namespace Assets.Scripts
             }
             if (Input.GetButton("Fire1"))
             {
-                _shootingScript.ShootPartice();
+                _shootingScript.ShootParticle();
             }
             if (Input.GetButtonUp("Fire1"))
             {
