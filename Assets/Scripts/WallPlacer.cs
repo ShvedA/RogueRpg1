@@ -6,16 +6,25 @@ namespace Assets.Scripts
     public class WallPlacer : MonoBehaviour {
         private const int Width = 50;
         private const int Height = 50;
+        public static Transform[] walls;
 
         [SerializeField]
         private int mapOffset;
 
         public GameObject Brick;
+
         void Start()
         {
             //CreateRectangleField();
             //RandomSquaresAroundTheMap();
             CreateCaveLikeMap();
+            walls = new Transform[transform.childCount];
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                walls[i] = transform.GetChild(i).transform;
+                Debug.Log(walls);
+                Debug.Log(transform.childCount);
+            }
         }
 
         private void CreateRectangleField()

@@ -216,7 +216,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 745850301}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1 &603421948
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,9 +226,9 @@ GameObject:
   m_Component:
   - 4: {fileID: 603421950}
   - 114: {fileID: 603421949}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -258,31 +258,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
---- !u!1 &745850294 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 118274, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
-  m_PrefabInternal: {fileID: 197984278}
---- !u!114 &745850295
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 745850294}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7837ca09acd77954da44063c475d919e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sightStart: {fileID: 190140564}
-  sightTopEnd: {fileID: 853042605}
-  sightRightEnd: {fileID: 1838994442}
-  sightDownEnd: {fileID: 479737652}
-  sightLeftEnd: {fileID: 1174190439}
-  spottedUp: 0
-  spottedRight: 0
-  spottedDown: 0
-  spottedLeft: 0
-  _randomMove: {x: 0, y: 0}
 --- !u!4 &745850301 stripped
 Transform:
   m_PrefabParentObject: {fileID: 418206, guid: 93dc9c173d573274fa3e92cd7e208698, type: 2}
@@ -340,7 +315,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 745850301}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!1001 &1504013713
 Prefab:
   m_ObjectHideFlags: 0

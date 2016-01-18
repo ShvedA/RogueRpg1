@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Projectile
   - Monster
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -17,7 +18,7 @@ TagManager:
   - 
   - Character
   - Monster
-  - 
+  - Wall
   - 
   - 
   - 
