@@ -1,17 +1,19 @@
 ﻿using UnityEngine;
 
-public class SpiderBehaviour : MonoBehaviour
+namespace Assets.Scripts
 {
-
-    public Animator Animator;
-
-    public void Awake()
+    public class SpiderBehaviour : MonoBehaviour
     {
-        Animator.GetComponent<Animator>();
-    }
+        public Animator Animator;
 
-    public void Update()
-    {
-        Animator.transform.position += new Vector3(0, -0.01f, 0);
+        public void Awake()
+        {
+            Animator.GetComponent<Animator>();
+        }
+
+        public void Update()
+        {
+            Animator.transform.position += new Vector3(0, -0.01f, 0);
+        }
     }
 }

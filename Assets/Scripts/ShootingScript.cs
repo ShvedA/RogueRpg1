@@ -3,10 +3,9 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-    public class ShootingScript : MonoBehaviour {
-
+    public class ShootingScript : MonoBehaviour
+    {
         private ParticleSystem _particleSystem;
-
         private float _arc = 0;
 
         public void Init()
@@ -21,7 +20,6 @@ namespace Assets.Scripts
             _particleSystem.Play();
         }
 
-
         public void Stop()
         {
             _particleSystem.Stop();
@@ -35,12 +33,10 @@ namespace Assets.Scripts
             gameObject.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, AngleHelper.GetAngleForParticles(projectileVector) - _arc / 2);
         }
 
-
         public void ShootProjectile()
         {
             var projectile = new GameObject();
             const int projectileSpeed = 10;
-
             var position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1);
             position = Camera.main.ScreenToWorldPoint(position);
             var go = Instantiate(projectile, transform.position, Quaternion.identity) as GameObject;
@@ -50,6 +46,5 @@ namespace Assets.Scripts
             go.transform.parent = transform;
             go.GetComponent<Rigidbody2D>().AddForce(Vector2.ClampMagnitude(projectileVector, 0.001f) * 1000 * projectileSpeed);
         }
-
     }
 }

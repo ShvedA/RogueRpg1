@@ -1,16 +1,18 @@
 ﻿using UnityEngine;
-using System.Collections;
 using UnityEngine.SceneManagement;
 
-public class Buttons : MonoBehaviour {
-
-	public void StartButton(int scene)
+namespace Assets.Scripts
+{
+    public class Buttons : MonoBehaviour
     {
-        SceneManager.LoadScene(scene);
-    }
+        public void StartButton(int scene)
+        {
+            SceneManager.LoadScene(scene);
+        }
 
-    public void ExitButton()
-    {
-        Application.Quit();
+        public void ExitButton()
+        {
+            Application.Quit();
+        }
     }
 }

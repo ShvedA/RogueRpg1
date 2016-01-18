@@ -3,15 +3,14 @@ using Assets.Scripts.Helper;
 
 namespace Assets.Scripts
 {
-    public class WallPlacer : MonoBehaviour {
+    public class WallPlacer : MonoBehaviour
+    {
+        [SerializeField] private int mapOffset;
         private const int Width = 50;
         private const int Height = 50;
-
-        [SerializeField]
-        private int mapOffset;
-
         public GameObject Brick;
-        void Start()
+
+        private void Start()
         {
             //CreateRectangleField();
             //RandomSquaresAroundTheMap();
@@ -37,7 +36,9 @@ namespace Assets.Scripts
         {
             for (int i = 0; i < 100; i++)
             {
-                GameObject each = Instantiate(Brick, new Vector3((int)Random.Range(-30f, 30f), (int)Random.Range(-30f, 30f), 0), Quaternion.identity) as GameObject;
+                GameObject each =
+                    Instantiate(Brick, new Vector3((int) Random.Range(-30f, 30f), (int) Random.Range(-30f, 30f), 0), Quaternion.identity) as
+                        GameObject;
                 each.transform.parent = transform;
             }
         }
@@ -48,7 +49,8 @@ namespace Assets.Scripts
             handler.MakeCaverns();
             handler.MakeCaverns();
             handler.MakeCaverns();
-            for (int column = 0, row = 0; row <= handler.MapHeight - 1; row++)
+            for (int column = 0,
+                row = 0; row <= handler.MapHeight - 1; row++)
             {
                 for (column = 0; column <= handler.MapWidth - 1; column++)
                 {
