@@ -3,6 +3,5 @@
     public class Constants {
 
         public const float Round = 360;
-
     }
 }

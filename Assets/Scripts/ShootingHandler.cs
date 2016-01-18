@@ -4,18 +4,17 @@ namespace Assets.Scripts
 {
     public class ShootingHandler : MonoBehaviour
     {
-
         public GameObject Particle;
-
         private ShootingScript _shootingScript;
 
-        void Start ()
+        private void Start()
         {
             _shootingScript = Particle.GetComponent<ShootingScript>();
             _shootingScript.Init();
         }
-	
-        void Update () {
+
+        private void Update()
+        {
             if (Input.GetButtonDown("Fire1"))
             {
                 Debug.Log("131");
@@ -23,7 +22,7 @@ namespace Assets.Scripts
             }
             if (Input.GetButton("Fire1"))
             {
-                _shootingScript.ShootPartice();
+                _shootingScript.ShootParticle();
             }
             if (Input.GetButtonUp("Fire1"))
             {
