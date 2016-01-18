@@ -2,7 +2,8 @@
 
 namespace Assets.Scripts
 {
-    public class MonsterBehaviour : MonoBehaviour {
+    public class MonsterBehaviour : MonoBehaviour
+    {
 
         public float Life;
 
@@ -12,9 +13,9 @@ namespace Assets.Scripts
 
         public GameObject Character;
 
-        private int _count=0;
+        private int _count = 0;
 
-        Vector2 _randomMove = new Vector2(0,0);
+        Vector2 _randomMove = new Vector2(0, 0);
 
         public Transform sightStart, sightTopEnd, sightRightEnd, sightDownEnd, sightLeftEnd;
 
@@ -26,23 +27,23 @@ namespace Assets.Scripts
         {
             _rb = GetComponent<Rigidbody2D>();
         }
-        
+
         private void Update()
         {
             RayCasting();
             Behaviours();
             _count++;
             switch (_count)
-                {
-                    case 20:
-                        _randomMove = Vector2.ClampMagnitude(new Vector2(Random.Range(-10, 11), Random.Range(-10, 11)),
-                            1);
-                        break;
-                    case 40:
-                        _randomMove = new Vector2(0, 0);
-                        _count = 0;
-                        break;
-                }
+            {
+                case 20:
+                    _randomMove = Vector2.ClampMagnitude(new Vector2(Random.Range(-10, 11), Random.Range(-10, 11)),
+                        1);
+                    break;
+                case 40:
+                    _randomMove = new Vector2(0, 0);
+                    _count = 0;
+                    break;
+            }
             _rb.velocity = _randomMove * Speed;
 
             //Follow version of a spider 

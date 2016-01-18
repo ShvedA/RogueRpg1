@@ -4,8 +4,8 @@ namespace Assets.Scripts
 {
     public class ShootingHandler : MonoBehaviour
     {
-
-        public GameObject Particle;
+        [SerializeField]
+        private GameObject Particle;
 
         private ShootingScript _shootingScript;
 
@@ -18,7 +18,6 @@ namespace Assets.Scripts
         void Update () {
             if (Input.GetButtonDown("Fire1"))
             {
-                Debug.Log("131");
                 _shootingScript.Play();
             }
             if (Input.GetButton("Fire1"))
