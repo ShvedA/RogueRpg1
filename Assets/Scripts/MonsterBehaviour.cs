@@ -8,10 +8,11 @@ namespace Assets.Scripts
         public float Speed;
         private Rigidbody2D _rb;
         public GameObject Character;
-        private int _count = 0;
-        private Vector2 _randomMove = new Vector2(0, 0);
+        public GameObject Walls;
+        private int _count;
+        Vector2 _randomMove = new Vector2(0,0);
         public Transform sightStart, sightTopEnd, sightRightEnd, sightDownEnd, sightLeftEnd;
-        public bool spottedUp, spottedRight, spottedDown, spottedLeft;
+        public bool spottedUp, spottedRight, spottedDown, spottedLeft = false;
 
         private void Start()
         {
@@ -22,69 +23,38 @@ namespace Assets.Scripts
         {
             RayCasting();
             Behaviours();
-            _count++;
-            switch (_count)
-            {
-                case 20:
-                    _randomMove = Vector2.ClampMagnitude(
-                        new Vector2(Random.Range(-10, 11), Random.Range(-10, 11)), 1);
-                    break;
-                case 40:
-                    _randomMove = new Vector2(0, 0);
-                    _count = 0;
-                    break;
-            }
-            _rb.velocity = _randomMove * Speed;
-            //FollowBehaviour();
-            //ChaseWhenOnSameLine();
+            
+            _rb.velocity = _randomMove * Speed; 
         }
-
-        private void ChaseWhenOnSameLine()
+        
+        void RayCasting()
         {
-            var position = Character.transform.position;
-            if (((int)transform.position.x).Equals((int)position.x) || ((int)transform.position.y).Equals((int)position.y) || (_count <= 0))
-            {
-                if (_count > 0)
-                {
-                    _count = -100;
-                }
-                else if ((transform.position.y > position.y) && ((int)transform.position.x).Equals((int)position.x))
-                {
-                    _randomMove = new Vector2(0, -3);
-                }
-                else if ((transform.position.y < position.y) && ((int)transform.position.x).Equals((int)position.x))
-                {
-                    _randomMove = new Vector2(0, 3);
-                }
-                else if ((transform.position.x > position.x) && ((int)transform.position.y).Equals((int)position.y))
-                {
-                    _randomMove = new Vector2(-3, 0);
-                }
-                else if ((transform.position.x < position.x) && ((int)transform.position.y).Equals((int)position.y))
-                {
-                    _randomMove = new Vector2(3, 0);
-                }
-            }
-        }
-
-        private void FollowBehaviour()
-        {
-            var position = Character.transform.position;
-            Vector2 movement = Vector2.ClampMagnitude(new Vector2(position.x - transform.position.x, position.y - transform.position.y), 0.001f) * 1000;
-            _rb.velocity = movement * Speed;
-        }
-
-        private void RayCasting()
-        {
-            Debug.DrawLine(sightStart.position, sightTopEnd.position, Color.green);
-            Debug.DrawLine(sightStart.position, sightRightEnd.position, Color.green);
+            Debug.DrawLine(sightStart.position, sightTopEnd.position, Color.red);
+            Debug.DrawLine(sightStart.position, sightRightEnd.position, Color.blue);
             Debug.DrawLine(sightStart.position, sightDownEnd.position, Color.green);
-            Debug.DrawLine(sightStart.position, sightLeftEnd.position, Color.green);
+            Debug.DrawLine(sightStart.position, sightLeftEnd.position, Color.yellow);
             spottedUp = Physics2D.Linecast(sightStart.position, sightTopEnd.position, 1 << LayerMask.NameToLayer("Character"));
             spottedRight = Physics2D.Linecast(sightStart.position, sightRightEnd.position, 1 << LayerMask.NameToLayer("Character"));
             spottedDown = Physics2D.Linecast(sightStart.position, sightDownEnd.position, 1 << LayerMask.NameToLayer("Character"));
             spottedLeft = Physics2D.Linecast(sightStart.position, sightLeftEnd.position, 1 << LayerMask.NameToLayer("Character"));
-
+        }
+        
+        Transform GetClosestObject()
+        {
+            Transform closestWall = null;
+            float searchDistance = Mathf.Infinity;
+            Vector2 currentPosition = transform.position;
+            foreach (var near in WallPlacer.walls)
+            {
+                Vector2 directionToWall = new Vector2(near.position.x - currentPosition.x, near.position.y - currentPosition.y);
+                float dSqrToTarget = directionToWall.sqrMagnitude;
+                if (dSqrToTarget < searchDistance)
+                {
+                    searchDistance = dSqrToTarget;
+                    closestWall = near;
+                }
+            }
+            return closestWall;
         }
 
         private void Behaviours()
@@ -108,6 +78,31 @@ namespace Assets.Scripts
             {
                 _count = -50;
                 _randomMove = new Vector2(-2, 0);
+            }
+            else
+            {
+                _count++;
+                if (_count == 40)
+                {
+                    Transform wall = GetClosestObject();
+                    if (wall == null)
+                    {
+                        _randomMove = Vector2.ClampMagnitude(new Vector2(Random.Range(-10, 11), Random.Range(-10, 11)),
+                            1);
+                    }
+                    else
+                    {
+                        var positionWall = wall.position;
+                        _randomMove =
+                            Vector2.ClampMagnitude(
+                                new Vector2(positionWall.x - transform.position.x, positionWall.y - transform.position.y),1f)*-1;
+                    }
+                }
+                else if (_count == 100)
+                {
+                    _randomMove = new Vector2(0, 0);
+                    _count = 0;
+                }
             }
         }
     }
