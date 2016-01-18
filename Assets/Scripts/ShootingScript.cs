@@ -13,20 +13,15 @@ namespace Assets.Scripts
             UnityEditor.SerializedObject so = new UnityEditor.SerializedObject(gameObject.GetComponent<ParticleSystem>());
             _arc = so.FindProperty("ShapeModule.arc").floatValue;
             _particleSystem = gameObject.GetComponent<ParticleSystem>();
-            Debug.Log(GetInstanceID());
         }
 
         public void Play()
         {
-            Debug.Log(_particleSystem);
-            Debug.Log(GetInstanceID());
             _particleSystem.Play();
         }
 
         public void Stop()
         {
-            Debug.Log(_particleSystem);
-            Debug.Log(GetInstanceID());
             _particleSystem.Stop();
         }
 
