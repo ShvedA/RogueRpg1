@@ -5,7 +5,10 @@ namespace Assets.Scripts
 {
     public class WallPlacer : MonoBehaviour
     {
-        [SerializeField] private int mapOffset;
+        [SerializeField]
+        private int mapOffsetX;
+        [SerializeField]
+        private int mapOffsetY;
         private const int Width = 50;
         private const int Height = 50;
 
@@ -58,14 +61,13 @@ namespace Assets.Scripts
             handler.MakeCaverns();
             handler.MakeCaverns();
             handler.MakeCaverns();
-            for (int column = 0,
-                row = 0; row <= handler.MapHeight - 1; row++)
+            for (int row = 0; row <= handler.MapHeight - 1; row++)
             {
-                for (column = 0; column <= handler.MapWidth - 1; column++)
+                for (int column = 0; column <= handler.MapWidth - 1; column++)
                 {
                     if (handler.Map[column, row] == 1)
                     {
-                        GameObject each = Instantiate(Brick, new Vector3(column - mapOffset, row - mapOffset, 0), Quaternion.identity) as GameObject;
+                        GameObject each = Instantiate(Brick, new Vector3(column - mapOffsetX, row - mapOffsetY, 0), Quaternion.identity) as GameObject;
                         each.transform.parent = transform;
                     }
                 }
