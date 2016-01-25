@@ -27,7 +27,7 @@ namespace Assets.Scripts
             {
                 case 20:
                     _randomMove = Vector2.ClampMagnitude(
-                        new Vector2(Random.Range(-10, 11), Random.Range(-10, 11)),1);
+                        new Vector2(Random.Range(-10, 11), Random.Range(-10, 11)), 1);
                     break;
                 case 40:
                     _randomMove = new Vector2(0, 0);
@@ -42,25 +42,25 @@ namespace Assets.Scripts
         private void ChaseWhenOnSameLine()
         {
             var position = Character.transform.position;
-            if (((int) transform.position.x).Equals((int) position.x) || ((int) transform.position.y).Equals((int) position.y) || (_count <= 0))
+            if (((int)transform.position.x).Equals((int)position.x) || ((int)transform.position.y).Equals((int)position.y) || (_count <= 0))
             {
                 if (_count > 0)
                 {
                     _count = -100;
                 }
-                else if ((transform.position.y > position.y) && ((int) transform.position.x).Equals((int) position.x))
+                else if ((transform.position.y > position.y) && ((int)transform.position.x).Equals((int)position.x))
                 {
                     _randomMove = new Vector2(0, -3);
                 }
-                else if ((transform.position.y < position.y) && ((int) transform.position.x).Equals((int) position.x))
+                else if ((transform.position.y < position.y) && ((int)transform.position.x).Equals((int)position.x))
                 {
                     _randomMove = new Vector2(0, 3);
                 }
-                else if ((transform.position.x > position.x) && ((int) transform.position.y).Equals((int) position.y))
+                else if ((transform.position.x > position.x) && ((int)transform.position.y).Equals((int)position.y))
                 {
                     _randomMove = new Vector2(-3, 0);
                 }
-                else if ((transform.position.x < position.x) && ((int) transform.position.y).Equals((int) position.y))
+                else if ((transform.position.x < position.x) && ((int)transform.position.y).Equals((int)position.y))
                 {
                     _randomMove = new Vector2(3, 0);
                 }
