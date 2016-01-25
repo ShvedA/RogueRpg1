@@ -290,7 +290,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 329c29415bc60384bba7b05f7ab0c48d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mapOffset: 5
+  mapOffsetX: 0
+  mapOffsetY: 0
   Brick: {fileID: 120498, guid: f1e4851cf4974d2469f352b5a5750e23, type: 2}
 --- !u!4 &603421950
 Transform:
@@ -650,6 +651,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 002f6cdc061cedd47a15a51f3740c67f, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1694911437 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 137534, guid: 876211df7f772af42bdd9acc91481ab6, type: 2}
+  m_PrefabInternal: {fileID: 78735455}
 --- !u!1 &1755471171
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,7 +808,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c665193caeddd1849bad3b1b89e959cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Particle: {fileID: 749457739}
+  Particle:
+  - {fileID: 749457739}
+  - {fileID: 1694911437}
 --- !u!114 &1755471180
 MonoBehaviour:
   m_ObjectHideFlags: 0
