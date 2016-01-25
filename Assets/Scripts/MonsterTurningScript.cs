@@ -12,7 +12,7 @@ namespace Assets.Scripts
         private int _activeSkin;
         private Rigidbody2D _rb;
         private Sprite[] _sprites;
-        public String FilePath = "Assets/Sprites/spider1.png";
+        public String FilePath;
         private const int NumOfSpriteTurns = 8;
         public GameObject Character;
 
