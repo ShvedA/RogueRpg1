@@ -22,7 +22,6 @@ namespace Assets.Scripts
             //RandomSquaresAroundTheMap();
             CreateCaveLikeMap();
             walls = new Transform[transform.childCount];
-            Debug.Log(transform.childCount);
             for (int i = 0; i < transform.childCount; i++)
             {
                 walls[i] = transform.GetChild(i).transform;

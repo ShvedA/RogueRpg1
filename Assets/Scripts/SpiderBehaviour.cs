@@ -3,10 +3,9 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-    public class SpiderBehaviour : MonoBehaviour
+    public class SpiderBehaviour : MonsterBehaviour
     {
         public Animator Animator;
-        public GameObject Character;
         private const int NumOfSpriteTurns = 8;
 
         public void Awake()
@@ -14,8 +13,9 @@ namespace Assets.Scripts
             Animator.GetComponent<Animator>();
         }
 
-        public void Update()
+        public override void Update()
         {
+            base.Update();
             Movement();
             //Animator.transform.position += new Vector3(0, -0.01f, 0);
         }

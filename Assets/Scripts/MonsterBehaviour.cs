@@ -19,7 +19,7 @@ namespace Assets.Scripts
             _rb = GetComponent<Rigidbody2D>();
         }
 
-        private void Update()
+        public virtual void Update()
         {
             RayCasting();
             Behaviours();
