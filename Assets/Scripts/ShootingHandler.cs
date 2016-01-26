@@ -46,7 +46,6 @@ namespace Assets.Scripts
 
             if (Input.GetButtonDown("Fire1"))
             {
-                Debug.Log("131");
                 _shootingScript.Play();
             }
             if (Input.GetButton("Fire1"))

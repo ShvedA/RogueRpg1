@@ -1,18 +1,22 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace Assets.Scripts
 {
     public class MonsterBehaviour : MonoBehaviour
     {
+        public GameObject Character;
         public float Life;
         public float Speed;
+        public float RushSpeed;
+        public float LookDistance = 100f;
+
         private Rigidbody2D _rb;
-        public GameObject Character;
-        public GameObject Walls;
         private int _count;
-        Vector2 _randomMove = new Vector2(0,0);
-        public Transform sightStart, sightTopEnd, sightRightEnd, sightDownEnd, sightLeftEnd;
-        public bool spottedUp, spottedRight, spottedDown, spottedLeft = false;
+        private Vector2 _randomMove = new Vector2(0,0);
+        private int _spotted = -1;
+        private readonly Vector2[] _directions = new Vector2[4] {Vector2.up, Vector2.right, Vector2.down, Vector2.left};
 
         private void Start()
         {
@@ -23,20 +27,25 @@ namespace Assets.Scripts
         {
             RayCasting();
             Behaviours();
-            
+            _spotted = -1;
             _rb.velocity = _randomMove * Speed; 
         }
         
         void RayCasting()
         {
-            Debug.DrawLine(sightStart.position, sightTopEnd.position, Color.red);
-            Debug.DrawLine(sightStart.position, sightRightEnd.position, Color.blue);
-            Debug.DrawLine(sightStart.position, sightDownEnd.position, Color.green);
-            Debug.DrawLine(sightStart.position, sightLeftEnd.position, Color.yellow);
-            spottedUp = Physics2D.Linecast(sightStart.position, sightTopEnd.position, 1 << LayerMask.NameToLayer("Character"));
-            spottedRight = Physics2D.Linecast(sightStart.position, sightRightEnd.position, 1 << LayerMask.NameToLayer("Character"));
-            spottedDown = Physics2D.Linecast(sightStart.position, sightDownEnd.position, 1 << LayerMask.NameToLayer("Character"));
-            spottedLeft = Physics2D.Linecast(sightStart.position, sightLeftEnd.position, 1 << LayerMask.NameToLayer("Character"));
+            for (int n = 0; n < _directions.Length; n++)
+            {
+                var hit = Physics2D.Raycast(transform.position, _directions[n], LookDistance);
+                try
+                {
+                    if (hit.transform.name.Equals("Character"))
+                    {
+                        _spotted = n;
+                        break;
+                    }
+                }
+                catch (NullReferenceException) { }
+            }
         }
         
         Transform GetClosestObject()
@@ -59,25 +68,10 @@ namespace Assets.Scripts
 
         private void Behaviours()
         {
-            if (spottedUp)
+            if (_spotted >= 0 && _count >= 7)
             {
                 _count = -50;
-                _randomMove = new Vector2(0, 2);
-            }
-            else if (spottedDown)
-            {
-                _count = -50;
-                _randomMove = new Vector2(0, -2);
-            }
-            else if (spottedRight)
-            {
-                _count = -50;
-                _randomMove = new Vector2(2, 0);
-            }
-            else if (spottedLeft)
-            {
-                _count = -50;
-                _randomMove = new Vector2(-2, 0);
+                _randomMove = _directions[_spotted] * RushSpeed;
             }
             else
             {
@@ -87,15 +81,14 @@ namespace Assets.Scripts
                     Transform wall = GetClosestObject();
                     if (wall == null)
                     {
-                        _randomMove = Vector2.ClampMagnitude(new Vector2(Random.Range(-10, 11), Random.Range(-10, 11)),
-                            1);
+                        _randomMove = Vector2.ClampMagnitude(new Vector2(Random.Range(-10, 11), Random.Range(-10, 11)), 1f);
                     }
                     else
                     {
                         var positionWall = wall.position;
                         _randomMove =
                             Vector2.ClampMagnitude(
-                                new Vector2(positionWall.x - transform.position.x, positionWall.y - transform.position.y),1f)*-1;
+                                new Vector2(positionWall.x - transform.position.x, positionWall.y - transform.position.y), 1f)*-1;
                     }
                 }
                 else if (_count == 100)
