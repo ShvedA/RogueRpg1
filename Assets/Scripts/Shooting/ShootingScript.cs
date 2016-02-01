@@ -16,9 +16,8 @@ namespace Assets.Scripts.Shooting
 
         public void Init()
         {
-            UnityEditor.SerializedObject so = new UnityEditor.SerializedObject(gameObject.GetComponent<ParticleSystem>());
-            _arc = so.FindProperty("ShapeModule.arc").floatValue;
             _particleSystem = gameObject.GetComponent<ParticleSystem>();
+            _arc = _particleSystem.shape.arc;
         }
 
         public void Play()
