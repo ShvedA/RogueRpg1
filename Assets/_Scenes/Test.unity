@@ -439,8 +439,23 @@ Prefab:
       propertyPath: EmissionModule.rate.scalar
       value: 100
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 11438628, guid: f0d2fa87ef1dc064e914ec6a4117bb6a, type: 2}
+    - target: {fileID: 19862136, guid: f0d2fa87ef1dc064e914ec6a4117bb6a, type: 2}
+      propertyPath: ShapeModule.arc
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 19862136, guid: f0d2fa87ef1dc064e914ec6a4117bb6a, type: 2}
+      propertyPath: ShapeModule.type
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 19862136, guid: f0d2fa87ef1dc064e914ec6a4117bb6a, type: 2}
+      propertyPath: ShapeModule.radius
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 19862136, guid: f0d2fa87ef1dc064e914ec6a4117bb6a, type: 2}
+      propertyPath: ShapeModule.randomDirection
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f0d2fa87ef1dc064e914ec6a4117bb6a, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1572782619

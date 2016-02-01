@@ -37,7 +37,7 @@ namespace Assets.Scripts
                 var hit = Physics2D.Raycast(transform.position, _directions[n], LookDistance);
                 try
                 {
-                    if (hit.transform.name.Equals("Character"))
+                    if (hit.transform.gameObject.tag == "Player")
                     {
                         _spotted = n;
                         break;
