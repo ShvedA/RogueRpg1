@@ -10,7 +10,7 @@ namespace Assets.Scripts
         public float Life;
         public float Speed;
         public float RushSpeed;
-        public float LookDistance = 100f;
+        public float LookDistance = 9f;
 
         private Rigidbody2D _rb;
         private int _count;
@@ -51,7 +51,7 @@ namespace Assets.Scripts
         Transform GetClosestObject()
         {
             Transform closestWall = null;
-            float searchDistance = Mathf.Infinity;
+            float searchDistance = 3f;
             Vector2 currentPosition = transform.position;
             foreach (var near in WallPlacer.walls)
             {
