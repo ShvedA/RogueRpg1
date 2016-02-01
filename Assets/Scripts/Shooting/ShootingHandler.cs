@@ -1,7 +1,7 @@
-﻿using UnityEngine;
-using Assets.Scripts.Helper;
+﻿using Assets.Scripts.Helper;
+using UnityEngine;
 
-namespace Assets.Scripts
+namespace Assets.Scripts.Shooting
 {
     public class ShootingHandler : MonoBehaviour
     {
@@ -42,12 +42,12 @@ namespace Assets.Scripts
         private void AnalyzeAngle(double angle)
         {
             double angleFromSectorBeginning = angle + (Constants.Round / Particle.Length) / 2;
-            int spriteNum = (int)(angleFromSectorBeginning / (Constants.Round / Particle.Length));
-            if (spriteNum < 0 || spriteNum == Particle.Length)
+            int weaponNumber = (int)(angleFromSectorBeginning / (Constants.Round / Particle.Length));
+            if (weaponNumber < 0 || weaponNumber == Particle.Length)
             {
-                spriteNum = 0;
+                weaponNumber = 0;
             }
-            ChangeWeapon(spriteNum);
+            ChangeWeapon(weaponNumber);
         }
 
         private void Update()

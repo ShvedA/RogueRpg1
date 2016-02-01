@@ -1,12 +1,18 @@
 ﻿using Assets.Scripts.Helper;
 using UnityEngine;
 
-namespace Assets.Scripts
+namespace Assets.Scripts.Shooting
 {
-    public class ShootingScript : MonoBehaviour
+    public abstract class ShootingScript : MonoBehaviour
     {
+        protected int Damage;
         private ParticleSystem _particleSystem;
         private float _arc = 0;
+
+        protected ShootingScript(int damage)
+        {
+            Damage = damage;
+        }
 
         public void Init()
         {
@@ -45,6 +51,12 @@ namespace Assets.Scripts
             go.transform.Rotate(new Vector3(0, 0, AngleHelper.GetAngleForParticles(projectileVector)));
             go.transform.parent = transform;
             go.GetComponent<Rigidbody2D>().AddForce(Vector2.ClampMagnitude(projectileVector, 0.001f) * 1000 * projectileSpeed);
+        }
+
+        private void OnParticleCollision(GameObject col) {
+            if (col.gameObject.tag == "Monster") {
+                col.gameObject.GetComponent<Monster>().Damage(Damage);
+            }
         }
     }
 }
