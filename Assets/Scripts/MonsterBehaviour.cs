@@ -7,10 +7,9 @@ namespace Assets.Scripts
     public class MonsterBehaviour : MonoBehaviour
     {
         public GameObject Character;
-        public float Life;
         public float Speed;
         public float RushSpeed;
-        public float LookDistance = 9f;
+        public float LookDistance;
 
         private Rigidbody2D _rb;
         private int _count;

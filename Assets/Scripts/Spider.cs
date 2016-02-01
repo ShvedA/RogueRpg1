@@ -4,6 +4,9 @@ namespace Assets.Scripts
 {
     public class Spider : Monster
     {
+
+        public Spider() : base(100, 1, 1){}
+
         protected override void OnDeath()
         {
             base.OnDeath();

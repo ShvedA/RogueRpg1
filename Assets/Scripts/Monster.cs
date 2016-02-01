@@ -4,11 +4,18 @@ namespace Assets.Scripts
 {
     public abstract class Monster : MonoBehaviour
     {
-        private int _health = 100;
+        private int _health;
         private double _speed;
         private int _attack;
         private static int _numOfMonsters = 1;
         public const int MaxNumOfMonsters = 100;
+
+        protected Monster(int health, double speed, int attack)
+        {
+            _health = health;
+            _speed = speed;
+            _attack = attack;
+        }
 
         protected virtual void Update()
         {

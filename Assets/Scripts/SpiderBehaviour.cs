@@ -17,7 +17,6 @@ namespace Assets.Scripts
         {
             base.Update();
             Movement();
-            //Animator.transform.position += new Vector3(0, -0.01f, 0);
         }
 
         public void Movement()
