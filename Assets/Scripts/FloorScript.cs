@@ -6,8 +6,9 @@ namespace Assets.Scripts
     {
 
         [SerializeField] private GameObject _floorTexture;
-        private const int Width = 10;
-        private const int Height = 10;
+        [SerializeField] private int Width;
+        [SerializeField] private int Height;
+        [SerializeField] private float Size;
 
         void Start ()
         {
@@ -15,7 +16,7 @@ namespace Assets.Scripts
             {
                 for (int y = -Height; y <= Height; y++)
                 {
-                        GameObject each = Instantiate(_floorTexture, new Vector3(x, y, 0), Quaternion.identity) as GameObject;
+                        GameObject each = Instantiate(_floorTexture, new Vector3(x * Size, y * Size, 0), Quaternion.identity) as GameObject;
                         each.transform.parent = transform;
                 }
             }

@@ -213,6 +213,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _floorTexture: {fileID: 169782, guid: d56be7c2b205e1f4689e3d9cbfba8281, type: 2}
+  Width: 10
+  Height: 10
+  Size: 1.28
 --- !u!4 &1478266016
 Transform:
   m_ObjectHideFlags: 0
