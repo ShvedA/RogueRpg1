@@ -9,14 +9,16 @@ namespace Assets.Scripts
         [SerializeField] private int Width;
         [SerializeField] private int Height;
         [SerializeField] private float Size;
+        [SerializeField] private float Scale;
 
         void Start ()
         {
+
             for (int x = -Width; x <= Width; x++)
             {
                 for (int y = -Height; y <= Height; y++)
                 {
-                        GameObject each = Instantiate(_floorTexture, new Vector3(x * Size, y * Size, 0), Quaternion.identity) as GameObject;
+                        GameObject each = Instantiate(_floorTexture, new Vector3(x * Size * Scale, y * Size * Scale, 0), Quaternion.identity) as GameObject;
                         each.transform.parent = transform;
                 }
             }
