@@ -10,8 +10,7 @@ GameObject:
   - 4: {fileID: 488420}
   - 198: {fileID: 19884326}
   - 199: {fileID: 19937104}
-  - 114: {fileID: 11415270}
-  - 114: {fileID: 11412764}
+  - 114: {fileID: 11469490}
   m_Layer: 0
   m_Name: Torch
   m_TagString: Untagged
@@ -31,7 +30,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11412764
+--- !u!114 &11469490
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -39,22 +38,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 138420}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0ea9feac2c8ee849b8a7d4fd6381de3, type: 3}
+  m_Script: {fileID: 11500000, guid: cace4507073be1f438c66bb0e7fa2e62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &11415270
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 138420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7a11007447e99545b08bc1f87f28f38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Character: {fileID: 0}
-  Damage: 4
 --- !u!198 &19884326
 ParticleSystem:
   m_ObjectHideFlags: 1

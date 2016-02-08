@@ -10,8 +10,7 @@ GameObject:
   - 4: {fileID: 416592}
   - 198: {fileID: 19801482}
   - 199: {fileID: 19989002}
-  - 114: {fileID: 11419720}
-  - 114: {fileID: 11438522}
+  - 114: {fileID: 11428392}
   m_Layer: 0
   m_Name: Ice Wave
   m_TagString: Untagged
@@ -61,7 +60,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 416592}
   m_RootOrder: 0
---- !u!114 &11419720
+--- !u!114 &11428392
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -69,20 +68,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 137534}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7a11007447e99545b08bc1f87f28f38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Character: {fileID: 0}
-  Damage: 2
---- !u!114 &11438522
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 137534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0ea9feac2c8ee849b8a7d4fd6381de3, type: 3}
+  m_Script: {fileID: 11500000, guid: 2e0b786e57b3d64439f1b1b8a46e992a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!198 &19801482

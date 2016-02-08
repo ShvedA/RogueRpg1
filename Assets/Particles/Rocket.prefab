@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 481354}
   - 198: {fileID: 19877006}
   - 199: {fileID: 19959384}
-  - 114: {fileID: 11438628}
+  - 114: {fileID: 11460382}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: Untagged
@@ -28,7 +28,7 @@ GameObject:
   - 4: {fileID: 408600}
   - 198: {fileID: 19862136}
   - 199: {fileID: 19993362}
-  - 114: {fileID: 11431692}
+  - 114: {fileID: 11423436}
   m_Layer: 0
   m_Name: Rocket Tail
   m_TagString: Untagged
@@ -46,7 +46,7 @@ GameObject:
   - 4: {fileID: 417882}
   - 198: {fileID: 19819668}
   - 199: {fileID: 19938780}
-  - 114: {fileID: 11498398}
+  - 114: {fileID: 11405700}
   m_Layer: 0
   m_Name: Explosion
   m_TagString: Untagged
@@ -92,33 +92,7 @@ Transform:
   - {fileID: 408600}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11431692
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 121574}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7a11007447e99545b08bc1f87f28f38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Character: {fileID: 0}
-  Damage: 1
---- !u!114 &11438628
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 120282}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7a11007447e99545b08bc1f87f28f38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Character: {fileID: 0}
-  Damage: 10
---- !u!114 &11498398
+--- !u!114 &11405700
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -126,11 +100,33 @@ MonoBehaviour:
   m_GameObject: {fileID: 136012}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7a11007447e99545b08bc1f87f28f38, type: 3}
+  m_Script: {fileID: 11500000, guid: 44eccbf7e9ab06f409f9b2890ea65254, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Character: {fileID: 0}
-  Damage: 5
+  _damage: 2
+--- !u!114 &11423436
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 121574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44eccbf7e9ab06f409f9b2890ea65254, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _damage: 2
+--- !u!114 &11460382
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 120282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13d25b9e8af44364c96915bfe9603204, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &19819668
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -4802,7 +4798,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: _damage
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 120282}
