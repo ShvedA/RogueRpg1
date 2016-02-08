@@ -9,24 +9,29 @@ namespace Assets.Scripts.Shooting
         private GameObject _mainParticle;
         private ShootingScript _shootingScript;
         private Rigidbody2D _rb;
+        private int _weaponNumber = 0;
 
         private void Start()
         {
             _rb = GetComponent<Rigidbody2D>();
-            _mainParticle = Particle[0];
+            _mainParticle = Particle[_weaponNumber];
             _shootingScript = _mainParticle.GetComponent<ShootingScript>();
             _shootingScript.Init();
         }
 
         private void ChangeWeapon(int weaponNumber)
         {
-            _shootingScript.Stop();
-            _mainParticle = Particle[weaponNumber];
-            _shootingScript = _mainParticle.GetComponent<ShootingScript>();
-            _shootingScript.Init();
-            if (Input.GetButton("Fire1"))
+            if (weaponNumber != _weaponNumber)
             {
-                _shootingScript.Play();
+                _shootingScript.Stop();
+                _weaponNumber = weaponNumber;
+                _mainParticle = Particle[weaponNumber];
+                _shootingScript = _mainParticle.GetComponent<ShootingScript>();
+                _shootingScript.Init();
+                if (Input.GetButton("Fire1"))
+                {
+                    _shootingScript.Play();
+                }
             }
         }
 
@@ -56,10 +61,6 @@ namespace Assets.Scripts.Shooting
             if (Input.GetButtonDown("Fire1"))
             {
                 _shootingScript.Play();
-            }
-            if (Input.GetButton("Fire1"))
-            {
-                _shootingScript.ShootParticle();
             }
             if (Input.GetButtonUp("Fire1"))
             {

@@ -1,7 +1,7 @@
 ﻿
 namespace Assets.Scripts.Shooting
 {
-    public class FireScript : ShootingScript
+    public class FireScript : ParticleShootingScript
     {
         public FireScript() : base(10)
         {

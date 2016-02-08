@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 
 namespace Assets.Scripts.Shooting {
-    class TorchScript : ShootingScript {
-        public TorchScript() : base(5)
+    class TorchScript : ParticleShootingScript
+    {
+        public TorchScript() : base(7)
         {}
     }
 }
