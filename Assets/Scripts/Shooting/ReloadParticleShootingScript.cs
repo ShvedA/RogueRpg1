@@ -13,6 +13,7 @@ namespace Assets.Scripts.Shooting
         protected float ReloadTime;
         protected bool ReloadStarted;
         protected bool Reloaded;
+        protected bool Fired;
 
         private IEnumerator StartReload(float seconds)
         {
@@ -22,18 +23,31 @@ namespace Assets.Scripts.Shooting
             ReloadStarted = false;
         }
 
+        void Start()
+        {
+            _particleSystem = gameObject.GetComponent<ParticleSystem>();
+        }
+
         protected void ToUpdate()
         {
-            if (_firing && Reloaded)
+            if (Fired)
             {
+
                 _particleSystem.Stop();
-                Reloaded = false;
             }
+            
             if (!ReloadStarted && !Reloaded)
+            {
+                Debug.Log("Started Reloading");
                 StartCoroutine(StartReload(ReloadTime));
+            }
             CursorHandle();
+            Debug.Log("" + _firing + Reloaded);
             if (_firing && Reloaded)
             {
+                Debug.Log("Started Play");
+                Reloaded = false;
+                Fired = true;
                 _particleSystem.Play();
             }
         }
@@ -69,6 +83,5 @@ namespace Assets.Scripts.Shooting
             var projectileVector = new Vector2(position.x - transform.position.x, position.y - transform.position.y);
             gameObject.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, AngleHelper.GetAngleForParticles(projectileVector) - _arc / 2);
         }
-
     }
 }
