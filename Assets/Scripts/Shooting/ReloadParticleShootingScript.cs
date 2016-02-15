@@ -8,9 +8,7 @@ namespace Assets.Scripts.Shooting
     {
 
         private ParticleSystem _particleSystem;
-        private float _arc = 0;
         private bool _firing;
-        private bool _waitingForReload;
         protected float ReloadTime;
         protected bool ReloadStarted;
         protected bool Reloaded;
@@ -25,20 +23,15 @@ namespace Assets.Scripts.Shooting
 
         protected void ToUpdate()
         {
-            if (_firing)
+            if (_firing && Reloaded)
             {
                 _particleSystem.Stop();
-                _firing = false;
                 Reloaded = false;
             }
             if (!ReloadStarted && !Reloaded)
                 StartCoroutine(StartReload(ReloadTime));
             CursorHandle();
-            if (_waitingForReload)
-            {
-                Play();
-            }
-            if (_firing)
+            if (_firing && Reloaded)
             {
                 _particleSystem.Play();
             }
@@ -53,35 +46,19 @@ namespace Assets.Scripts.Shooting
         public override void Init()
         {
             _particleSystem = gameObject.GetComponent<ParticleSystem>();
-            _arc = _particleSystem.shape.arc;
+            Arc = _particleSystem.shape.arc;
             Reloaded = false;
+            ReloadStarted = false;
         }
 
         public override void Play()
         {
-            if (Reloaded)
-            {
-                _firing = true;
-            }
-            else
-            {
-                _waitingForReload = true;
-            }
+            _firing = true;
         }
 
         public override void Stop()
         {
-            _particleSystem.Stop();
             _firing = false;
-            _waitingForReload = false;
-        }
-
-        public void CursorHandle()
-        {
-            var position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1);
-            position = Camera.main.ScreenToWorldPoint(position);
-            var projectileVector = new Vector2(position.x - transform.position.x, position.y - transform.position.y);
-            gameObject.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, AngleHelper.GetAngleForParticles(projectileVector) - _arc / 2);
         }
 
     }
