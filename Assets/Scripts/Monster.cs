@@ -24,7 +24,7 @@ namespace Assets.Scripts
 
         public void CheckForDeath()
         {
-            if (_health <= 0)
+            if (IsDead())
             {
                 OnDeath();
                 Die();
@@ -61,6 +61,5 @@ namespace Assets.Scripts
             Instantiate(gameObject, gameObject.transform.localPosition, gameObject.transform.localRotation);
             _numOfMonsters++;
         }
-
     }
 }

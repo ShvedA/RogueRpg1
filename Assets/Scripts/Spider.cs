@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
 namespace Assets.Scripts
 {
@@ -20,5 +21,15 @@ namespace Assets.Scripts
                 Debug.LogWarning("Too much monsters, can't create another one");
             }
         }
+
+        void OnCollisionStay2D(Collision2D col)
+        {
+            if (col.gameObject.tag == "Player")
+            {
+                col.gameObject.GetComponent<CharHealth>().GetDamage(1);
+            }
+
+        }
+
     }
 }

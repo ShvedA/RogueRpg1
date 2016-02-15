@@ -11,6 +11,7 @@ GameObject:
   - 212: {fileID: 21226478}
   - 50: {fileID: 5065706}
   - 61: {fileID: 6140314}
+  - 61: {fileID: 6130230}
   - 114: {fileID: 11462854}
   - 95: {fileID: 9585480}
   - 114: {fileID: 11401034}
@@ -41,7 +42,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 118274}
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.2
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -50,6 +51,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!61 &6130230
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118274}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1.1, y: 1.1}
 --- !u!61 &6140314
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -92,11 +107,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f486458f0e1ac284296ef0355a6ba983, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Life: 2
+  Character: {fileID: 0}
   Speed: 4
   RushSpeed: 3
-  Character: {fileID: 0}
-  Walls: {fileID: 0}
   LookDistance: 100
   Animator: {fileID: 9585480}
 --- !u!114 &11462854

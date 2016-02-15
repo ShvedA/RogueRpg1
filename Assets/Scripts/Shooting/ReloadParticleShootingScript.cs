@@ -8,6 +8,7 @@ namespace Assets.Scripts.Shooting
     {
 
         private ParticleSystem _particleSystem;
+        private float _arc;
         private bool _firing;
         protected float ReloadTime;
         protected bool ReloadStarted;
@@ -46,7 +47,7 @@ namespace Assets.Scripts.Shooting
         public override void Init()
         {
             _particleSystem = gameObject.GetComponent<ParticleSystem>();
-            Arc = _particleSystem.shape.arc;
+            _arc = _particleSystem.shape.arc;
             Reloaded = false;
             ReloadStarted = false;
         }
@@ -59,6 +60,14 @@ namespace Assets.Scripts.Shooting
         public override void Stop()
         {
             _firing = false;
+        }
+
+        private void CursorHandle()
+        {
+            var position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1);
+            position = Camera.main.ScreenToWorldPoint(position);
+            var projectileVector = new Vector2(position.x - transform.position.x, position.y - transform.position.y);
+            gameObject.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, AngleHelper.GetAngleForParticles(projectileVector) - _arc / 2);
         }
 
     }

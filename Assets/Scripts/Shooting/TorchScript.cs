@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Assets.Scripts.Shooting {
+﻿namespace Assets.Scripts.Shooting
+{
     class TorchScript : ParticleShootingScript
     {
         public TorchScript() : base(7)
