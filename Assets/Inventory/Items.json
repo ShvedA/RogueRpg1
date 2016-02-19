@@ -1,0 +1,30 @@
+[
+  {
+    "id": 0,
+    "title": "Red bullet",
+    "value": 6,
+    "stats": {
+      "power": 1,
+      "defence": 4,
+      "vitality": 2
+    },
+    "description": "ReDDD",
+    "stackable": true,
+    "rarity": 1,
+    "slug": "red_bullet"
+  },
+  {
+    "id": 1,
+    "title": "Purple bullet",
+    "value": 6,
+    "stats": {
+      "power": 2,
+      "defence": 2,
+      "vitality": 5
+    },
+    "description": "Lol",
+    "stackable": true,
+    "rarity": 2,
+    "slug": "purple_bullet"
+  }
+]

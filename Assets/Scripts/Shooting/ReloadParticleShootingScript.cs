@@ -38,14 +38,11 @@ namespace Assets.Scripts.Shooting
             
             if (!ReloadStarted && !Reloaded)
             {
-                Debug.Log("Started Reloading");
                 StartCoroutine(StartReload(ReloadTime));
             }
             CursorHandle();
-            Debug.Log("" + _firing + Reloaded);
             if (_firing && Reloaded)
             {
-                Debug.Log("Started Play");
                 Reloaded = false;
                 Fired = true;
                 _particleSystem.Play();
