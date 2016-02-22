@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using LitJson;
 using System.IO;
-using Assets.Inventory;
+using UnityEditor;
 
 namespace Assets.Inventory
 {
@@ -11,14 +11,16 @@ namespace Assets.Inventory
     {
         private List<Item> _database = new List<Item>();
         private JsonData _itemData;
+        [SerializeField]
+        private Object _JsonFile;
 
         void Start()
         {
-
-            _itemData = JsonMapper.ToObject(Application.dataPath + "/Inventory/Items.json");
+            
+            _itemData = JsonMapper.ToObject(_JsonFile.ToString());
             ConstructItemDatabase();
 
-            //Debug.Log(FetchItemByID(0).Description);
+            Debug.Log(FetchItemByID(0).Description);
         }
 
         public Item FetchItemByID(int id)
@@ -60,6 +62,7 @@ namespace Assets.Inventory
         public bool Stackable { get; set; }
         public int Rarity { get; set; }
         public string Slug { get; set; }
+        public Sprite Sprite { get; set; }
 
         public Item(int id, string title, int value, int power, int defence, int vitality, string description,
             bool stackable, int rarity, string slug)
@@ -74,6 +77,7 @@ namespace Assets.Inventory
             this.Stackable = stackable;
             this.Rarity = rarity;
             this.Slug = slug;
+            this.Sprite = Resources.Load<Sprite>(slug);
         }
 
         public Item()

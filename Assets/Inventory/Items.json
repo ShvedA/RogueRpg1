@@ -11,7 +11,7 @@
     "description": "ReDDD",
     "stackable": true,
     "rarity": 1,
-    "slug": "red_bullet"
+    "slug": "brick_wall_inset"
   },
   {
     "id": 1,
@@ -25,6 +25,6 @@
     "description": "Lol",
     "stackable": true,
     "rarity": 2,
-    "slug": "purple_bullet"
+    "slug": "brick_wall_inset"
   }
 ]
