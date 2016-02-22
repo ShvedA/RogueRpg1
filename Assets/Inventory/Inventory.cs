@@ -34,24 +34,54 @@ namespace Assets.Inventory
             }
             AddItem(1);
             AddItem(0);
+            AddItem(0);
+            AddItem(0);
+            AddItem(0);
         }
 
         public void AddItem(int id)
         {
             Item itemToAdd = _dataBase.FetchItemByID(id);
-            for (int i = 0; i < items.Count; i++)
+            int indexOfItem;
+            if (itemToAdd.Stackable && ((indexOfItem = FindItemInInventory(id)) != -2))
             {
-                if (items[i].ID == -1)
+                ItemData data = slots[indexOfItem].transform.GetChild(0).GetComponent<ItemData>();
+                data.amount++;
+                data.transform.GetChild(0).GetComponent<Text>().text = data.amount.ToString();
+            }
+            else
+            {
+                for (int i = 0; i < items.Count; i++)
                 {
-                    items[i] = itemToAdd;
-                    GameObject itemObj = Instantiate(inventoryItem);
-                    itemObj.transform.SetParent(slots[i].transform);
-                    itemObj.GetComponent<Image>().sprite = itemToAdd.Sprite;
-                    //itemObj.transform.position = Vector2.zero;
-                    itemObj.name = itemToAdd.Title;
-                    break;
+                    if (items[i].ID == -1)
+                    {
+                        items[i] = itemToAdd;
+                        GameObject itemObj = Instantiate(inventoryItem);
+                        itemObj.transform.SetParent(slots[i].transform);
+                        itemObj.GetComponent<Image>().sprite = itemToAdd.Sprite;
+                        //itemObj.transform.position = Vector2.zero;
+                        itemObj.name = itemToAdd.Title;
+                        if (itemToAdd.Stackable)
+                        {
+                            ItemData data = slots[i].transform.GetChild(0).GetComponent<ItemData>();
+                            data.amount++;
+                            data.transform.GetChild(0).GetComponent<Text>().text = data.amount.ToString();
+                        }
+                        break;
+                    }
                 }
             }
         }
+
+        int FindItemInInventory(int id) // -2 if didn't find
+        {
+            for (int i = 0; i < items.Count; i++)
+            {
+                if (items[i].ID == id)
+                    return i;
+            }
+            return -2;
+        }
+
     }
 }

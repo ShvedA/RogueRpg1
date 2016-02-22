@@ -11,7 +11,7 @@
     "description": "ReDDD",
     "stackable": true,
     "rarity": 1,
-    "slug": "brick_wall_inset"
+    "slug": "character-color"
   },
   {
     "id": 1,
@@ -23,7 +23,7 @@
       "vitality": 5
     },
     "description": "Lol",
-    "stackable": true,
+    "stackable": false,
     "rarity": 2,
     "slug": "brick_wall_inset"
   }

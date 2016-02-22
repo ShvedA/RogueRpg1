@@ -676,6 +676,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40558bba0cd6a7147b7bb44d85c1fc8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventorySlot: {fileID: 112526, guid: 93cf2714612ecbc41b96203ca149c969, type: 2}
-  inventoryItem: {fileID: 160746, guid: bc630a901a28add4f933217994ea2b23, type: 2}
+  inventorySlot: {fileID: 189212, guid: 93cf2714612ecbc41b96203ca149c969, type: 2}
+  inventoryItem: {fileID: 151098, guid: bc630a901a28add4f933217994ea2b23, type: 2}
   slots: []

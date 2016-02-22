@@ -19,8 +19,6 @@ namespace Assets.Inventory
             
             _itemData = JsonMapper.ToObject(_JsonFile.ToString());
             ConstructItemDatabase();
-
-            Debug.Log(FetchItemByID(0).Description);
         }
 
         public Item FetchItemByID(int id)
