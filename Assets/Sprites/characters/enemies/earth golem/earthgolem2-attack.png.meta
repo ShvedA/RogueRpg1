@@ -1,9 +1,41 @@
 fileFormatVersion: 2
 guid: 45add4274d9a48d4a989a601230a13ad
-timeCreated: 1456163382
+timeCreated: 1456222557
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: earthgolem2-attack_0
+    21300002: earthgolem2-attack_1
+    21300004: earthgolem2-attack_2
+    21300006: earthgolem2-attack_3
+    21300008: earthgolem2-attack_4
+    21300010: earthgolem2-attack_5
+    21300012: earthgolem2-attack_6
+    21300014: earthgolem2-attack_7
+    21300016: earthgolem2-attack_8
+    21300018: earthgolem2-attack_9
+    21300020: earthgolem2-attack_10
+    21300022: earthgolem2-attack_11
+    21300024: earthgolem2-attack_12
+    21300026: earthgolem2-attack_13
+    21300028: earthgolem2-attack_14
+    21300030: earthgolem2-attack_15
+    21300032: earthgolem2-attack_16
+    21300034: earthgolem2-attack_17
+    21300036: earthgolem2-attack_18
+    21300038: earthgolem2-attack_19
+    21300040: earthgolem2-attack_20
+    21300042: earthgolem2-attack_21
+    21300044: earthgolem2-attack_22
+    21300046: earthgolem2-attack_23
+    21300048: earthgolem2-attack_24
+    21300050: earthgolem2-attack_25
+    21300052: earthgolem2-attack_26
+    21300054: earthgolem2-attack_27
+    21300056: earthgolem2-attack_28
+    21300058: earthgolem2-attack_29
+    21300060: earthgolem2-attack_30
+    21300062: earthgolem2-attack_31
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,7 +62,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,7 +70,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,7 +81,670 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: earthgolem2-attack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 13, y: -48}
+        - {x: 27, y: -53}
+        - {x: 33, y: -53}
+        - {x: 38, y: -41}
+        - {x: 38, y: -8}
+        - {x: 28, y: 28}
+        - {x: -12, y: 28}
+        - {x: -38, y: 20}
+        - {x: -39, y: 14}
+        - {x: -39, y: -36}
+        - {x: -34, y: -46}
+        - {x: -21, y: -49}
+        - {x: -15, y: -42}
+        - {x: -14, y: -39}
+        - {x: -14, y: -34}
+        - {x: -20, y: -29}
+        - {x: -14, y: -30}
+        - {x: -14, y: -43}
+        - {x: -9, y: -52}
+        - {x: -4, y: -53}
+        - {x: 5, y: -53}
+        - {x: 9, y: -49}
+        - {x: 12, y: -42}
+        - {x: 12, y: -38}
+    - name: earthgolem2-attack_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: 31}
+        - {x: -39, y: 23}
+        - {x: -39, y: -35}
+        - {x: -26, y: -53}
+        - {x: -24, y: -54}
+        - {x: 17, y: -54}
+        - {x: 37, y: -39}
+        - {x: 46, y: -9}
+        - {x: 46, y: 31}
+    - name: earthgolem2-attack_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 26, y: 51}
+        - {x: 10, y: 51}
+        - {x: 7, y: 50}
+        - {x: -40, y: 17}
+        - {x: -40, y: -33}
+        - {x: -26, y: -53}
+        - {x: -20, y: -54}
+        - {x: 10, y: -54}
+        - {x: 27, y: -34}
+        - {x: 35, y: 7}
+        - {x: 35, y: 46}
+    - name: earthgolem2-attack_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 896
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 24}
+        - {x: -40, y: 20}
+        - {x: -40, y: -33}
+        - {x: -15, y: -52}
+        - {x: 24, y: -52}
+        - {x: 33, y: -31}
+        - {x: 33, y: 24}
+    - name: earthgolem2-attack_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 31}
+        - {x: -4, y: 31}
+        - {x: -36, y: 20}
+        - {x: -39, y: 14}
+        - {x: -39, y: -55}
+        - {x: -36, y: -58}
+        - {x: -2, y: -58}
+        - {x: 24, y: -39}
+        - {x: 24, y: -3}
+        - {x: 20, y: 24}
+    - name: earthgolem2-attack_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -41, y: 13}
+        - {x: -41, y: -27}
+        - {x: -27, y: -57}
+        - {x: 9, y: -57}
+        - {x: 55, y: -7}
+        - {x: 55, y: 41}
+        - {x: 48, y: 45}
+        - {x: 27, y: 45}
+        - {x: -6, y: 42}
+    - name: earthgolem2-attack_6
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 27, y: 57}
+        - {x: 5, y: 57}
+        - {x: -40, y: 17}
+        - {x: -40, y: -31}
+        - {x: -39, y: -44}
+        - {x: -24, y: -57}
+        - {x: 4, y: -57}
+        - {x: 28, y: -34}
+        - {x: 36, y: 21}
+        - {x: 36, y: 55}
+    - name: earthgolem2-attack_7
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 768
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: -17}
+        - {x: 16, y: -13}
+        - {x: 20, y: -4}
+        - {x: 20, y: -1}
+        - {x: 19, y: 0}
+        - {x: 19, y: 3}
+        - {x: 19, y: 1}
+        - {x: 26, y: -5}
+        - {x: 22, y: -8}
+        - {x: 13, y: -15}
+        - {x: 11, y: -20}
+        - {x: 11, y: -27}
+        - {x: 10, y: -36}
+        - {x: 33, y: -47}
+        - {x: 42, y: -42}
+        - {x: 42, y: -2}
+        - {x: 32, y: 29}
+        - {x: -19, y: 29}
+        - {x: -50, y: -7}
+        - {x: -50, y: -48}
+        - {x: -43, y: -52}
+        - {x: -11, y: -54}
+        - {x: 2, y: -54}
+        - {x: 7, y: -46}
+        - {x: 10, y: -30}
+        - {x: 11, y: -24}
+    - name: earthgolem2-attack_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 2, y: 29}
+        - {x: -24, y: 29}
+        - {x: -29, y: 17}
+        - {x: -29, y: -42}
+        - {x: -23, y: -63}
+        - {x: -20, y: -64}
+        - {x: 0, y: -64}
+        - {x: 8, y: -48}
+        - {x: 12, y: -8}
+        - {x: 12, y: 2}
+    - name: earthgolem2-attack_9
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 10, y: 57}
+        - {x: 6, y: 48}
+        - {x: 5, y: 45}
+        - {x: -27, y: 28}
+        - {x: -33, y: 21}
+        - {x: -33, y: -10}
+        - {x: -22, y: -57}
+        - {x: 36, y: -57}
+        - {x: 39, y: -43}
+        - {x: 39, y: 57}
+    - name: earthgolem2-attack_10
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -7, y: 63}
+        - {x: -31, y: 61}
+        - {x: -31, y: -57}
+        - {x: 24, y: -57}
+        - {x: 25, y: -54}
+        - {x: 25, y: 63}
+    - name: earthgolem2-attack_11
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 640
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -17, y: 31}
+        - {x: -46, y: -8}
+        - {x: -46, y: -54}
+        - {x: -39, y: -57}
+        - {x: 34, y: -57}
+        - {x: 48, y: -34}
+        - {x: 48, y: 28}
+        - {x: 44, y: 31}
+    - name: earthgolem2-attack_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 23}
+        - {x: -38, y: 16}
+        - {x: -42, y: -19}
+        - {x: -42, y: -47}
+        - {x: -35, y: -53}
+        - {x: -11, y: -61}
+        - {x: -5, y: -64}
+        - {x: 20, y: -64}
+        - {x: 23, y: -57}
+        - {x: 23, y: 11}
+        - {x: -1, y: 23}
+    - name: earthgolem2-attack_13
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -30, y: 59}
+        - {x: -38, y: 39}
+        - {x: -38, y: -32}
+        - {x: -17, y: -59}
+        - {x: 27, y: -59}
+        - {x: 36, y: -56}
+        - {x: 36, y: -19}
+        - {x: 15, y: 59}
+    - name: earthgolem2-attack_14
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -37, y: -28}
+        - {x: -25, y: -59}
+        - {x: 31, y: -59}
+        - {x: 31, y: 27}
+        - {x: 25, y: 64}
+        - {x: -20, y: 64}
+        - {x: -37, y: 46}
+    - name: earthgolem2-attack_15
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 512
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -24, y: 28}
+        - {x: -26, y: 27}
+        - {x: -26, y: -49}
+        - {x: -18, y: -63}
+        - {x: 12, y: -63}
+        - {x: 36, y: -15}
+        - {x: 36, y: 14}
+        - {x: 10, y: 28}
+    - name: earthgolem2-attack_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -38, y: 16}
+        - {x: -38, y: -62}
+        - {x: 39, y: -62}
+        - {x: 39, y: 15}
+        - {x: 38, y: 16}
+    - name: earthgolem2-attack_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -40, y: 49}
+        - {x: -46, y: 44}
+        - {x: -46, y: 23}
+        - {x: -44, y: 7}
+        - {x: -16, y: -59}
+        - {x: 14, y: -59}
+        - {x: 40, y: -37}
+        - {x: 40, y: 22}
+        - {x: -2, y: 49}
+    - name: earthgolem2-attack_18
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: -24}
+        - {x: -12, y: -59}
+        - {x: 20, y: -59}
+        - {x: 40, y: -54}
+        - {x: 40, y: 32}
+        - {x: 28, y: 60}
+        - {x: -33, y: 60}
+        - {x: -35, y: 50}
+    - name: earthgolem2-attack_19
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 11, y: 22}
+        - {x: -28, y: 22}
+        - {x: -32, y: 17}
+        - {x: -32, y: -7}
+        - {x: -15, y: -61}
+        - {x: 32, y: -61}
+        - {x: 40, y: -50}
+        - {x: 40, y: 1}
+        - {x: 35, y: 19}
+    - name: earthgolem2-attack_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 36, y: 20}
+        - {x: 9, y: 20}
+        - {x: -19, y: 7}
+        - {x: -24, y: -25}
+        - {x: -24, y: -61}
+        - {x: -20, y: -64}
+        - {x: 8, y: -64}
+        - {x: 35, y: -52}
+        - {x: 40, y: -30}
+        - {x: 40, y: 18}
+    - name: earthgolem2-attack_21
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 5, y: 36}
+        - {x: -52, y: 36}
+        - {x: -55, y: 35}
+        - {x: -55, y: -2}
+        - {x: -9, y: -58}
+        - {x: 16, y: -58}
+        - {x: 41, y: -6}
+        - {x: 41, y: 17}
+        - {x: 37, y: 30}
+    - name: earthgolem2-attack_22
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -14, y: 52}
+        - {x: -28, y: 52}
+        - {x: -36, y: 43}
+        - {x: -36, y: 24}
+        - {x: -31, y: 7}
+        - {x: -15, y: -55}
+        - {x: -4, y: -58}
+        - {x: 17, y: -58}
+        - {x: 40, y: 0}
+        - {x: 40, y: 20}
+        - {x: -10, y: 50}
+    - name: earthgolem2-attack_23
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42, y: 3}
+        - {x: -42, y: -15}
+        - {x: -40, y: -22}
+        - {x: -12, y: -59}
+        - {x: 50, y: -59}
+        - {x: 50, y: -5}
+        - {x: 38, y: 20}
+        - {x: -8, y: 20}
+        - {x: -41, y: 8}
+    - name: earthgolem2-attack_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0, y: 28}
+        - {x: -12, y: 17}
+        - {x: -12, y: -46}
+        - {x: -6, y: -64}
+        - {x: 29, y: -64}
+        - {x: 29, y: 27}
+        - {x: 28, y: 28}
+    - name: earthgolem2-attack_25
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 28}
+        - {x: -23, y: 26}
+        - {x: -39, y: 21}
+        - {x: -39, y: -7}
+        - {x: -10, y: -56}
+        - {x: 18, y: -56}
+        - {x: 34, y: -25}
+        - {x: 34, y: 13}
+        - {x: 28, y: 28}
+    - name: earthgolem2-attack_26
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -25, y: 44}
+        - {x: -25, y: -47}
+        - {x: -10, y: -56}
+        - {x: 18, y: -56}
+        - {x: 27, y: -51}
+        - {x: 31, y: -29}
+        - {x: 31, y: 29}
+        - {x: 3, y: 44}
+    - name: earthgolem2-attack_27
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 46, y: -56}
+        - {x: 46, y: 11}
+        - {x: 38, y: 27}
+        - {x: -27, y: 27}
+        - {x: -48, y: 22}
+        - {x: -48, y: -56}
+    - name: earthgolem2-attack_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -21, y: 28}
+        - {x: -23, y: 27}
+        - {x: -23, y: -36}
+        - {x: -10, y: -59}
+        - {x: 42, y: -59}
+        - {x: 42, y: 13}
+        - {x: 14, y: 28}
+    - name: earthgolem2-attack_29
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -29, y: 28}
+        - {x: -35, y: 18}
+        - {x: -35, y: -50}
+        - {x: -32, y: -54}
+        - {x: 18, y: -54}
+        - {x: 38, y: -8}
+        - {x: 38, y: 25}
+        - {x: 30, y: 28}
+    - name: earthgolem2-attack_30
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 20, y: 45}
+        - {x: -8, y: 45}
+        - {x: -27, y: 24}
+        - {x: -31, y: 0}
+        - {x: -31, y: -41}
+        - {x: -16, y: -45}
+        - {x: -10, y: -31}
+        - {x: -10, y: -26}
+        - {x: -10, y: -47}
+        - {x: -4, y: -54}
+        - {x: 16, y: -54}
+        - {x: 37, y: -8}
+        - {x: 37, y: 23}
+        - {x: 28, y: 43}
+    - name: earthgolem2-attack_31
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -20, y: 26}
+        - {x: -36, y: -3}
+        - {x: -36, y: -50}
+        - {x: -35, y: -53}
+        - {x: 25, y: -53}
+        - {x: 26, y: -47}
+        - {x: 26, y: 17}
+        - {x: 7, y: 26}
     outline: []
   spritePackingTag: 
   userData: 

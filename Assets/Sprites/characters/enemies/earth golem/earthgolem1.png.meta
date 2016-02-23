@@ -1,9 +1,17 @@
 fileFormatVersion: 2
 guid: 88da37810480f0f4986b6ee90a8d2a2c
-timeCreated: 1456163384
+timeCreated: 1456222477
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: earthgolem1_0
+    21300002: earthgolem1_1
+    21300004: earthgolem1_2
+    21300006: earthgolem1_3
+    21300008: earthgolem1_4
+    21300010: earthgolem1_5
+    21300012: earthgolem1_6
+    21300014: earthgolem1_7
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,7 +38,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -38,7 +46,7 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -49,7 +57,169 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: earthgolem1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 37, y: -14}
+        - {x: 40, y: 7}
+        - {x: 40, y: 12}
+        - {x: 31, y: 38}
+        - {x: -21, y: 38}
+        - {x: -31, y: 36}
+        - {x: -38, y: 29}
+        - {x: -38, y: -31}
+        - {x: -29, y: -42}
+        - {x: 24, y: -42}
+        - {x: 29, y: -41}
+        - {x: 40, y: -32}
+        - {x: 40, y: -19}
+    - name: earthgolem1_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -9, y: 40}
+        - {x: -36, y: 24}
+        - {x: -36, y: -35}
+        - {x: -29, y: -48}
+        - {x: 15, y: -48}
+        - {x: 28, y: -45}
+        - {x: 28, y: 39}
+        - {x: 27, y: 40}
+    - name: earthgolem1_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -11, y: 42}
+        - {x: -19, y: 30}
+        - {x: -19, y: -24}
+        - {x: -9, y: -52}
+        - {x: 11, y: -52}
+        - {x: 22, y: -24}
+        - {x: 22, y: 26}
+        - {x: 16, y: 42}
+    - name: earthgolem1_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 128
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5, y: 40}
+        - {x: -21, y: 40}
+        - {x: -29, y: 30}
+        - {x: -31, y: -1}
+        - {x: -31, y: -29}
+        - {x: -6, y: -49}
+        - {x: 28, y: -49}
+        - {x: 34, y: -48}
+        - {x: 34, y: 12}
+        - {x: 23, y: 33}
+    - name: earthgolem1_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 33}
+        - {x: -38, y: 32}
+        - {x: -38, y: -44}
+        - {x: 32, y: -44}
+        - {x: 40, y: -40}
+        - {x: 40, y: 31}
+        - {x: 24, y: 33}
+    - name: earthgolem1_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 2, y: 34}
+        - {x: -28, y: 25}
+        - {x: -29, y: 19}
+        - {x: -29, y: -49}
+        - {x: -18, y: -54}
+        - {x: 25, y: -54}
+        - {x: 35, y: -30}
+        - {x: 35, y: 34}
+    - name: earthgolem1_6
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 1, y: 40}
+        - {x: -13, y: 27}
+        - {x: -16, y: 16}
+        - {x: -16, y: -15}
+        - {x: -11, y: -44}
+        - {x: -4, y: -54}
+        - {x: 21, y: -54}
+        - {x: 24, y: -46}
+        - {x: 24, y: 30}
+        - {x: 11, y: 40}
+    - name: earthgolem1_7
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 128
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -23, y: 39}
+        - {x: -26, y: 30}
+        - {x: -26, y: -29}
+        - {x: -25, y: -33}
+        - {x: 8, y: -49}
+        - {x: 29, y: -49}
+        - {x: 39, y: -44}
+        - {x: 39, y: 1}
+        - {x: 33, y: 27}
+        - {x: 8, y: 39}
     outline: []
   spritePackingTag: 
   userData: 
