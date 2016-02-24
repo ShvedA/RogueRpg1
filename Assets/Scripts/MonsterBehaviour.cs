@@ -13,7 +13,7 @@ namespace Assets.Scripts
 
         private Rigidbody2D _rb;
         private int _count;
-        private Vector2 _randomMove = new Vector2(0,0);
+        private Vector2 _randomMove = Vector2.zero;
         private int _spotted = -1;
         private readonly Vector2[] _directions = new Vector2[4] {Vector2.up, Vector2.right, Vector2.down, Vector2.left};
 
@@ -92,7 +92,7 @@ namespace Assets.Scripts
                 }
                 else if (_count == 100)
                 {
-                    _randomMove = new Vector2(0, 0);
+                    _randomMove = Vector2.zero;
                     _count = 0;
                 }
             }

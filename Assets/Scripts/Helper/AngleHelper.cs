@@ -5,8 +5,8 @@ namespace Assets.Scripts.Helper
     public class AngleHelper
     {
 
-        private static readonly Vector2 ZeroVectorForParticles = new Vector2(1, 0);
-        private static readonly Vector2 ZeroVectorForTurningAround = new Vector2(0, -1);
+        private static readonly Vector2 ZeroVectorForParticles = Vector2.right;
+        private static readonly Vector2 ZeroVectorForTurningAround = Vector2.down;
 
         public static float GetAngleForParticles(Vector2 vectorFromCenter)
         {
