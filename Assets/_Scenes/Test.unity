@@ -207,24 +207,14 @@ GameObject:
 --- !u!114 &625479949
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11401034, guid: 93dc9c173d573274fa3e92cd7e208698,
-    type: 2}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 625479948}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f486458f0e1ac284296ef0355a6ba983, type: 3}
+  m_Script: {fileID: 11500000, guid: 012571c28ef847241ad2a5cbc531c755, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Character: {fileID: 1755471171}
-  Speed: 4
-  RushSpeed: 3
-  LookDistance: 100
-  _rb: {fileID: 0}
-  _count: 0
-  _randomMove: {x: 0, y: 0}
-  _spotted: -1
-  Animator: {fileID: 625479950}
 --- !u!95 &625479950
 Animator:
   serializedVersion: 3
@@ -259,7 +249,7 @@ MonoBehaviour:
   Speed: 3
   RushSpeed: 4
   LookDistance: 5
-  Animator: {fileID: 1572782620}
+  Animator: {fileID: 625479950}
 --- !u!61 &625479952
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -440,6 +430,7 @@ GameObject:
   - 61: {fileID: 1069108146}
   - 95: {fileID: 1069108145}
   - 114: {fileID: 1069108144}
+  - 114: {fileID: 1069108151}
   m_Layer: 2
   m_Name: Golem
   m_TagString: Monster
@@ -573,6 +564,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &1069108151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1069108143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dc9ab7b5b40d274688828073841a364, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1116020667
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,7 +945,6 @@ GameObject:
   - 4: {fileID: 1572782622}
   - 212: {fileID: 1572782621}
   - 95: {fileID: 1572782620}
-  - 114: {fileID: 1572782623}
   m_Layer: 0
   m_Name: spider-mov_0
   m_TagString: Untagged
@@ -1010,26 +1011,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
---- !u!114 &1572782623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1572782619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f486458f0e1ac284296ef0355a6ba983, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Character: {fileID: 1755471171}
-  Speed: 0
-  RushSpeed: 0
-  LookDistance: 10
-  _rb: {fileID: 0}
-  _count: 0
-  _randomMove: {x: 0, y: 0}
-  _spotted: -1
-  Animator: {fileID: 1572782620}
 --- !u!1 &1596371624
 GameObject:
   m_ObjectHideFlags: 0
