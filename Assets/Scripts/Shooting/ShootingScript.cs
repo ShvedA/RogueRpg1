@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using Assets.Scripts.Helper;
+using Assets.Scripts.Monsters.Model;
 using UnityEngine;
 
 namespace Assets.Scripts.Shooting

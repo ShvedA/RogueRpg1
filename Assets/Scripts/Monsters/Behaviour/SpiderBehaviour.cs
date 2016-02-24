@@ -1,25 +1,17 @@
 ﻿using Assets.Scripts.Helper;
 using UnityEngine;
 
-namespace Assets.Scripts
+namespace Assets.Scripts.Monsters.Behaviour
 {
     public class SpiderBehaviour : MonsterBehaviour
     {
-        public Animator Animator;
-        private const int NumOfSpriteTurns = 8;
-
-        public void Awake()
-        {
-            Animator.GetComponent<Animator>();
-        }
-
         public override void Update()
         {
             base.Update();
             Movement();
         }
 
-        public void Movement()
+        private void Movement()
         {
             var position = Character.transform.position;
             var vectorFromCenter = new Vector2(position.x - transform.position.x, position.y - transform.position.y);
@@ -30,7 +22,7 @@ namespace Assets.Scripts
             if (spriteNr < 0 || spriteNr == NumOfSpriteTurns) {
                 spriteNr = 0;
             }
-            Animator.SetInteger("angle", spriteNr);
+            Animator.SetInteger("angle", spriteNr);//throwing warning - need to expect this
         }
     }
 }

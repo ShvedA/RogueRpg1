@@ -1,20 +1,20 @@
 ﻿using UnityEngine;
 
-namespace Assets.Scripts
+namespace Assets.Scripts.Monsters.Model
 {
     public abstract class Monster : MonoBehaviour
     {
-        private int _health;
-        private double _speed;
-        private int _attack;
+        protected int Health;
+        protected double Speed;
+        protected int Attack;
         private static int _numOfMonsters = 1;
         public const int MaxNumOfMonsters = 100;
 
         protected Monster(int health, double speed, int attack)
         {
-            _health = health;
-            _speed = speed;
-            _attack = attack;
+            Health = health;
+            Speed = speed;
+            Attack = attack;
         }
 
         protected virtual void Update()
@@ -38,12 +38,12 @@ namespace Assets.Scripts
 
         public bool IsDead()
         {
-            return _health <= 0;
+            return Health <= 0;
         }
 
         public void Damage(int damage)
         {
-            _health -= damage;
+            Health -= damage;
         }
 
         public void Die()

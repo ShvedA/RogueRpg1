@@ -26,7 +26,7 @@ public class CharHealth : MonoBehaviour {
             SetHealth();
     }
 
-    public void GetDamage(float damage)
+    public void Damage(float damage)
     {
         health -= damage;
     }

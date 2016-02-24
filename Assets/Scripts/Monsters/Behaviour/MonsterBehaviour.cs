@@ -2,7 +2,7 @@
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace Assets.Scripts
+namespace Assets.Scripts.Monsters.Behaviour
 {
     public class MonsterBehaviour : MonoBehaviour
     {
@@ -10,12 +10,19 @@ namespace Assets.Scripts
         public float Speed;
         public float RushSpeed;
         public float LookDistance;
+        public Animator Animator;
+
+        protected const int NumOfSpriteTurns = 8;
 
         private Rigidbody2D _rb;
         private int _count;
         private Vector2 _randomMove = Vector2.zero;
         private int _spotted = -1;
         private readonly Vector2[] _directions = new Vector2[4] {Vector2.up, Vector2.right, Vector2.down, Vector2.left};
+
+        public void Awake() {
+            Animator.GetComponent<Animator>();
+        }
 
         private void Start()
         {

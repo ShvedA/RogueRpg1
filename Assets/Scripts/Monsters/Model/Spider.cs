@@ -1,7 +1,7 @@
-﻿using System.Linq;
-using UnityEngine;
+﻿using UnityEngine;
+using Random = System.Random;
 
-namespace Assets.Scripts
+namespace Assets.Scripts.Monsters.Model
 {
     public class Spider : Monster
     {
@@ -13,8 +13,12 @@ namespace Assets.Scripts
             base.OnDeath();
             if (CanAddMonster())
             {
-                CreateNewMonster();
-                CreateNewMonster();
+                Random random = new Random();
+                var rand = random.Next(3);
+                for (int i = 0; i < rand; i++)
+                {
+                    CreateNewMonster();
+                }
             }
             else
             {
@@ -26,7 +30,7 @@ namespace Assets.Scripts
         {
             if (col.gameObject.tag == "Player")
             {
-                col.gameObject.GetComponent<CharHealth>().GetDamage(1);
+                col.gameObject.GetComponent<CharHealth>().Damage(Attack);
             }
 
         }
