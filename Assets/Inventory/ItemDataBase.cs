@@ -75,7 +75,7 @@ namespace Assets.Inventory
             this.Stackable = stackable;
             this.Rarity = rarity;
             this.Slug = slug;
-            this.Sprite = Resources.Load<Sprite>(slug);
+            this.Sprite = Resources.Load<Sprite>("Gems\\" + slug);
         }
 
         public Item()

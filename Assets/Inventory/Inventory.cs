@@ -23,7 +23,7 @@ namespace Assets.Inventory
         {
             _dataBase = GetComponent<ItemDataBase>();
 
-            slotAmount = 12;
+            slotAmount = 20;
             inventoryPanel = GameObject.Find("Inventory Panel");
             slotPanel = inventoryPanel.transform.FindChild("Slot Panel").gameObject;
             for (int i = 0; i < slotAmount; i++)
