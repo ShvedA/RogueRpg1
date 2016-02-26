@@ -30,6 +30,7 @@ namespace Assets.Inventory
             {
                 items.Add(new Item());
                 slots.Add(Instantiate(inventorySlot));
+                slots[i].GetComponent<Slot>().id = i;
                 slots[i].transform.SetParent(slotPanel.transform);
             }
             AddItem(1);
@@ -57,6 +58,8 @@ namespace Assets.Inventory
                     {
                         items[i] = itemToAdd;
                         GameObject itemObj = Instantiate(inventoryItem);
+                        itemObj.GetComponent<ItemData>().item = itemToAdd;
+                        itemObj.GetComponent<ItemData>().slot = i;
                         itemObj.transform.SetParent(slots[i].transform);
                         itemObj.GetComponent<Image>().sprite = itemToAdd.Sprite;
                         //itemObj.transform.position = Vector2.zero;

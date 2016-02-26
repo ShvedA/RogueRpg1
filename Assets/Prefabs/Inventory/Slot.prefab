@@ -10,6 +10,7 @@ GameObject:
   - 224: {fileID: 22475056}
   - 222: {fileID: 22272926}
   - 114: {fileID: 11440972}
+  - 114: {fileID: 11419006}
   m_Layer: 5
   m_Name: Slot
   m_TagString: Untagged
@@ -17,6 +18,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &11419006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 189212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d6ef8c42f23433489ab59f043b9d01e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0
 --- !u!114 &11440972
 MonoBehaviour:
   m_ObjectHideFlags: 1
