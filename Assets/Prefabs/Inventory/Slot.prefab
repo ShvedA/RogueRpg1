@@ -86,7 +86,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: invObject
+      value: 
+      objectReference: {fileID: 121272, guid: a69a15aa2da1e8b49ba64dcc59c60c61, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 189212}

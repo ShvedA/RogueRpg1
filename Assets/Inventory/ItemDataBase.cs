@@ -24,8 +24,10 @@ namespace Assets.Inventory
         public Item FetchItemByID(int id)
         {
             for (int i = 0; i < _database.Count; i++)
+            {
                 if (_database[i].ID == id)
                     return _database[i];
+            }
             return null;
         }
 

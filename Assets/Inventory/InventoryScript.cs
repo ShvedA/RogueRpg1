@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 namespace Assets.Inventory
 {
-    public class Inventory : MonoBehaviour
+    public class InventoryScript : MonoBehaviour
     {
+        [SerializeField]
         GameObject inventoryPanel;
         GameObject slotPanel;
         private ItemDataBase _dataBase;
@@ -24,7 +25,7 @@ namespace Assets.Inventory
             _dataBase = GetComponent<ItemDataBase>();
 
             slotAmount = 20;
-            inventoryPanel = GameObject.Find("Inventory Panel");
+            //inventoryPanel = GameObject.Find("Inventory Panel");
             slotPanel = inventoryPanel.transform.FindChild("Slot Panel").gameObject;
             for (int i = 0; i < slotAmount; i++)
             {

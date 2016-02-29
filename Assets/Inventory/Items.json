@@ -8,7 +8,7 @@
       "defence": 4,
       "vitality": 2
     },
-    "description": "ReDDD",
+    "description": "Placeholder for Flamethrower and some more story just to try bigger string! :D",
     "stackable": true,
     "rarity": 1,
     "slug": "little_fire"
@@ -22,7 +22,7 @@
       "defence": 2,
       "vitality": 5
     },
-    "description": "Lol",
+    "description": "Placeholder for ice magic",
     "stackable": false,
     "rarity": 2,
     "slug": "ice_shard"

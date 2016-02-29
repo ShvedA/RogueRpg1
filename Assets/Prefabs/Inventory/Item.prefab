@@ -28,7 +28,6 @@ GameObject:
   - 224: {fileID: 22427642}
   - 222: {fileID: 22222032}
   - 114: {fileID: 11438410}
-  - 114: {fileID: 11415990}
   - 114: {fileID: 11498684}
   - 225: {fileID: 22539492}
   - 114: {fileID: 11422778}
@@ -39,17 +38,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &11415990
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 151098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &11422778
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -225,6 +213,10 @@ Prefab:
       propertyPath: m_IgnoreLayout
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: inventoryObject
+      value: 
+      objectReference: {fileID: 121272, guid: a69a15aa2da1e8b49ba64dcc59c60c61, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 151098}

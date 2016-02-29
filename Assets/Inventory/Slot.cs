@@ -9,11 +9,11 @@ namespace Assets.Inventory
 
         public int id;
 
-        private Inventory inv;
+        private InventoryScript inv;
 
         void Start()
         {
-            inv = GameObject.Find("Inventory").GetComponent<Inventory>();
+            inv = GameObject.Find("InventoryObject").GetComponent<InventoryScript>();
         }
 
         public void OnDrop(PointerEventData eventData)

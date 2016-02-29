@@ -1,10 +1,11 @@
 fileFormatVersion: 2
-guid: 2d6ef8c42f23433489ab59f043b9d01e
-timeCreated: 1456768508
+guid: f3205867ec164874da478557128e2584
+timeCreated: 1456770279
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - tooltip: {fileID: 192354, guid: 64d024a216b6e1e42b764aa21cba3412, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

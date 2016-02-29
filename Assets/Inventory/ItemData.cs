@@ -6,13 +6,26 @@ using System;
 namespace Assets.Inventory
 {
 
-    public class ItemData : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+    public class ItemData : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerEnterHandler, IPointerExitHandler
     {
 
         public Item item;
+        [HideInInspector]
         public int amount;
+        [HideInInspector]
         public int slot;
+        [HideInInspector]
         public Transform originalParent;
+        private InventoryScript inv;
+
+        private TooltipScript tooltip;
+
+        void Start()
+        {
+            inv = GameObject.Find("InventoryObject").GetComponent<InventoryScript>();
+            tooltip = inv.GetComponent<TooltipScript>();
+        }
+
 
         public void OnBeginDrag(PointerEventData eventData)
         {
@@ -38,6 +51,16 @@ namespace Assets.Inventory
             this.transform.SetParent(originalParent);
             this.transform.position = originalParent.transform.position;
             GetComponent<CanvasGroup>().blocksRaycasts = true;
+        }
+
+        public void OnPointerEnter(PointerEventData eventData)
+        {
+            tooltip.Activate(item);
+        }
+
+        public void OnPointerExit(PointerEventData eventData)
+        {
+            tooltip.Deactivate();
         }
     }
 }
