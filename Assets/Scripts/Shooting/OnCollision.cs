@@ -1,17 +1,18 @@
-﻿using UnityEngine;
-using System.Collections;
-using Assets.Scripts;
-using Assets.Scripts.Monsters.Model;
+﻿using Assets.Scripts.Monsters.Model;
+using UnityEngine;
 
-public class OnCollision : MonoBehaviour
+namespace Assets.Scripts.Shooting
 {
-    [SerializeField] private int _damage = 0;
-
-    private void OnParticleCollision(GameObject col)
+    public class OnCollision : MonoBehaviour
     {
-        if (col.gameObject.tag == "Monster")
+        [SerializeField] private int damage = 0;
+
+        private void OnParticleCollision(GameObject col)
         {
-            col.gameObject.GetComponent<Monster>().Damage(_damage);
+            if (col.gameObject.tag == "Monster")
+            {
+                col.gameObject.GetComponent<Monster>().Damage(damage);
+            }
         }
     }
 }

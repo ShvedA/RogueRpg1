@@ -2,7 +2,6 @@
 {
     class TorchScript : ParticleShootingScript
     {
-        public TorchScript() : base(7)
-        {}
+        public TorchScript() : base(7) {}
     }
 }

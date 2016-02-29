@@ -5,7 +5,6 @@ namespace Assets.Scripts.Monsters.Model
 {
     public class Spider : Monster
     {
-
         public Spider() : base(100, 1, 1){}
 
         protected override void OnDeath()
@@ -32,8 +31,6 @@ namespace Assets.Scripts.Monsters.Model
             {
                 col.gameObject.GetComponent<CharHealth>().Damage(Attack);
             }
-
         }
-
     }
 }

@@ -22,6 +22,5 @@ namespace Assets.Scripts.Shooting
                 col.gameObject.GetComponent<Monster>().Damage(Damage);
             }
         }
-
     }
 }

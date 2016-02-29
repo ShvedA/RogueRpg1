@@ -6,8 +6,7 @@ using System.Text;
 namespace Assets.Scripts.Shooting {
     class RocketScript : ReloadParticleShootingScript
     {
-        public RocketScript() : base(20, 2)
-        {}
+        public RocketScript() : base(20, 2) {}
 
         void Update()
         {

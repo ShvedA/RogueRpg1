@@ -2,7 +2,6 @@
 {
     public class FireScript : ParticleShootingScript
     {
-        public FireScript() : base(10)
-        {}
+        public FireScript() : base(10) {}
     }
 }

@@ -12,8 +12,7 @@ namespace Assets.Scripts
         private const int Width = 50;
         private const int Height = 50;
 
-        public static Transform[] walls;
-
+        public static Transform[] Walls;
         public GameObject Brick;
 
         private void Start()
@@ -21,22 +20,22 @@ namespace Assets.Scripts
             //CreateRectangleField();
             //RandomSquaresAroundTheMap();
             CreateCaveLikeMap();
-            walls = new Transform[transform.childCount];
-            for (int i = 0; i < transform.childCount; i++)
+            Walls = new Transform[transform.childCount];
+            for (var i = 0; i < transform.childCount; i++)
             {
-                walls[i] = transform.GetChild(i).transform;
+                Walls[i] = transform.GetChild(i).transform;
             }
         }
 
         private void CreateRectangleField()
         {
-            for (int x = -Width; x <= Width; x++)
+            for (var x = -Width; x <= Width; x++)
             {
-                for (int y = -Height; y <= Height; y++)
+                for (var y = -Height; y <= Height; y++)
                 {
                     if (x == -Width || x == Width || y == -Height || y == Height)
                     {
-                        GameObject each = Instantiate(Brick, new Vector3(x, y, 0), Quaternion.identity) as GameObject;
+                        var each = Instantiate(Brick, new Vector3(x, y, 0), Quaternion.identity) as GameObject;
                         each.transform.parent = transform;
                     }
                 }
@@ -45,9 +44,9 @@ namespace Assets.Scripts
 
         private void RandomSquaresAroundTheMap()
         {
-            for (int i = 0; i < 100; i++)
+            for (var i = 0; i < 100; i++)
             {
-                GameObject each =
+                var each =
                     Instantiate(Brick, new Vector3((int) Random.Range(-30f, 30f), (int) Random.Range(-30f, 30f), 0), Quaternion.identity) as
                         GameObject;
                 each.transform.parent = transform;
@@ -56,17 +55,17 @@ namespace Assets.Scripts
 
         private void CreateCaveLikeMap()
         {
-            MapHandler handler = new MapHandler(100, 100, 657);
+            var handler = new MapHandler(100, 100, 657);
             handler.MakeCaverns();
             handler.MakeCaverns();
             handler.MakeCaverns();
-            for (int row = 0; row <= handler.MapHeight - 1; row++)
+            for (var row = 0; row <= handler.MapHeight - 1; row++)
             {
-                for (int column = 0; column <= handler.MapWidth - 1; column++)
+                for (var column = 0; column <= handler.MapWidth - 1; column++)
                 {
                     if (handler.Map[column, row] == 1)
                     {
-                        GameObject each = Instantiate(Brick, new Vector3(column - mapOffsetX, row - mapOffsetY, 0), Quaternion.identity) as GameObject;
+                        var each = Instantiate(Brick, new Vector3(column - mapOffsetX, row - mapOffsetY, 0), Quaternion.identity) as GameObject;
                         each.transform.parent = transform;
                     }
                 }

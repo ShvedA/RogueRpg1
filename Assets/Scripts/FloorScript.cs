@@ -5,20 +5,19 @@ namespace Assets.Scripts
     public class FloorScript : MonoBehaviour
     {
 
-        [SerializeField] private GameObject _floorTexture;
-        [SerializeField] private int Width;
-        [SerializeField] private int Height;
-        [SerializeField] private float Size;
-        [SerializeField] private float Scale;
+        [SerializeField] private GameObject floorTexture;
+        [SerializeField] private int width;
+        [SerializeField] private int height;
+        [SerializeField] private float size;
+        [SerializeField] private float scale;
 
         void Start ()
         {
-
-            for (int x = -Width; x <= Width; x++)
+            for (var x = -width; x <= width; x++)
             {
-                for (int y = -Height; y <= Height; y++)
+                for (var y = -height; y <= height; y++)
                 {
-                        GameObject each = Instantiate(_floorTexture, new Vector3(x * Size * Scale, y * Size * Scale, 0), Quaternion.identity) as GameObject;
+                        var each = Instantiate(floorTexture, new Vector3(x * size * scale, y * size * scale, 0), Quaternion.identity) as GameObject;
                         each.transform.parent = transform;
                 }
             }

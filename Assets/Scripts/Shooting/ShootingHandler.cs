@@ -6,32 +6,33 @@ namespace Assets.Scripts.Shooting
     public class ShootingHandler : MonoBehaviour
     {
         public GameObject[] Particle;
-        private GameObject _mainParticle;
-        private ShootingScript _shootingScript;
-        private Rigidbody2D _rb;
-        private int _weaponNumber = 0;
+        private GameObject mainParticle;
+        private ShootingScript shootingScript;
+        private Rigidbody2D rb;
+        private int weaponNumber = 0;
 
         private void Start()
         {
-            _rb = GetComponent<Rigidbody2D>();
-            _mainParticle = Particle[_weaponNumber];
-            _shootingScript = _mainParticle.GetComponent<ShootingScript>();
-            _shootingScript.Init();
+            rb = GetComponent<Rigidbody2D>();
+            mainParticle = Particle[weaponNumber];
+            shootingScript = mainParticle.GetComponent<ShootingScript>();
+            shootingScript.Init();
         }
 
-        private void ChangeWeapon(int weaponNumber)
+        private void ChangeWeapon(int weaponNr)
         {
-            if (weaponNumber != _weaponNumber)
+            if (weaponNr == weaponNumber)
             {
-                _shootingScript.Stop();
-                _weaponNumber = weaponNumber;
-                _mainParticle = Particle[weaponNumber];
-                _shootingScript = _mainParticle.GetComponent<ShootingScript>();
-                _shootingScript.Init();
-                if (Input.GetButton("Fire1"))
-                {
-                    _shootingScript.Play();
-                }
+                return;
+            }
+            shootingScript.Stop();
+            weaponNumber = weaponNr;
+            mainParticle = Particle[weaponNr];
+            shootingScript = mainParticle.GetComponent<ShootingScript>();
+            shootingScript.Init();
+            if (Input.GetButton("Fire1"))
+            {
+                shootingScript.Play();
             }
         }
 
@@ -39,20 +40,20 @@ namespace Assets.Scripts.Shooting
         {
             Vector3 pz = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector2 mouse = new Vector2(pz.x, pz.y);
-            Vector2 vectorFromCenter = new Vector2(mouse.x - _rb.position.x, mouse.y - _rb.position.y);
+            Vector2 vectorFromCenter = new Vector2(mouse.x - rb.position.x, mouse.y - rb.position.y);
             double angle = AngleHelper.GetAngleForTurningAround(vectorFromCenter);
             AnalyzeAngle(angle);
         }
 
         private void AnalyzeAngle(double angle)
         {
-            double angleFromSectorBeginning = angle + (Constants.Round / Particle.Length) / 2;
-            int weaponNumber = (int)(angleFromSectorBeginning / (Constants.Round / Particle.Length));
-            if (weaponNumber < 0 || weaponNumber == Particle.Length)
+            var angleFromSectorBeginning = angle + (Constants.Round / Particle.Length) / 2;
+            var weaponNr = (int)(angleFromSectorBeginning / (Constants.Round / Particle.Length));
+            if (weaponNr < 0 || weaponNr == Particle.Length)
             {
-                weaponNumber = 0;
+                weaponNr = 0;
             }
-            ChangeWeapon(weaponNumber);
+            ChangeWeapon(weaponNr);
         }
 
         private void Update()
@@ -60,11 +61,11 @@ namespace Assets.Scripts.Shooting
             LookingAngle();
             if (Input.GetButtonDown("Fire1"))
             {
-                _shootingScript.Play();
+                shootingScript.Play();
             }
             if (Input.GetButtonUp("Fire1"))
             {
-                _shootingScript.Stop();
+                shootingScript.Stop();
             }
         }
     }

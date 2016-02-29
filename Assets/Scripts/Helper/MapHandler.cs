@@ -4,15 +4,11 @@ namespace Assets.Scripts.Helper
 {
     public class MapHandler
     {
-        //Random rand = new Random();
-
         public int[,] Map;
 
         public int MapWidth { get; set; }
         public int MapHeight { get; set; }
         public int PercentAreWalls { get; set; }
-
-
 
         public MapHandler()
         {

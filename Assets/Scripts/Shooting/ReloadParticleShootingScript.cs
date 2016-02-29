@@ -6,10 +6,11 @@ namespace Assets.Scripts.Shooting
 {
     public abstract class ReloadParticleShootingScript : ShootingScript
     {
+        [HideInInspector]
+        public ParticleSystem ParticleSystem;
 
-        private ParticleSystem _particleSystem;
-        private float _arc;
-        private bool _firing;
+        private float arc;
+        private bool firing;
         protected float ReloadTime;
         protected bool ReloadStarted;
         protected bool Reloaded;
@@ -25,7 +26,7 @@ namespace Assets.Scripts.Shooting
 
         void Start()
         {
-            _particleSystem = gameObject.GetComponent<ParticleSystem>();
+            ParticleSystem = gameObject.GetComponent<ParticleSystem>();
         }
 
         protected void ToUpdate()
@@ -33,7 +34,7 @@ namespace Assets.Scripts.Shooting
             if (Fired)
             {
 
-                _particleSystem.Stop();
+                ParticleSystem.Stop();
             }
             
             if (!ReloadStarted && !Reloaded)
@@ -41,11 +42,11 @@ namespace Assets.Scripts.Shooting
                 StartCoroutine(StartReload(ReloadTime));
             }
             CursorHandle();
-            if (_firing && Reloaded)
+            if (firing && Reloaded)
             {
                 Reloaded = false;
                 Fired = true;
-                _particleSystem.Play();
+                ParticleSystem.Play();
             }
         }
 
@@ -57,20 +58,20 @@ namespace Assets.Scripts.Shooting
 
         public override void Init()
         {
-            _particleSystem = gameObject.GetComponent<ParticleSystem>();
-            _arc = _particleSystem.shape.arc;
+            ParticleSystem = gameObject.GetComponent<ParticleSystem>();
+            arc = ParticleSystem.shape.arc;
             Reloaded = false;
             ReloadStarted = false;
         }
 
         public override void Play()
         {
-            _firing = true;
+            firing = true;
         }
 
         public override void Stop()
         {
-            _firing = false;
+            firing = false;
         }
 
         private void CursorHandle()
@@ -78,7 +79,7 @@ namespace Assets.Scripts.Shooting
             var position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1);
             position = Camera.main.ScreenToWorldPoint(position);
             var projectileVector = new Vector2(position.x - transform.position.x, position.y - transform.position.y);
-            gameObject.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, AngleHelper.GetAngleForParticles(projectileVector) - _arc / 2);
+            gameObject.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, AngleHelper.GetAngleForParticles(projectileVector) - arc / 2);
         }
     }
 }

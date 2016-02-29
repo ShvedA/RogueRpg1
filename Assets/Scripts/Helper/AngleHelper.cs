@@ -4,7 +4,6 @@ namespace Assets.Scripts.Helper
 {
     public class AngleHelper
     {
-
         private static readonly Vector2 ZeroVectorForParticles = Vector2.right;
         private static readonly Vector2 ZeroVectorForTurningAround = Vector2.down;
 

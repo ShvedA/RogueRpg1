@@ -6,10 +6,10 @@ namespace Assets.Scripts.Shooting
 {
     public abstract class ParticleShootingScript : ShootingScript
     {
+        [HideInInspector]
+        public ParticleSystem ParticleSystem;
 
-        private ParticleSystem _particleSystem;
-
-        private float _arc;
+        private float arc;
 
         void Update()
         {
@@ -23,18 +23,18 @@ namespace Assets.Scripts.Shooting
 
         public override void Init()
         {
-            _particleSystem = gameObject.GetComponent<ParticleSystem>();
-            _arc = _particleSystem.shape.arc;
+            ParticleSystem = gameObject.GetComponent<ParticleSystem>();
+            arc = ParticleSystem.shape.arc;
         }
 
         public override void Play()
         {
-            _particleSystem.Play();
+            ParticleSystem.Play();
         }
 
         public override void Stop()
         {
-            _particleSystem.Stop();
+            ParticleSystem.Stop();
         }
 
         private void OnParticleCollision(GameObject col)
@@ -47,8 +47,7 @@ namespace Assets.Scripts.Shooting
             var position = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 1);
             position = Camera.main.ScreenToWorldPoint(position);
             var projectileVector = new Vector2(position.x - transform.position.x, position.y - transform.position.y);
-            gameObject.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, AngleHelper.GetAngleForParticles(projectileVector) - _arc / 2);
+            gameObject.GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, AngleHelper.GetAngleForParticles(projectileVector) - arc / 2);
         }
-
     }
 }

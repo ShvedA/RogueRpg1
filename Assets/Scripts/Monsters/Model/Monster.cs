@@ -7,7 +7,7 @@ namespace Assets.Scripts.Monsters.Model
         protected int Health;
         protected double Speed;
         protected int Attack;
-        private static int _numOfMonsters = 1;
+        private static int numOfMonsters = 1;
         public const int MaxNumOfMonsters = 100;
 
         protected Monster(int health, double speed, int attack)
@@ -33,7 +33,7 @@ namespace Assets.Scripts.Monsters.Model
 
         protected virtual void OnDeath()
         {
-            _numOfMonsters--;
+            numOfMonsters--;
         }
 
         public bool IsDead()
@@ -53,13 +53,13 @@ namespace Assets.Scripts.Monsters.Model
 
         public bool CanAddMonster()
         {
-            return MaxNumOfMonsters > _numOfMonsters;
+            return MaxNumOfMonsters > numOfMonsters;
         }
 
         public void CreateNewMonster()
         {
             Instantiate(gameObject, gameObject.transform.localPosition, gameObject.transform.localRotation);
-            _numOfMonsters++;
+            numOfMonsters++;
         }
     }
 }
