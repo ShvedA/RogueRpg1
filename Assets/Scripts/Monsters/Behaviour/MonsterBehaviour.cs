@@ -1,4 +1,5 @@
 ﻿using System;
+using Assets.Scripts.Helper;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -11,6 +12,7 @@ namespace Assets.Scripts.Monsters.Behaviour
         public float RushSpeed;
         public float LookDistance;
         public Animator Animator;
+        public int PrevBehaviour = 0;
 
         protected const int NumOfSpriteTurns = 8;
 
@@ -70,6 +72,23 @@ namespace Assets.Scripts.Monsters.Behaviour
                 }
             }
             return closestWall;
+        }
+
+        protected void ChangeAnimation(Vector2 vectorFromCenter) {
+            double angle = AngleHelper.GetAngleForTurningAround(vectorFromCenter);
+            var angleFromSectorBeginning = angle + (Constants.Round / NumOfSpriteTurns) / 2;
+
+            int spriteNr = (int)(angleFromSectorBeginning / (Constants.Round / NumOfSpriteTurns));
+            if (spriteNr < 0 || spriteNr == NumOfSpriteTurns) {
+                spriteNr = 0;
+            }
+            if (PrevBehaviour == spriteNr)
+            {
+                return;
+            }
+            Debug.Log(Animator.GetInteger("angle"));
+            Animator.SetInteger("angle", spriteNr); //throwing warning - need to expect this
+            PrevBehaviour = spriteNr;
         }
 
         private void Behaviours()
