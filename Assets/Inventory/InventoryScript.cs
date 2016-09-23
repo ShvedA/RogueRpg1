@@ -53,21 +53,21 @@ namespace Assets.Inventory
             }
             else
             {
-                for (int i = 0; i < items.Count; i++)
+                for (int slotNumber = 0; slotNumber < items.Count; slotNumber++)
                 {
-                    if (items[i].ID == -1)
+                    if (items[slotNumber].ID == -1)
                     {
-                        items[i] = itemToAdd;
+                        items[slotNumber] = itemToAdd;
                         GameObject itemObj = Instantiate(inventoryItem);
                         itemObj.GetComponent<ItemData>().item = itemToAdd;
-                        itemObj.GetComponent<ItemData>().slot = i;
-                        itemObj.transform.SetParent(slots[i].transform);
+                        itemObj.GetComponent<ItemData>().slot = slotNumber;
+                        itemObj.transform.SetParent(slots[slotNumber].transform);
                         itemObj.GetComponent<Image>().sprite = itemToAdd.Sprite;
                         //itemObj.transform.position = Vector2.zero;
                         itemObj.name = itemToAdd.Title;
                         if (itemToAdd.Stackable)
                         {
-                            ItemData data = slots[i].transform.GetChild(0).GetComponent<ItemData>();
+                            ItemData data = slots[slotNumber].transform.GetChild(0).GetComponent<ItemData>();
                             data.amount++;
                             data.transform.GetChild(0).GetComponent<Text>().text = data.amount.ToString();
                         }

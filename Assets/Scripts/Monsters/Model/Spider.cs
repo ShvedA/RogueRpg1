@@ -7,8 +7,12 @@ namespace Assets.Scripts.Monsters.Model
     {
         public Spider() : base(100, 1, 1){}
 
+        [SerializeField]
+        private GameObject drop;
+
         protected override void OnDeath()
         {
+            Instantiate(drop).transform.position = transform.position;
             base.OnDeath();
             if (CanAddMonster())
             {
