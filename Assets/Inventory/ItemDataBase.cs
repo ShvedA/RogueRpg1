@@ -5,38 +5,53 @@ using LitJson;
 using System.IO;
 using UnityEditor;
 
-namespace Assets.Inventory {
-    public class ItemDataBase : MonoBehaviour {
+namespace Assets.Inventory
+{
+    public class ItemDataBase : MonoBehaviour
+    {
         private List<Item> _database = new List<Item>();
         private JsonData _itemData;
-        [SerializeField] private Object _JsonFile;
+        [SerializeField]
+        private Object _JsonFile;
 
-        private void Start() {
+        void Start()
+        {
+            
             _itemData = JsonMapper.ToObject(_JsonFile.ToString());
             ConstructItemDatabase();
         }
 
-        public Item FetchItemByID(int id) {
-            for (int i = 0; i < _database.Count; i++) {
-                if (_database[i].ID == id) {
+        public Item FetchItemByID(int id)
+        {
+            for (int i = 0; i < _database.Count; i++)
+            {
+                if (_database[i].ID == id)
                     return _database[i];
-                }
             }
             return null;
         }
 
-        private void ConstructItemDatabase() {
-            for (int i = 0; i < _itemData.Count; i++) {
-                _database.Add(
-                    new Item(
-                        (int) _itemData[i]["id"], _itemData[i]["title"].ToString(), (int) _itemData[i]["value"], (int) _itemData[i]["stats"]["power"],
-                        (int) _itemData[i]["stats"]["defence"], (int) _itemData[i]["stats"]["vitality"], _itemData[i]["description"].ToString(),
-                        (bool) _itemData[i]["stackable"], (int) _itemData[i]["rarity"], _itemData[i]["slug"].ToString()));
+        void ConstructItemDatabase()
+        {
+            for (int i = 0; i < _itemData.Count; i++)
+            {
+                _database.Add(new Item(
+                    (int) _itemData[i]["id"],
+                    _itemData[i]["title"].ToString(),
+                    (int) _itemData[i]["value"],
+                    (int) _itemData[i]["stats"]["power"],
+                    (int) _itemData[i]["stats"]["defence"],
+                    (int) _itemData[i]["stats"]["vitality"],
+                    _itemData[i]["description"].ToString(),
+                    (bool) _itemData[i]["stackable"],
+                    (int) _itemData[i]["rarity"],
+                    _itemData[i]["slug"].ToString()));
             }
         }
     }
 
-    public class Item {
+    public class Item
+    {
         public int ID { get; set; }
         public string Title { get; set; }
         public int Value { get; set; }
@@ -49,8 +64,9 @@ namespace Assets.Inventory {
         public string Slug { get; set; }
         public Sprite Sprite { get; set; }
 
-        public Item(
-            int id, string title, int value, int power, int defence, int vitality, string description, bool stackable, int rarity, string slug) {
+        public Item(int id, string title, int value, int power, int defence, int vitality, string description,
+            bool stackable, int rarity, string slug)
+        {
             this.ID = id;
             this.Title = title;
             this.Value = value;
@@ -64,7 +80,8 @@ namespace Assets.Inventory {
             this.Sprite = Resources.Load<Sprite>("Gems\\" + slug);
         }
 
-        public Item() {
+        public Item()
+        {
             this.ID = -1;
         }
     }

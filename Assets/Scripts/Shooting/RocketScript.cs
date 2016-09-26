@@ -4,10 +4,12 @@ using System.Linq;
 using System.Text;
 
 namespace Assets.Scripts.Shooting {
-    internal class RocketScript : ReloadParticleShootingScript {
+    class RocketScript : ReloadParticleShootingScript
+    {
         public RocketScript() : base(20, 2) {}
 
-        private void Update() {
+        void Update()
+        {
             ToUpdate();
         }
     }

@@ -1,5 +1,7 @@
-﻿namespace Assets.Scripts.Shooting {
-    internal class IceScript : ParticleShootingScript {
-        public IceScript() : base(5) {}
+﻿namespace Assets.Scripts.Shooting
+{
+    class IceScript : ParticleShootingScript
+    {
+        public IceScript() : base(5) {}   
     }
 }
