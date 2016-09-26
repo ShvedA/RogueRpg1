@@ -3,10 +3,8 @@ using Assets.Scripts.Helper;
 using Assets.Scripts.Monsters.Model;
 using UnityEngine;
 
-namespace Assets.Scripts.Shooting
-{
-    public abstract class ShootingScript : MonoBehaviour
-    {
+namespace Assets.Scripts.Shooting {
+    public abstract class ShootingScript : MonoBehaviour {
         protected int Damage;
 
         public abstract void Init();
@@ -15,10 +13,8 @@ namespace Assets.Scripts.Shooting
 
         public abstract void Stop();
 
-        protected void DealDamage(GameObject col)
-        {
-            if (col.gameObject.tag == "Monster")
-            {
+        protected void DealDamage(GameObject col) {
+            if (col.gameObject.tag == "Monster") {
                 col.gameObject.GetComponent<Monster>().Damage(Damage);
             }
         }
