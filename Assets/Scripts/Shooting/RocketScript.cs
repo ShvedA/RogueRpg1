@@ -12,5 +12,9 @@ namespace Assets.Scripts.Shooting {
         {
             ToUpdate();
         }
+
+        public override string GetName() {
+            return "Rocket";
+        }
     }
 }

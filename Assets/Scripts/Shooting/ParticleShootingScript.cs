@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
 using Assets.Scripts.Helper;
 
@@ -10,10 +11,18 @@ namespace Assets.Scripts.Shooting
         public ParticleSystem ParticleSystem;
 
         private float arc;
+        private bool isActive;
 
         void Update()
         {
             CursorHandle();
+            chargeLeft = Math.Min(ShootingHandler.MaxCharge, chargeLeft += chargeCharging);
+            if (isActive && chargeLeft >= chargeCost) {
+                chargeLeft -= chargeCost;
+                ParticleSystem.Play();
+            } else {
+                ParticleSystem.Stop();
+            }
         }
 
         protected ParticleShootingScript(int damage)
@@ -27,14 +36,12 @@ namespace Assets.Scripts.Shooting
             arc = ParticleSystem.shape.arc;
         }
 
-        public override void Play()
-        {
-            ParticleSystem.Play();
+        public override void Play() {
+            isActive = true;
         }
 
-        public override void Stop()
-        {
-            ParticleSystem.Stop();
+        public override void Stop() {
+            isActive = false;
         }
 
         private void OnParticleCollision(GameObject col)

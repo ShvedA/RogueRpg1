@@ -1,4 +1,5 @@
-﻿using Assets.Scripts.Helper;
+﻿using System.Linq;
+using Assets.Scripts.Helper;
 using UnityEngine;
 
 namespace Assets.Scripts.Shooting
@@ -7,16 +8,22 @@ namespace Assets.Scripts.Shooting
     {
         public GameObject[] Particle;
         private GameObject mainParticle;
+        private ShootingScript[] shootingScripts;
         private ShootingScript shootingScript;
         private Rigidbody2D rb;
         private int weaponNumber = 0;
+        public static double MaxCharge = 100;
 
         private void Start()
         {
             rb = GetComponent<Rigidbody2D>();
+            shootingScripts = new ShootingScript[Particle.Length];
+            for (var i = 0; i < Particle.Length; i++) {
+                shootingScripts[i] = Particle[i].GetComponent<ShootingScript>();
+                shootingScripts[i].Init();
+            }
             mainParticle = Particle[weaponNumber];
-            shootingScript = mainParticle.GetComponent<ShootingScript>();
-            shootingScript.Init();
+            shootingScript = shootingScripts[weaponNumber];
         }
 
         private void ChangeWeapon(int weaponNr)
@@ -28,8 +35,7 @@ namespace Assets.Scripts.Shooting
             shootingScript.Stop();
             weaponNumber = weaponNr;
             mainParticle = Particle[weaponNr];
-            shootingScript = mainParticle.GetComponent<ShootingScript>();
-            shootingScript.Init();
+            shootingScript = shootingScripts[weaponNr];
             if (Input.GetButton("Fire1"))
             {
                 shootingScript.Play();
