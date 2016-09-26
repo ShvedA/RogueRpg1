@@ -23,7 +23,10 @@ namespace Assets.Scripts
 
             if (Input.GetKeyDown("i"))
             {
-                inventoryPanel.SetActive(!inventoryPanel.activeSelf);
+                if (inventoryPanel != null)
+                {
+                    inventoryPanel.SetActive(!inventoryPanel.activeSelf);
+                }
             }
         }
     }

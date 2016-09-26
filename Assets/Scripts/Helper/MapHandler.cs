@@ -134,7 +134,7 @@ namespace Assets.Scripts.Helper
 
         public MapHandler(int mapWidth, int mapHeight, int seed, int percentWalls = 45)
         {
-            Random.seed = seed;
+            Random.InitState(seed);
             this.MapWidth = mapWidth;
             this.MapHeight = mapHeight;
             this.PercentAreWalls = percentWalls;

@@ -86,7 +86,6 @@ namespace Assets.Scripts.Monsters.Behaviour
             {
                 return;
             }
-            Debug.Log(Animator.GetInteger("angle"));
             Animator.SetInteger("angle", spriteNr); //throwing warning - need to expect this
             PrevBehaviour = spriteNr;
         }
