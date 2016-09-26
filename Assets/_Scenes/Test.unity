@@ -324,6 +324,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11453068, guid: dd2b5df2dd708c549b436a51847fe8af, type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd2b5df2dd708c549b436a51847fe8af, type: 2}
   m_IsPrefabParent: 0
@@ -930,6 +934,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 11422296, guid: 3ea58e98c6884f64d83f48fa0df28316, type: 2}
+      propertyPath: Particles.Array.size
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 427424, guid: 3ea58e98c6884f64d83f48fa0df28316, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -966,6 +974,22 @@ Prefab:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1699302790}
+    - target: {fileID: 11422296, guid: 3ea58e98c6884f64d83f48fa0df28316, type: 2}
+      propertyPath: Particles.Array.data[0]
+      value: 
+      objectReference: {fileID: 137534, guid: 876211df7f772af42bdd9acc91481ab6, type: 2}
+    - target: {fileID: 11422296, guid: 3ea58e98c6884f64d83f48fa0df28316, type: 2}
+      propertyPath: Particles.Array.data[1]
+      value: 
+      objectReference: {fileID: 138420, guid: 92f7a0b800357104397b6d01bdc0e247, type: 2}
+    - target: {fileID: 11422296, guid: 3ea58e98c6884f64d83f48fa0df28316, type: 2}
+      propertyPath: Particles.Array.data[2]
+      value: 
+      objectReference: {fileID: 159536, guid: feff8fa6097a818459750f42032ea0c1, type: 2}
+    - target: {fileID: 11422296, guid: 3ea58e98c6884f64d83f48fa0df28316, type: 2}
+      propertyPath: Particles.Array.data[3]
+      value: 
+      objectReference: {fileID: 120282, guid: f0d2fa87ef1dc064e914ec6a4117bb6a, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3ea58e98c6884f64d83f48fa0df28316, type: 2}
   m_IsPrefabParent: 0

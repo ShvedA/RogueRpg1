@@ -23,7 +23,7 @@ GameObject:
   - 61: {fileID: 61000010545298088}
   - 114: {fileID: 114000011881586116}
   m_Layer: 0
-  m_Name: IceShardDrop
+  m_Name: Ice Shard Drop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

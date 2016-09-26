@@ -22,7 +22,7 @@ GameObject:
   - 222: {fileID: 222000013080762832}
   - 114: {fileID: 114000013198123046}
   m_Layer: 5
-  m_Name: InventoryPanel
+  m_Name: Inventory Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

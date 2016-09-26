@@ -7,7 +7,6 @@ namespace Assets.Scripts.Shooting
     public class ShootingHandler : MonoBehaviour
     {
         public GameObject[] Particle;
-        private GameObject mainParticle;
         private ShootingScript[] shootingScripts;
         private ShootingScript shootingScript;
         private Rigidbody2D rb;
@@ -22,7 +21,6 @@ namespace Assets.Scripts.Shooting
                 shootingScripts[i] = Particle[i].GetComponent<ShootingScript>();
                 shootingScripts[i].Init();
             }
-            mainParticle = Particle[weaponNumber];
             shootingScript = shootingScripts[weaponNumber];
         }
 
@@ -34,7 +32,6 @@ namespace Assets.Scripts.Shooting
             }
             shootingScript.Stop();
             weaponNumber = weaponNr;
-            mainParticle = Particle[weaponNr];
             shootingScript = shootingScripts[weaponNr];
             if (Input.GetButton("Fire1"))
             {
