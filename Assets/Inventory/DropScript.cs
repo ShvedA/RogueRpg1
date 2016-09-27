@@ -16,7 +16,7 @@ namespace Assets.Inventory
             inventoryObject = GameObject.Find("InventoryObject").GetComponent<InventoryScript>();
         }
 
-        void OnCollisionStay2D(Collision2D col)
+        void OnCollisionEnter2D(Collision2D col)
         {
             if (col.gameObject.tag == "Player")
             {

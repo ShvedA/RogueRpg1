@@ -7,6 +7,7 @@ namespace Assets.Scripts.Monsters.Model
         protected int Health;
         protected double Speed;
         protected int Attack;
+        protected bool Dead;
         private static int numOfMonsters = 1;
         public const int MaxNumOfMonsters = 100;
 
@@ -24,8 +25,9 @@ namespace Assets.Scripts.Monsters.Model
 
         public void CheckForDeath()
         {
-            if (IsDead())
+            if (IsDead() && !Dead)
             {
+                Dead = true;
                 OnDeath();
                 Die();
             }

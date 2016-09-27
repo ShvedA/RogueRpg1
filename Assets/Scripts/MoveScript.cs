@@ -11,7 +11,7 @@ namespace Assets.Scripts
         private void Start()
         {
             rb = GetComponent<Rigidbody2D>();
-            inventoryPanel = GameObject.Find("InventoryPanel");
+            inventoryPanel = GameObject.Find("Inventory Panel");
         }
 
         private void Update()

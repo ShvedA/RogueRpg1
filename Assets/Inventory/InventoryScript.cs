@@ -38,42 +38,38 @@ namespace Assets.Inventory
             AddItem(0);
             AddItem(0);
             AddItem(0);
-            AddItem(0);
+            AddItem(1);
         }
 
         public void AddItem(int id)
         {
             Item itemToAdd = _dataBase.FetchItemByID(id);
-            int indexOfItem;
-            if (itemToAdd.Stackable && ((indexOfItem = FindItemInInventory(id)) != -2))
+            if (itemToAdd.Stackable && FindItemInInventory(id) != -2)
             {
-                ItemData data = slots[indexOfItem].transform.GetChild(0).GetComponent<ItemData>();
+                ItemData data = slots[FindItemInInventory(id)].transform.GetChild(0).GetComponent<ItemData>();
                 data.amount++;
                 data.transform.GetChild(0).GetComponent<Text>().text = data.amount.ToString();
             }
             else
             {
-                for (int slotNumber = 0; slotNumber < items.Count; slotNumber++)
+                int slotNumber = FindItemInInventory(-1);
+                if (slotNumber != 2)
                 {
-                    if (items[slotNumber].ID == -1)
+                    items[slotNumber] = itemToAdd;
+                    GameObject itemObj = Instantiate(inventoryItem);
+                    itemObj.GetComponent<ItemData>().item = itemToAdd;
+                    itemObj.GetComponent<ItemData>().slot = slotNumber;
+                    itemObj.transform.SetParent(slots[slotNumber].transform);
+                    itemObj.GetComponent<Image>().sprite = itemToAdd.Sprite;
+                    //itemObj.transform.position = Vector2.zero;
+                    itemObj.name = itemToAdd.Title;
+                    if (itemToAdd.Stackable)
                     {
-                        items[slotNumber] = itemToAdd;
-                        GameObject itemObj = Instantiate(inventoryItem);
-                        itemObj.GetComponent<ItemData>().item = itemToAdd;
-                        itemObj.GetComponent<ItemData>().slot = slotNumber;
-                        itemObj.transform.SetParent(slots[slotNumber].transform);
-                        itemObj.GetComponent<Image>().sprite = itemToAdd.Sprite;
-                        //itemObj.transform.position = Vector2.zero;
-                        itemObj.name = itemToAdd.Title;
-                        if (itemToAdd.Stackable)
-                        {
-                            ItemData data = slots[slotNumber].transform.GetChild(0).GetComponent<ItemData>();
-                            data.amount++;
-                            data.transform.GetChild(0).GetComponent<Text>().text = data.amount.ToString();
-                        }
-                        break;
+                        ItemData data = slots[slotNumber].transform.GetChild(0).GetComponent<ItemData>();
+                        data.amount++;
+                        data.transform.GetChild(0).GetComponent<Text>().text = data.amount.ToString();
                     }
-                }
+                }      
             }
         }
 
