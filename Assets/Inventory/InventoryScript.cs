@@ -34,11 +34,12 @@ namespace Assets.Inventory
                 slots[i].GetComponent<Slot>().id = i;
                 slots[i].transform.SetParent(slotPanel.transform);
             }
-            AddItem(1);
+            AddItem(2);
             AddItem(0);
             AddItem(0);
             AddItem(0);
             AddItem(1);
+            AddItem(2);
         }
 
         public void AddItem(int id)
@@ -53,7 +54,7 @@ namespace Assets.Inventory
             else
             {
                 int slotNumber = FindItemInInventory(-1);
-                if (slotNumber != 2)
+                if (slotNumber != -2)
                 {
                     items[slotNumber] = itemToAdd;
                     GameObject itemObj = Instantiate(inventoryItem);

@@ -26,5 +26,19 @@
     "stackable": false,
     "rarity": 2,
     "slug": "ice_shard"
+  },
+  {
+    "id": 2,
+    "title": "Rocket",
+    "value": 6,
+    "stats": {
+      "power": 2,
+      "defence": 2,
+      "vitality": 5
+    },
+    "description": "Placeholder for a rocket skill",
+    "stackable": false,
+    "rarity": 3,
+    "slug": "rocket"
   }
 ]
